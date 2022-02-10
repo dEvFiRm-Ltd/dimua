@@ -1,3 +1,75 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf) format('truetype');
+}
+:root {
+  --white: #ffffff;
+  --black: #383838;
+  --primary: #44bd32;
+  --secondary: #00baf1;
+  --tertiary: #d6001c;
+  --danger: #da4f25;
+  --info: #004c73;
+  --warning: #899296;
+  --rates: #ffdb1f;
+  --ash: #dce3ec;
+}
+@font-face {
+  font-family: google-regular;
+  src: url(../fonts/google-regular.ttf);
+}
+@font-face {
+  font-family: google-medium;
+  src: url(../fonts/google-medium.ttf);
+}
+@font-face {
+  font-family: google-bold;
+  src: url(../fonts/google-bold.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -42,15 +114,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-:root {
-  --white: #ffffff;
-  --black: #383838;
-  --primary: #44bd32;
-  --secondary: #00baf1;
-  --tertiary: #d6001c;
-  --danger: #da4f25;
-  --info: #004c73;
-  --warning: #899296;
-  --rates: #ffdb1f;
-  --ash: #dce3ec;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
