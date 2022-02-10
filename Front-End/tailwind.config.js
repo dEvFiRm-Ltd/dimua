@@ -1,6 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         googleRegular: ['google-regular', 'Helvetica', 'Arial', 'sans-serif'],
@@ -27,6 +30,16 @@ module.exports = {
 
       '2xl': '1400px',
       // => @media (min-width: 1400px) { ... }
+    },
+    spacing: {
+      1: '4px',
+      2: '6px',
+      3: '8px',
+      4: '12px',
+      5: '13px',
+      6: '16px',
+      7: '19px',
+      8: '20px',
     },
   },
   colors: {
