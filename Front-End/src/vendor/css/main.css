@@ -141,6 +141,7 @@ header .features .single-feature p .text {
   font-size: 13px;
   line-height: 19px;
   font-family: google-regular;
+  text-transform: capitalize;
 }
 header .features .single-feature::after {
   position: absolute;
@@ -150,5 +151,8 @@ header .features .single-feature::after {
   border-radius: 50%;
   background: #000;
   top: 50%;
-  right: 0;
+  right: -2px;
+}
+header .features .single-feature:last-child::after {
+  display: none;
 }

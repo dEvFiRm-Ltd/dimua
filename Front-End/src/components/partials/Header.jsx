@@ -1,4 +1,5 @@
 import React from 'react';
+import url from '../core/core';
 
 function Header() {
   return (
@@ -9,7 +10,7 @@ function Header() {
             <p>
               <span className='icon'>
                 <img
-                  src='./vendor/images/header/shipping.svg'
+                  src={`${url}/images/header/shipping.svg`}
                   alt=''
                   className='img-fluid'
                 />{' '}
@@ -21,7 +22,7 @@ function Header() {
             <p>
               <span className='icon'>
                 <img
-                  src='./vendor/images/header/refund.svg'
+                  src={`${url}/images/header/refund.svg`}
                   alt=''
                   className='img-fluid'
                 />{' '}
@@ -34,7 +35,7 @@ function Header() {
             <p>
               <span className='icon'>
                 <img
-                  src='./vendor/images/header/insurance.svg'
+                  src={`${url}/images/header/insurance.svg`}
                   alt=''
                   className='img-fluid'
                 />{' '}
@@ -46,7 +47,7 @@ function Header() {
             <p>
               <span className='icon'>
                 <img
-                  src='./vendor/images/header/genuine.svg'
+                  src={`${url}/images/header/genuine.svg`}
                   alt=''
                   className='img-fluid'
                 />{' '}
@@ -57,8 +58,8 @@ function Header() {
         </ul>
       </header>
 
-      <section className=''>
-        <div className='container'>
+      <section className='navigation'>
+        <div className='container-fluid'>
           <div className='row'>
             <div className='col-lg-12'></div>
           </div>

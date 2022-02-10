@@ -1,0 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: google-regular;
+    src: url(./vendor/fonts/google-regular.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: google-medium;
+    src: url(./vendor/fonts/google-medium.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: google-bold;
+    src: url(./vendor/fonts/google-bold.ttf) format('ttf');
+  }
+}

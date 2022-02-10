@@ -114,6 +114,7 @@ header {
           font-size: 13px;
           line-height: 19px;
           font-family: google-regular;
+          text-transform: capitalize;
         }
       }
       &::after {
@@ -124,7 +125,12 @@ header {
         border-radius: 50%;
         background: #000;
         top: 50%;
-        right: 0;
+        right: -2px;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
       }
     }
   }
