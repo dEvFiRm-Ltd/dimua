@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+// 600
+// 700
+// 400
+:root {
+  --white: #ffffff;
+  --black: #383838;
+  --primary: #44bd32;
+  --secondary: #00baf1;
+  --tertiary: #d6001c;
+  --danger: #da4f25;
+  --info: #004c73;
+  --warning: #899296;
+  --rates: #ffdb1f;
+  --ash: #dce3ec;
+}
+
+//  Import Local Fonts
+
+// @font-face {
+//   font-family: myFirstFont;
+//   src: url(sansation_light.woff);
+// }
+@font-face {
+  font-family: google-regular;
+  src: url(../fonts/google-regular.ttf);
+}
+@font-face {
+  font-family: google-medium;
+  src: url(../fonts/google-medium.ttf);
+}
+@font-face {
+  font-family: google-bold;
+  src: url(../fonts/google-bold.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -49,15 +85,32 @@ ul {
   margin: 0;
 }
 
-:root {
-  --white: #ffffff;
-  --black: #383838;
-  --primary: #44bd32;
-  --secondary: #00baf1;
-  --tertiary: #d6001c;
-  --danger: #da4f25;
-  --info: #004c73;
-  --warning: #899296;
-  --rates: #ffdb1f;
-  --ash: #dce3ec;
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Media Queries
+
+// Extra extra large
+@media (min-width: 1400px) {
+}
+
+// Extra large
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+// Large
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Medium
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+// Small
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// X-Small
+@media (max-width: 575.98px) {
 }
