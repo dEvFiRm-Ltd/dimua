@@ -42,6 +42,27 @@
   input {
     @apply bg-white rounded py-8 px-12 border border-solid box-border border-inputColor focus:border-green;
   }
+  h1 {
+    @apply text-3xl font-medium;
+  }
+  h2 {
+    @apply text-2xl font-medium;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h4 {
+    @apply text-lg font-bold;
+  }
+  h5 {
+    @apply text-md font-bold;
+  }
+  h6 {
+    @apply text-sm font-normal;
+  }
+  p {
+    @apply text-xs font-normal;
+  }
 }
 
 /* Custom Classes */

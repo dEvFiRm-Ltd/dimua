@@ -5,6 +5,15 @@ module.exports = {
       center: true,
       padding: { DEFAULT: '16px', sm: '8px', xs: '8px' },
     },
+    fontSize: {
+      xs: ['12px', '18px'],
+      sm: ['13px', '19px'],
+      md: ['14px', '20px'],
+      lg: ['15px', '18px'],
+      xl: ['16px', '24px'],
+      '2xl': ['18px', '18px'],
+      '3xl': ['24px', '29px'],
+    },
     extend: {
       fontFamily: {
         googleRegular: ['google-regular', 'Helvetica', 'Arial', 'sans-serif'],

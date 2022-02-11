@@ -6,51 +6,50 @@ function Header() {
     <>
       <header className='container flex flex-row-reverse'>
         <ul className='features flex flex-row'>
-          <li className='single-feature'>
+          <li className='relative py-8 px-10'>
             <p>
-              <span className='icon'>
+              <span className='pr-8 h-[15px] inline-block '>
                 <img
+                  className='h-full'
                   src={`${url}/images/header/shipping.svg`}
                   alt=''
-                  className='img-fluid'
-                />{' '}
+                />
               </span>
               <span className='text'> Free ship 2km </span>
             </p>
           </li>
-          <li className='single-feature'>
+          <li className='relative py-8 px-10'>
             <p>
-              <span className='icon'>
+              <span className='pr-8 h-[15px] inline-block '>
                 <img
+                  className='h-full'
                   src={`${url}/images/header/refund.svg`}
                   alt=''
-                  className='img-fluid'
-                />{' '}
+                />
               </span>
               <span className='text'> Free Refund </span>
             </p>
           </li>
-
-          <li className='single-feature'>
+          <li className='relative py-8 px-10'>
             <p>
-              <span className='icon'>
+              <span className='pr-8 h-[15px] inline-block '>
                 <img
+                  className='h-full'
                   src={`${url}/images/header/insurance.svg`}
                   alt=''
-                  className='img-fluid'
-                />{' '}
+                />
               </span>
               <span className='text'> Return insurance </span>
             </p>
           </li>
-          <li className='single-feature'>
+          <li className='relative py-8 px-10'>
             <p>
-              <span className='icon'>
+              <span className='pr-8 h-[15px] inline-block '>
                 <img
+                  className='h-full'
                   src={`${url}/images/header/genuine.svg`}
                   alt=''
-                  className='img-fluid'
-                />{' '}
+                />
               </span>
               <span className='text'> genuine </span>
             </p>
