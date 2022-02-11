@@ -4,55 +4,58 @@ import url from '../core/core';
 function Header() {
   return (
     <>
-      <header className='container flex flex-row-reverse'>
+      <header className='container py-8 flex flex-row-reverse'>
         <ul className='features flex flex-row'>
           <li className='relative py-8 px-10'>
-            <p>
+            <h6>
               <span className='pr-8 h-[15px] inline-block '>
                 <img
-                  className='h-full'
+                  className='h-full mt-[4px]'
                   src={`${url}/images/header/shipping.svg`}
                   alt=''
                 />
               </span>
               <span className='text'> Free ship 2km </span>
-            </p>
+            </h6>
+            <span className='absolute w-4 h-4 rounded-[50%] top-1/2 right-[-2px] bg-[#000000] ' />
           </li>
           <li className='relative py-8 px-10'>
-            <p>
+            <h6>
               <span className='pr-8 h-[15px] inline-block '>
                 <img
-                  className='h-full'
+                  className='h-full mt-[4px]'
                   src={`${url}/images/header/refund.svg`}
                   alt=''
                 />
               </span>
               <span className='text'> Free Refund </span>
-            </p>
+            </h6>
+            <span className='absolute w-4 h-4 rounded-[50%] top-1/2 right-[-2px] bg-[#000000] ' />
           </li>
           <li className='relative py-8 px-10'>
-            <p>
+            <h6>
               <span className='pr-8 h-[15px] inline-block '>
                 <img
-                  className='h-full'
+                  className='h-full mt-[4px]'
                   src={`${url}/images/header/insurance.svg`}
                   alt=''
                 />
               </span>
               <span className='text'> Return insurance </span>
-            </p>
+            </h6>
+            <span className='absolute w-4 h-4 rounded-[50%] top-1/2 right-[-2px] bg-[#000000] ' />
           </li>
           <li className='relative py-8 px-10'>
-            <p>
+            <h6>
               <span className='pr-8 h-[15px] inline-block '>
                 <img
-                  className='h-full'
+                  className='h-full mt-[4px]'
                   src={`${url}/images/header/genuine.svg`}
                   alt=''
                 />
               </span>
               <span className='text'> genuine </span>
-            </p>
+            </h6>
           </li>
         </ul>
       </header>
