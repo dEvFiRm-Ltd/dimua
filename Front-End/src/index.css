@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base CSS */
 @layer base {
   @font-face {
     font-family: google-regular;
@@ -17,5 +18,41 @@
   @font-face {
     font-family: google-bold;
     src: url(./vendor/fonts/google-bold.ttf) format('ttf');
+  }
+
+  button,
+  a {
+    @apply no-underline hover:underline outline-none;
+  }
+  ol,
+  ul {
+    @apply list-none;
+  }
+
+  textarea {
+    @apply resize-none;
+  }
+
+  body {
+    @apply bg-base;
+  }
+  img {
+    @apply max-w-full object-contain h-auto;
+  }
+  input {
+    @apply bg-white rounded py-8 px-12 border border-solid box-border border-inputColor focus:border-green;
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .btn-white {
+    @apply bg-white text-black border border-solid border-green rounded py-10 text-center;
+  }
+  .btn-white.active {
+    @apply bg-green text-white border-0;
+  }
+  .btn-green {
+    @apply bg-green text-white rounded py-10 text-center;
   }
 }

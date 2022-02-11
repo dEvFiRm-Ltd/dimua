@@ -4,7 +4,7 @@ import url from '../core/core';
 function Header() {
   return (
     <>
-      <header className='md:container flex flex-row-reverse'>
+      <header className='container flex flex-row-reverse'>
         <ul className='features flex flex-row'>
           <li className='single-feature'>
             <p>
