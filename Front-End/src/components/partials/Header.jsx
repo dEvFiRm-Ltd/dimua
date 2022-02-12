@@ -3,7 +3,7 @@ import url from '../core/core';
 
 function Header() {
   return (
-    <header className='container py-8 flex flex-row-reverse'>
+    <header className='container py-8 my-0 flex flex-row-reverse'>
       <ul className='features flex flex-row'>
         <li className='relative py-8 px-10'>
           <h6>

@@ -5,8 +5,8 @@ import url from '../core/core';
 
 function Navigation() {
   return (
-    <section className='bg-green py-[4px] '>
-      <div className='container flex flex-row'>
+    <section className='bg-green'>
+      <div className='container flex flex-row m-0'>
         <div className='w-[50px] h-[50px] px-12 '>
           <Hamburger />
         </div>
@@ -34,7 +34,7 @@ function Navigation() {
             />
           </button>
         </div>
-        <ul className='flex flex-row md:ml-auto'>
+        <ul className='flex flex-row'>
           <li className='my-auto'>
             <button type='button' className='p-16'>
               <img

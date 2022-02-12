@@ -4,8 +4,8 @@ import url from '../core/core';
 
 function Hero() {
   const settings = {
-    dots: true,
-    nav: false,
+    dots: false,
+    arrows: false,
     fade: true,
     infinite: true,
     speed: 500,
@@ -13,23 +13,29 @@ function Hero() {
     slidesToScroll: 1,
   };
   return (
-    <section className=' container p-0 h-[300px]'>
+    <section className='container p-0 h-[300px] m-0'>
       <Slider {...settings}>
-        <img
-          src={`${url}/img/H-Banner-Main.jpg`}
-          alt=''
-          className='img w-full h-full'
-        />
-        <img
-          src={`${url}/img/H-Banner-Main.jpg`}
-          alt=''
-          className='img w-full h-full'
-        />
-        <img
-          src={`${url}/img/H-Banner-Main.jpg`}
-          alt=''
-          className='img w-full h-full'
-        />
+        <div className='h-[309px] bg-white block'>
+          <img
+            src={`${url}/img/H-Banner-Main.jpg`}
+            alt=''
+            className='img w-full h-full object-cover'
+          />
+        </div>
+        <div className='h-[309px] bg-white block'>
+          <img
+            src={`${url}/img/H-Banner-Main02.jpg`}
+            alt=''
+            className='img w-full h-full object-cover'
+          />
+        </div>
+        <div className='h-[309px] bg-white block'>
+          <img
+            src={`${url}/img/H-Banner-Main03.jpg`}
+            alt=''
+            className='img w-full h-full object-cover'
+          />
+        </div>
       </Slider>
     </section>
   );
