@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/partials/Header';
 import Navigation from './components/partials/Navigation';
 import Home from './pages/Home';
-import Hamburger from './pages/Test-Area/Hamburger';
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/test' element={<Hamburger />} />
+        {/* <Route path='/test' element={<Hamburger />} /> */}
       </Routes>
 
       {/* Blank */}
