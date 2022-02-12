@@ -4,7 +4,7 @@ import url from '../core/core';
 
 function Hero() {
   const settings = {
-    dots: false,
+    dots: true,
     nav: false,
     fade: true,
     infinite: true,
