@@ -34,7 +34,7 @@
   }
 
   body {
-    @apply bg-base;
+    @apply bg-base overflow-x-hidden;
   }
   img {
     @apply max-w-full object-contain h-auto;

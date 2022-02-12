@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: { DEFAULT: '16px', sm: '8px', xs: '8px' },
+      padding: { lg: '16px', default: '8px' },
     },
     fontSize: {
       xs: ['12px', '18px'],

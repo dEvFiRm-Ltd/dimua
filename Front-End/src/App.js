@@ -1,14 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/partials/Header';
+import Navigation from './components/partials/Navigation';
 import Home from './pages/Home';
+import Hamburger from './pages/Test-Area/Hamburger';
 
 function App() {
   return (
     <>
       <Header />
+      <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/test' element={<Hamburger />} />
       </Routes>
+
+      {/* Blank */}
+      <section className=''>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-12'></div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
