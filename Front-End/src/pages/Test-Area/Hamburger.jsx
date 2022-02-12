@@ -8,7 +8,7 @@ function Hamburger() {
     <>
       <span
         onClick={() => setClick(!click)}
-        className='relative block w-[24px] h-[24px] rounded-[50%] duration-500 ease-in-out cursor-pointer '
+        className='relative block w-[100%] h-[100%] rounded-[50%] duration-500 ease-in-out cursor-pointer '
       >
         {' '}
         <span
