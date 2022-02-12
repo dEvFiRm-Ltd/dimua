@@ -34,7 +34,7 @@ function Navigation() {
             />
           </button>
         </div>
-        <ul className='flex flex-row'>
+        <ul className='flex flex-row md:ml-auto'>
           <li className='my-auto'>
             <button type='button' className='p-16'>
               <img
