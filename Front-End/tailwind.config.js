@@ -60,6 +60,7 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     spacing: {
+      0: '0',
       4: '4px',
       6: '6px',
       8: '8px',
