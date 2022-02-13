@@ -107,4 +107,31 @@ export const FlashSaleData = [
   },
 ];
 
+export const couponData = [
+  {
+    code: 'LVLM002',
+    date: '20/09',
+    discount: '20% Off',
+    description: 'Coolmate Wears Beautiful Life Quality -',
+    duration: '2',
+    link: 'lvlm002',
+  },
+  {
+    code: 'LVLM002',
+    date: '20/09',
+    discount: '20% Off',
+    description: 'Coolmate Wears Beautiful Life Quality -',
+    duration: '2',
+    link: 'lvlm002',
+  },
+  {
+    code: 'LVLM002',
+    date: '20/09',
+    discount: '20% Off',
+    description: 'Coolmate Wears Beautiful Life Quality -',
+    duration: '2',
+    link: 'lvlm002',
+  },
+];
+
 export default url;

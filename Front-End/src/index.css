@@ -74,7 +74,7 @@
     @apply bg-green text-white border-0;
   }
   .btn-green {
-    @apply bg-green text-white rounded py-10 text-center;
+    @apply bg-green text-white rounded py-10 text-center capitalize;
   }
   .container {
     @apply my-8 pb-16;
