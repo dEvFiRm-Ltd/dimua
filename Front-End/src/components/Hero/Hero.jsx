@@ -13,23 +13,23 @@ function Hero() {
     slidesToScroll: 1,
   };
   return (
-    <section className='container p-0 h-[300px] m-0 inline-block'>
+    <section className='container p-0 h-[300px] m-0'>
       <Slider {...settings}>
-        <div className='h-[309px] bg-white block'>
+        <div className='h-[300px] bg-white block'>
           <img
             src={`${url}/img/H-Banner-Main.jpg`}
             alt=''
             className='img w-full h-full object-cover'
           />
         </div>
-        <div className='h-[309px] bg-white block'>
+        <div className='h-[300px] bg-white block'>
           <img
             src={`${url}/img/H-Banner-Main02.jpg`}
             alt=''
             className='img w-full h-full object-cover'
           />
         </div>
-        <div className='h-[309px] bg-white block'>
+        <div className='h-[300px] bg-white block'>
           <img
             src={`${url}/img/H-Banner-Main03.jpg`}
             alt=''
