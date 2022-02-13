@@ -22,7 +22,7 @@
 
   button,
   a {
-    @apply no-underline hover:underline outline-none;
+    @apply no-underline hover:no-underline outline-none;
   }
   ol,
   ul {
