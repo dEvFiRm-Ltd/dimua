@@ -53,4 +53,23 @@ export const category = [
   },
 ];
 
+export const headerData = [
+  {
+    icon: `${url}/img/header/shipping.svg`,
+    text: 'Free ship 2km',
+  },
+  {
+    icon: `${url}/img/header/refund.svg`,
+    text: 'Free Refund',
+  },
+  {
+    icon: `${url}/img/header/insurance.svg`,
+    text: 'Return insurance',
+  },
+  {
+    icon: `${url}/img/header/genuine.svg`,
+    text: 'genuine',
+  },
+];
+
 export default url;

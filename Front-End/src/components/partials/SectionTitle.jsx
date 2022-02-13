@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SectionTitle({ title, duration, slug, background }) {
   return (
-    <div className='p-16 bg-transparent flex content-between'>
+    <div className='p-16 bg-transparent flex items-center'>
       <div className='flex flex-row items-center '>
         <h3
           className={`pr-16 capitalize ${
@@ -27,7 +28,15 @@ function SectionTitle({ title, duration, slug, background }) {
           </h3>
         )}
       </div>
-      <i class='fa-solid fa-chevron-right'></i>
+      {slug && (
+        <Link to={`/${slug}`} className=' ml-auto'>
+          <i
+            className={`fa-solid fa-chevron-right ${
+              background === 'white' ? 'text-black' : 'text-white'
+            }`}
+          ></i>
+        </Link>
+      )}
     </div>
   );
 }
