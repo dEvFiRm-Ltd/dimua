@@ -10,10 +10,10 @@ function FlashSale() {
     setData(FlashSaleData);
     setCount(FlashSaleData.length - 1);
     return () => {
+      setCount(0);
       setData([]);
     };
   }, []);
-  console.log('count', count);
 
   return (
     <section className='bg-cyan container pb-16 inline-block'>

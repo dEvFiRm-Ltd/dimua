@@ -1,5 +1,6 @@
 import React from 'react';
 import Category from '../components/Category';
+import Coupons from '../components/coupones/Coupons';
 import FlashSale from '../components/flashSale/FlashSale';
 import Hero from '../components/Hero';
 import HotComponent from '../components/HotComponent';
@@ -11,6 +12,7 @@ function Home() {
       <HotComponent />
       <Category />
       <FlashSale />
+      <Coupons />
     </>
   );
 }
