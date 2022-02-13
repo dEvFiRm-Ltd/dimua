@@ -27,6 +27,7 @@ function SectionTitle({ title, duration, slug, background }) {
           </h3>
         )}
       </div>
+      <i class='fa-solid fa-chevron-right'></i>
     </div>
   );
 }
