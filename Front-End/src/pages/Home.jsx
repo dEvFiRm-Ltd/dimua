@@ -1,6 +1,6 @@
 import React from 'react';
 import Category from '../components/Category';
-import FlashSale from '../components/FlashSale';
+import FlashSale from '../components/flashSale/FlashSale';
 import Hero from '../components/Hero';
 import HotComponent from '../components/HotComponent';
 
