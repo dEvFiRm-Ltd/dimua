@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import url from '../core/core';
+import url from './core/core';
 
 function Hero() {
   const settings = {

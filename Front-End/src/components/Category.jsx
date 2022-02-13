@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { category } from '../core/core';
+import { category } from './core/core';
 
 function Category() {
   const [content, setContent] = useState([]);
