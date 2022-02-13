@@ -77,6 +77,6 @@
     @apply bg-green text-white rounded py-10 text-center;
   }
   .container {
-    @apply my-8;
+    @apply my-8 pb-16;
   }
 }

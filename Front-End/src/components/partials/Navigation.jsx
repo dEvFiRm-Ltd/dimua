@@ -6,7 +6,7 @@ import url from '../core/core';
 function Navigation() {
   return (
     <section className='bg-green'>
-      <div className='container flex flex-row m-0'>
+      <div className='container flex flex-row m-0 py-0'>
         <div className='w-[50px] h-[50px] px-12 '>
           <Hamburger />
         </div>

@@ -4,10 +4,10 @@ import url from './core/core';
 
 function HotComponent() {
   return (
-    <section className='container flex flex-row m-0'>
+    <section className='container flex flex-row m-0 py-16 pb-8'>
       <Link
         to='/'
-        className='w-1/3 bg-gray h-[130px] mr-8 rounded-md block my-16 overflow-hidden  '
+        className='w-1/3 bg-gray h-[130px] mr-8 rounded-md block overflow-hidden  '
       >
         <img
           src={`${url}/img/sale01.jpg`}
@@ -17,7 +17,7 @@ function HotComponent() {
       </Link>
       <Link
         to='/'
-        className='w-1/3 bg-gray h-[130px] mx-8 rounded-md block my-16 overflow-hidden '
+        className='w-1/3 bg-gray h-[130px] mx-8 rounded-md block overflow-hidden '
       >
         <img
           src={`${url}/img/sale02.jpg`}
@@ -27,7 +27,7 @@ function HotComponent() {
       </Link>
       <Link
         to='/'
-        className='w-1/3 bg-gray h-[130px] ml-8 rounded-md block my-16 overflow-hidden '
+        className='w-1/3 bg-gray h-[130px] ml-8 rounded-md block overflow-hidden '
       >
         <img
           src={`${url}/img/sale03.jpg`}

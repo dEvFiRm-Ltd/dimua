@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function SectionTitle({ title, duration, slug, background }) {
   return (
-    <div className='p-16 bg-transparent flex items-center'>
+    <div className='py-16 bg-transparent flex items-center'>
       <div className='flex flex-row items-center '>
         <h3
           className={`pr-16 capitalize ${
