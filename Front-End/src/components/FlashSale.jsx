@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import FlashItem from './FeaturedItem';
 import SectionTitle from './partials/SectionTitle';
 import { FlashSaleData } from './core/core';
+import SingleItem from './SingleItem';
 
 function FlashSale() {
   const [data, setData] = useState([]);
@@ -25,10 +25,12 @@ function FlashSale() {
       />
       <div className='flex justify-center'>
         {data.map((item, index) => (
-          <FlashItem
+          <SingleItem
             key={index}
             content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
+            classes={` w-[229px] ${
+              index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'
+            }`}
           />
         ))}
       </div>

@@ -24,7 +24,9 @@ function TopSelling() {
           <SingleItem
             key={index}
             content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
+            classes={` w-[180px] ${
+              index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'
+            }`}
           />
         ))}
       </div>
