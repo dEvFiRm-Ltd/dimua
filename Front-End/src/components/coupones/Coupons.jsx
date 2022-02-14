@@ -11,7 +11,7 @@ function Coupons() {
 
   return (
     <section className='container bg-white pb-16'>
-      <SectionTitle title='Coupon Codes' background='white' slug='coupon' />
+      <SectionTitle title='Coupon Codes' slug='coupon' />
       <div className='flex flex-row justify-center '>
         {data.map((item, index) => (
           <SingleCoupon

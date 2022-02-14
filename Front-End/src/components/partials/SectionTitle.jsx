@@ -32,7 +32,7 @@ function SectionTitle({ title, duration, slug, background }) {
         <Link to={`/${slug}`} className=' ml-auto'>
           <i
             className={`fa-solid fa-chevron-right ${
-              background === 'white' ? 'text-black' : 'text-white'
+              background ? 'text-white' : 'text-black'
             }`}
           ></i>
         </Link>
