@@ -8,6 +8,7 @@ import FlashSale from '../components/FlashSale';
 import Hero from '../components/Hero';
 import HotComponent from '../components/HotComponent';
 import PromoProducts from '../components/PromoProducts';
+import Suggetions from '../components/Suggetions';
 import TopSelling from '../components/TopSelling';
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
       </Link>
       <FeaturedBrand />
       <PromoProducts />
+      <Suggetions />
     </>
   );
 }

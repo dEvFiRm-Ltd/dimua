@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function SingleItem({ content, classes, size }) {
+function SingleItem({ content, classes, size, showDiscount }) {
   return (
     <Link
       to={`/${content.slug}`}
@@ -21,7 +21,9 @@ function SingleItem({ content, classes, size }) {
           {content.currency}. {content.price}
           <span className='absolute w-[108%] h-[2px] top-1/2 bg-gray left-[-4%] ' />
         </h3>
-        <h5 className='text-blue'>Save: {content.discount}</h5>
+        {showDiscount && (
+          <h5 className='text-blue'>Save: {content.discount}</h5>
+        )}
       </div>
     </Link>
   );

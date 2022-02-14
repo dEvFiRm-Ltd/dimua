@@ -24,6 +24,7 @@ function PromoProducts() {
             content={item}
             classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
             size='229px'
+            showDiscount={true}
           />
         ))}
       </div>

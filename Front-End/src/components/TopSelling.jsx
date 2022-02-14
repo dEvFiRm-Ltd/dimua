@@ -26,6 +26,7 @@ function TopSelling() {
             content={item}
             classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
             size='180px'
+            showDiscount={true}
           />
         ))}
       </div>
