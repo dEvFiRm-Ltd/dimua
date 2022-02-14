@@ -4,7 +4,7 @@ import url from './core/core';
 
 function HotComponent() {
   return (
-    <section className='container flex flex-row m-0 py-16 pb-8'>
+    <section className='container flex flex-row m-0 py-8'>
       <Link
         to='/'
         className='w-1/3 bg-gray h-[130px] mr-8 rounded-md block overflow-hidden  '

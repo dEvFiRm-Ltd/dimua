@@ -77,6 +77,6 @@
     @apply bg-green text-white rounded py-10 text-center capitalize;
   }
   .container {
-    @apply my-8 pb-16;
+    @apply my-8 pb-16 inline-block;
   }
 }
