@@ -16,7 +16,7 @@ function FlashSale() {
   }, []);
 
   return (
-    <section className='container bg-cyan pb-16 inline-block'>
+    <section className='container bg-cyan inline-block'>
       <SectionTitle
         title='Flash Sale'
         duration='20-24-30'

@@ -177,4 +177,39 @@ export const topSellingData = [
   },
 ];
 
+export const FeaturedBrandData = [
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+  {
+    image: `${url}/img/brand.png`,
+    slug: 'brand',
+  },
+];
+
 export default url;
