@@ -7,7 +7,7 @@ function SectionTitle({ title, duration, slug, background }) {
       <div className='flex flex-row items-center '>
         <h3
           className={`pr-16 capitalize ${
-            background === 'white' ? `text-black` : `text-white`
+            background ? 'text-white' : 'text-black'
           }`}
         >
           {title}

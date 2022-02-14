@@ -134,4 +134,47 @@ export const couponData = [
   },
 ];
 
+export const topSellingData = [
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1,229.000',
+    discount: '29.000',
+    image: `${url}/img/kettele.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1,229.000',
+    discount: '1,229.000',
+    image: `${url}/img/cooker.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1,229.000',
+    discount: '1,229.000',
+    image: `${url}/img/dipar.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1,229.000',
+    discount: '1,229.000',
+    image: `${url}/img/pan.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1,229.000',
+    discount: '1,229.000',
+    image: `${url}/img/pan.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+];
+
 export default url;

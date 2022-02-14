@@ -5,8 +5,10 @@ import SingleCoupon from './SingleCoupon';
 
 function Coupons() {
   const [data, setData] = useState([]);
+  const [count, setCount] = useState(0);
   useEffect(() => {
     setData(couponData);
+    setCount(couponData.length - 1);
   }, []);
 
   return (
@@ -17,9 +19,7 @@ function Coupons() {
           <SingleCoupon
             key={index}
             content={item}
-            classes={
-              index === 0 ? 'mr-8' : index === data.length - 1 ? 'ml-8' : 'mx-8'
-            }
+            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
           />
         ))}
       </div>
