@@ -7,6 +7,7 @@ import FeaturedBrand from '../components/FeaturedBrand';
 import FlashSale from '../components/FlashSale';
 import Hero from '../components/Hero';
 import HotComponent from '../components/HotComponent';
+import PromoProducts from '../components/PromoProducts';
 import TopSelling from '../components/TopSelling';
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
         <img src={`${url}/img/advertise.jpg`} alt='' className='w-[full]' />
       </Link>
       <FeaturedBrand />
+      <PromoProducts />
     </>
   );
 }

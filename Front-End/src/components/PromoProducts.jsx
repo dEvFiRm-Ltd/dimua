@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import SectionTitle from './partials/SectionTitle';
 import { FlashSaleData } from './core/core';
+import SectionTitle from './partials/SectionTitle';
 import SingleItem from './SingleItem';
 
-function FlashSale() {
+function PromoProducts() {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -14,16 +14,10 @@ function FlashSale() {
       setData([]);
     };
   }, []);
-
   return (
-    <section className='container bg-cyan inline-block'>
-      <SectionTitle
-        title='Flash Sale'
-        duration='20-24-30'
-        slug='flash-sales'
-        background={true}
-      />
-      <div className='flex justify-center'>
+    <section className='container bg-white'>
+      <SectionTitle title='Promotional Products' slug='promo-products' />
+      <div className='flex justify-center pt-16'>
         {data.map((item, index) => (
           <SingleItem
             key={index}
@@ -37,4 +31,4 @@ function FlashSale() {
   );
 }
 
-export default FlashSale;
+export default PromoProducts;
