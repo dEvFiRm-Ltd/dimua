@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react/cjs/react.production.min';
 import { category } from './core/core';
 
 function Category() {

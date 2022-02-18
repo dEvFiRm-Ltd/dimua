@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react/cjs/react.production.min';
 import { category, topSellingData } from './core/core';
 import SectionTitle from './partials/SectionTitle';
 import SingleItem from './SingleItem';
@@ -23,6 +24,14 @@ function Suggetions() {
       <SectionTitle title='Product Suggestions' />
       <div className='flex flex-col'>
         <select className='w-1/4 py-10 px-16 capitalize'>
+          <option
+            value=''
+            className='p-16 border-none bg-transparent text-2xl leading-[24px] capitalize'
+            type='button'
+            defaultChecked
+          >
+            All
+          </option>
           {collections.map((item, index) => (
             <option
               value={item.slug}
