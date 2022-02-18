@@ -4,11 +4,14 @@ import { couponData, FlashSaleData } from '../components/core/core';
 import SingleCoupon from '../components/coupones/SingleCoupon';
 import Hero from '../components/Hero';
 import Pagination from '../components/Pagination';
+// eslint-disable-next-line
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
 
 function FlashSale() {
+  // eslint-disable-next-line
   const [product, setProduct] = useState([]);
+  // eslint-disable-next-line
   const [productCount, setProductCount] = useState(0);
   const [coupon, setCoupon] = useState([]);
   const [couponCount, setCouponCount] = useState(0);
