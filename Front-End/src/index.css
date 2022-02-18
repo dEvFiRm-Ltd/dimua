@@ -76,6 +76,18 @@
   .btn-green {
     @apply bg-green text-white rounded py-10 text-center capitalize;
   }
+  .pagination {
+    @apply bg-white text-black border border-solid border-borderGray rounded-lg text-md font-bold px-13 py-10 text-center transition-all;
+  }
+  .pagination.indicators {
+    @apply hover:bg-green hover:text-white hover:border-green;
+  }
+  .pagination.count {
+    @apply bg-transparent border-transparent border mx-4 hover:border-borderGray;
+  }
+  .pagination.count.active {
+    @apply bg-green text-white hover:border-green;
+  }
   .container {
     @apply my-8 pb-16 inline-block;
   }

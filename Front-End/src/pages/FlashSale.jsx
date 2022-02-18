@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import { FlashSaleData } from '../components/core/core';
 import Hero from '../components/Hero';
+import Pagination from '../components/Pagination';
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
 
@@ -37,6 +38,7 @@ function FlashSale() {
           ))}
         </div>
       </section>
+      <Pagination />
     </>
   );
 }
