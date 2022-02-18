@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import { FlashSaleData } from '../components/core/core';
+import { couponData, FlashSaleData } from '../components/core/core';
+import SingleCoupon from '../components/coupones/SingleCoupon';
 import Hero from '../components/Hero';
 import Pagination from '../components/Pagination';
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
 
 function FlashSale() {
-  const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
+  const [product, setProduct] = useState([]);
+  const [productCount, setProductCount] = useState(0);
+  const [coupon, setCoupon] = useState([]);
+  const [couponCount, setCouponCount] = useState(0);
+
   useEffect(() => {
-    setData(FlashSaleData);
-    setCount(FlashSaleData.length - 1);
+    setCoupon(couponData);
+    setCouponCount(couponData.length - 1);
+    setProduct(FlashSaleData);
+    setProductCount(FlashSaleData.length - 1);
     return () => {
-      setCount(0);
-      setData([]);
+      setCoupon([]);
+      setProductCount(0);
+      setCouponCount(0);
+      setProduct([]);
     };
   }, []);
   return (
@@ -27,13 +35,22 @@ function FlashSale() {
           <TimeLaps />
         </div>
         <div className='flex flex-row'>
-          {data.map((item, index) => (
+          {/* {product.map((item, index) => (
             <SingleItem
               key={index}
               content={item}
-              classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
+              classes={index === 0 ? 'mr-8' : index === productCount ? 'ml-8' : 'mx-8'}
               size='229px'
               showDiscount={true}
+            />
+          ))} */}
+          {coupon.map((item, index) => (
+            <SingleCoupon
+              key={index}
+              content={item}
+              classes={
+                index === 0 ? 'mr-8' : index === couponCount ? 'ml-8' : 'mx-8'
+              }
             />
           ))}
         </div>
