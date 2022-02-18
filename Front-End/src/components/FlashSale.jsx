@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionTitle from './partials/SectionTitle';
 import { FlashSaleData } from './core/core';
 import SingleItem from './SingleItem';
-import { useEffect, useState } from 'react/cjs/react.production.min';
 
 function FlashSale() {
   const [data, setData] = useState([]);
@@ -21,7 +20,7 @@ function FlashSale() {
       <SectionTitle
         title='flash-sale'
         duration='20-24-30'
-        slug='flash-sales'
+        slug='flash-sale'
         background={true}
       />
       <div className='flex justify-center'>

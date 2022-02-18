@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useState } from 'react/cjs/react.production.min';
+import React, { useEffect, useState } from 'react';
 import { category, topSellingData } from './core/core';
 import SectionTitle from './partials/SectionTitle';
 import SingleItem from './SingleItem';

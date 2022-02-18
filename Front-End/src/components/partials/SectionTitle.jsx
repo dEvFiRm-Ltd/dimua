@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import TimeLaps from '../TimeLaps';
 
 function SectionTitle({ title, duration, slug, background }) {
   return (
@@ -12,21 +13,7 @@ function SectionTitle({ title, duration, slug, background }) {
         >
           {title}
         </h3>
-        {duration && (
-          <h3 className='font-[120%] duration flex flex-row '>
-            <span className=' text-white mr-8 p-[5.5px] bg-red rounded-md '>
-              00
-            </span>
-            <span className='mr-8 text-red my-auto'>:</span>
-            <span className=' font-[120%] text-white mr-8 p-[5.5px] bg-red rounded-md '>
-              00
-            </span>
-            <span className='mr-8 text-red my-auto'>:</span>
-            <span className=' font-[120%] text-white p-[5.5px] bg-red rounded-md '>
-              00
-            </span>
-          </h3>
-        )}
+        {duration && <TimeLaps />}
       </div>
       {slug && (
         <Link to={`/${slug}`} className=' ml-auto'>
