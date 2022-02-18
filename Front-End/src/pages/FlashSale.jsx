@@ -4,6 +4,7 @@ import { couponData, FlashSaleData } from '../components/core/core';
 import SingleCoupon from '../components/coupones/SingleCoupon';
 import Hero from '../components/Hero';
 import Pagination from '../components/Pagination';
+import Modal from '../components/partials/Modal';
 // eslint-disable-next-line
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
@@ -59,6 +60,7 @@ function FlashSale() {
         </div>
       </section>
       <Pagination />
+      <Modal />
     </>
   );
 }
