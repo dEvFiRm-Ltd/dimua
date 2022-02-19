@@ -6,7 +6,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import url, { category } from '../components/core/core';
 import Hero from '../components/Hero';
 
-function Brands() {
+function AllBrands() {
   const [collections, setCollections] = useState([]);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function Brands() {
         {/* Card */}
         <div className='w-1/3 px-8'>
           <Link
-            to='/'
+            to='/brand'
             className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
@@ -88,7 +88,7 @@ function Brands() {
         </div>
         <div className='w-1/3 px-8'>
           <Link
-            to='/'
+            to='/brand'
             className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
@@ -109,7 +109,7 @@ function Brands() {
         </div>
         <div className='w-1/3 px-8'>
           <Link
-            to='/'
+            to='/brand'
             className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
@@ -130,7 +130,7 @@ function Brands() {
         </div>
         <div className='w-1/3 px-8'>
           <Link
-            to='/'
+            to='/brand'
             className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
@@ -154,4 +154,4 @@ function Brands() {
   );
 }
 
-export default Brands;
+export default AllBrands;
