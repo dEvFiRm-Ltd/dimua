@@ -17,22 +17,33 @@ function FlashSale() {
   }, []);
 
   return (
-    <section className='container bg-cyan inline-block'>
-      <SectionTitle
-        title='flash-sale'
-        duration='20-24-30'
-        slug='flash-sale'
-        background={true}
-      />
-      <div className='flex justify-center'>
+    <section className='container px-8 bg-cyan inline-block'>
+      <div className='px-8'>
+        <SectionTitle
+          title='flash-sale'
+          duration='20-24-30'
+          slug='flash-sale'
+          background={true}
+        />
+      </div>
+      <div className='flex justify-center flex-wrap px-8'>
         {data.map((item, index) => (
-          <SingleItem
-            key={index}
-            content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
-            size='229px'
-            showDiscount={true}
-          />
+          <div
+            className={`w-1/4 py-8 ${
+              index % 4 === 0 || index === 0
+                ? 'pr-8'
+                : index === count || index % 3 === 0
+                ? 'pl-8'
+                : 'px-8'
+            }`}
+          >
+            <SingleItem
+              key={index}
+              content={item}
+              size='229px'
+              showDiscount={true}
+            />
+          </div>
         ))}
       </div>
     </section>

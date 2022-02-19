@@ -31,7 +31,7 @@ function Coupon() {
           <h3 className='mr-16'>Time Left </h3>
           <TimeLaps />
         </div>
-        <div className='flex flex-row'>
+        <div className='flex flex-row flex-wrap'>
           {coupon.map((item, index) => (
             <SingleCoupon
               key={index}

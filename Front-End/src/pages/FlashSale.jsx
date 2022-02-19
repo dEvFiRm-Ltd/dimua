@@ -28,7 +28,7 @@ function FlashSale() {
           <h3 className='mr-16'>Time Left </h3>
           <TimeLaps />
         </div>
-        <div className='flex flex-row'>
+        <div className='flex flex-row flex-wrap '>
           {product.map((item, index) => (
             <SingleItem
               key={index}

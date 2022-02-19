@@ -105,6 +105,38 @@ export const FlashSaleData = [
     slug: 'flash-sale',
     currency: 'BDT',
   },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '29.000',
+    image: `${url}/img/kettele.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '229.000',
+    image: `${url}/img/cooker.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '19.000',
+    image: `${url}/img/dipar.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '12.000',
+    image: `${url}/img/pan.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
 ];
 
 export const couponData = [
@@ -135,6 +167,46 @@ export const couponData = [
 ];
 
 export const topSellingData = [
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '29.000',
+    image: `${url}/img/kettele.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '129.000',
+    image: `${url}/img/cooker.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '122.000',
+    image: `${url}/img/dipar.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '229.000',
+    image: `${url}/img/pan.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    price: '1229.000',
+    discount: '19.000',
+    image: `${url}/img/pan.jpg`,
+    slug: 'flash-sale',
+    currency: 'BDT',
+  },
   {
     title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
     price: '1229.000',

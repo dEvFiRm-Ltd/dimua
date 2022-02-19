@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function SingleItem({ content, classes, size, showDiscount }) {
+function SingleItem({ content, size, showDiscount }) {
   return (
     <Link
       to={`/${content.slug}`}
-      className={`bg-white rounded-lg h-auto w-[${size}] ${classes} transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
+      className={`bg-white rounded-lg max-h-[${size}] block transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
     >
       <div
         className={`rounded-lg p-16 w-full h-[${size}] flex justify-center items-center `}
