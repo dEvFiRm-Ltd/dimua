@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react/cjs/react.development';
 import Breadcrumb from '../components/Breadcrumb';
 import url, { topSellingData } from '../components/core/core';
+import Feedback from '../components/Feedback';
 import Hero from '../components/Hero';
 import SingleItem from '../components/SingleItem';
 import Stars from '../components/Stars';
@@ -118,7 +119,7 @@ function SingleBrand() {
           </div>
         </div>
       </div> */}
-      <div className='my-16 py-16 bg-white flex flex-row justify-around'>
+      <div className='my-16 pt-16 pb-[1px] bg-white flex flex-row justify-around'>
         <div className='flex flex-col'>
           <h3 className='font-normal mb-16'>Product Reviews</h3>
           <div className='flex flex-row'>
@@ -142,6 +143,11 @@ function SingleBrand() {
           <Stars count={2} />
           <Stars count={1} />
         </div>
+      </div>
+      <div className=''>
+        <Feedback />
+        <Feedback />
+        <Feedback />
       </div>
     </>
   );
