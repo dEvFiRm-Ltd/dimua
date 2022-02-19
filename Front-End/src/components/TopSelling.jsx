@@ -20,15 +20,24 @@ function TopSelling() {
   return (
     <section className='container bg-topSelling inline-block'>
       <SectionTitle title='Top selling products' slug='top-products' />
-      <div className='flex flex-row'>
+      <div className='flex flex-row flex-wrap'>
         {data.map((item, index) => (
-          <SingleItem
-            key={index}
-            content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
-            size='180px'
-            showDiscount={true}
-          />
+          <div
+            className={`w-1/5 py-8 ${
+              index % 5 === 0 || index === 0
+                ? 'pr-8'
+                : index === count || index % 4 === 0
+                ? 'pl-8'
+                : 'px-8'
+            }`}
+          >
+            <SingleItem
+              key={index}
+              content={item}
+              size='180px'
+              showDiscount={true}
+            />
+          </div>
         ))}
       </div>
     </section>

@@ -78,14 +78,19 @@ function Suggetions() {
         </Slider>
         <div className='absolute bottom-0 left-0 right-0 w-full h-[2px] bg-black/50 opacity-50'></div>
       </div>
-      <div className='w-full flex flex-row mt-16'>
+      <div className='w-full flex flex-wrap flex-row mt-16'>
         {data.map((item, index) => (
-          <SingleItem
-            key={index}
-            content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
-            size='180px'
-          />
+          <div
+            className={`w-1/5 py-8 ${
+              index % 5 === 0 || index === 0
+                ? 'pr-8'
+                : index === count || index % 4 === 0
+                ? 'pl-8'
+                : 'px-8'
+            }`}
+          >
+            <SingleItem key={index} content={item} size='180px' />
+          </div>
         ))}
       </div>
     </section>

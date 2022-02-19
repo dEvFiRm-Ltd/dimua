@@ -18,15 +18,24 @@ function PromoProducts() {
   return (
     <section className='container bg-white'>
       <SectionTitle title='Promotional Products' slug='promo-products' />
-      <div className='flex justify-center pt-16'>
+      <div className='flex justify-center pt-16 flex-wrap '>
         {data.map((item, index) => (
-          <SingleItem
-            key={index}
-            content={item}
-            classes={index === 0 ? 'mr-8' : index === count ? 'ml-8' : 'mx-8'}
-            size='229px'
-            showDiscount={true}
-          />
+          <div
+            className={`w-1/4 py-8 ${
+              index % 4 === 0 || index === 0
+                ? 'pr-8'
+                : index === count || index % 3 === 0
+                ? 'pl-8'
+                : 'px-8'
+            }`}
+          >
+            <SingleItem
+              key={index}
+              content={item}
+              size='229px'
+              showDiscount={true}
+            />
+          </div>
         ))}
       </div>
     </section>
