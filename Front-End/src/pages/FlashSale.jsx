@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
+// import { useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.development';
 import Breadcrumb from '../components/Breadcrumb';
 import { FlashSaleData } from '../components/core/core';
 import Hero from '../components/Hero';
 import Pagination from '../components/Pagination';
-// eslint-disable-next-line
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
 
 function FlashSale() {
-  // eslint-disable-next-line
   const [product, setProduct] = useState([]);
-  // eslint-disable-next-line
   const [productCount, setProductCount] = useState(0);
 
   useEffect(() => {

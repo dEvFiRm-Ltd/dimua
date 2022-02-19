@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// import { useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.development';
 import SectionTitle from './partials/SectionTitle';
 import { FlashSaleData } from './core/core';
 import SingleItem from './SingleItem';

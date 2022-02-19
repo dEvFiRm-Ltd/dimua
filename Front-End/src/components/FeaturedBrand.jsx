@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// import { useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.development';
 import { Link } from 'react-router-dom';
 import url, { FeaturedBrandData } from './core/core';
 import SectionTitle from './partials/SectionTitle';
@@ -18,7 +19,7 @@ function FeaturedBrand() {
 
   return (
     <section className='container bg-white '>
-      <SectionTitle title='Featured brand' slug='featured-brand' />
+      <SectionTitle title='Featured brand' slug='all-brands' />
       <div className='flex flex-row justify-center w-full px-12 py-16 '>
         {data.map((item, index) => (
           <Link

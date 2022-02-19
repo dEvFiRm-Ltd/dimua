@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// import { useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.development';
 import Slider from 'react-slick/lib/slider';
 import { category, topSellingData } from './core/core';
 import SectionTitle from './partials/SectionTitle';

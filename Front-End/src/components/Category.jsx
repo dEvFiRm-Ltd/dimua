@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// import { useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.development';
 import { Link } from 'react-router-dom';
 import { category } from './core/core';
 
