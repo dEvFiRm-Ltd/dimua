@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import { FlashSaleData } from '../components/core/core';
+import { couponData } from '../components/core/core';
+import SingleCoupon from '../components/coupones/SingleCoupon';
 import Hero from '../components/Hero';
 import Pagination from '../components/Pagination';
+import Modal from '../components/partials/Modal';
 // eslint-disable-next-line
 import SingleItem from '../components/SingleItem';
 import TimeLaps from '../components/TimeLaps';
 
-function FlashSale() {
-  // eslint-disable-next-line
-  const [product, setProduct] = useState([]);
-  // eslint-disable-next-line
-  const [productCount, setProductCount] = useState(0);
+function Coupon() {
+  const [coupon, setCoupon] = useState([]);
+  const [couponCount, setCouponCount] = useState(0);
 
   useEffect(() => {
-    setProduct(FlashSaleData);
-    setProductCount(FlashSaleData.length - 1);
+    setCoupon(couponData);
+    setCouponCount(couponData.length - 1);
     return () => {
-      setProductCount(0);
-      setProduct([]);
+      setCoupon([]);
+      setCouponCount(0);
     };
   }, []);
   return (
@@ -31,22 +31,21 @@ function FlashSale() {
           <TimeLaps />
         </div>
         <div className='flex flex-row'>
-          {product.map((item, index) => (
-            <SingleItem
+          {coupon.map((item, index) => (
+            <SingleCoupon
               key={index}
               content={item}
               classes={
-                index === 0 ? 'mr-8' : index === productCount ? 'ml-8' : 'mx-8'
+                index === 0 ? 'mr-8' : index === couponCount ? 'ml-8' : 'mx-8'
               }
-              size='229px'
-              showDiscount={true}
             />
           ))}
         </div>
       </section>
       <Pagination />
+      <Modal />
     </>
   );
 }
 
-export default FlashSale;
+export default Coupon;

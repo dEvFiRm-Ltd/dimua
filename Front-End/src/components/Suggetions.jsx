@@ -40,7 +40,7 @@ function Suggetions() {
   const settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     variableWidth: true,
     swipeToSlide: true,
