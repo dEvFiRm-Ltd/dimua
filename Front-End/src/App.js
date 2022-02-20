@@ -6,6 +6,7 @@ import AllBrands from './pages/AllBrands';
 import Coupon from './pages/Coupon';
 import FlashSale from './pages/FlashSale';
 import Home from './pages/Home';
+import Products from './pages/Products';
 import SingleBrand from './pages/SingleBrand';
 import TopProducts from './pages/TopProducts';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='top-products' element={<TopProducts />} />
         <Route path='all-brands' element={<AllBrands />} />
         <Route path='brand' element={<SingleBrand />} />
+        <Route path='products' element={<Products />} />
         {/* <Route path='/test' element={<Hamburger />} /> */}
       </Routes>
 
