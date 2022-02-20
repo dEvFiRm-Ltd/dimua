@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Hamburger from '../../pages/Test-Area/Hamburger';
+import Hamburger from './Hamburger';
 import url from '../core/core';
 
 function Navigation() {
