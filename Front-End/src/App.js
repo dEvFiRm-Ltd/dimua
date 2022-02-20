@@ -3,6 +3,7 @@ import Footer from './components/partials/Footer';
 import Header from './components/partials/Header';
 import Navigation from './components/partials/Navigation';
 import AllBrands from './pages/AllBrands';
+import Checkout from './pages/Checkout';
 import Coupon from './pages/Coupon';
 import FlashSale from './pages/FlashSale';
 import Home from './pages/Home';
@@ -23,6 +24,7 @@ function App() {
         <Route path='all-brands' element={<AllBrands />} />
         <Route path='brand' element={<SingleBrand />} />
         <Route path='products' element={<Products />} />
+        <Route path='checkout' element={<Checkout />} />
         {/* <Route path='/test' element={<Hamburger />} /> */}
       </Routes>
 
