@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import url from '../components/core/core';
 
 function Profile() {
   return (
     <section className='container m-0 py-16 flex flex-row'>
-      <div className='w-1/3 bg-white py-[23px] rounded-lg '>
+      <div className='w-1/3 bg-white py-[23px] mr-8 rounded-lg '>
         <div className='flex flex-row p-16'>
           <div className='flex w-[80px] flex-col items-center mr-8 '>
             <img
@@ -43,7 +43,7 @@ function Profile() {
               alt=''
               className='w-20 h-20 mr-8'
             />{' '}
-            Account Information
+            Billing Information
           </Link>
           <Link
             to=''
@@ -54,7 +54,7 @@ function Profile() {
               alt=''
               className='w-20 h-20 mr-8'
             />{' '}
-            Account Information
+            My Orders
           </Link>
           <Link
             to=''
@@ -65,31 +65,12 @@ function Profile() {
               alt=''
               className='w-20 h-20 mr-8'
             />{' '}
-            Account Information
-          </Link>
-          <Link
-            to=''
-            className='w-full py-10 px-16 mb-4 flex flex-row items-center transition hover:bg-ash '
-          >
-            <img
-              src={`${url}/img/icon.png`}
-              alt=''
-              className='w-20 h-20 mr-8'
-            />{' '}
-            Account Information
-          </Link>
-          <Link
-            to=''
-            className='w-full py-10 px-16 mb-4 flex flex-row items-center transition hover:bg-ash '
-          >
-            <img
-              src={`${url}/img/icon.png`}
-              alt=''
-              className='w-20 h-20 mr-8'
-            />{' '}
-            Account Information
+            Ratings &amp; Reviews
           </Link>
         </div>
+      </div>
+      <div className='w-2/3 ml-8 rounded-lg bg-white'>
+        <Outlet />
       </div>
     </section>
   );
