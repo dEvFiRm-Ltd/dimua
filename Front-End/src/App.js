@@ -4,12 +4,16 @@ import Header from './components/partials/Header';
 import Navigation from './components/partials/Navigation';
 import AllBrands from './pages/AllBrands';
 import Checkout from './pages/Checkout';
+import CompanyInformation from './pages/BrandInformation';
 import Coupon from './pages/Coupon';
 import FlashSale from './pages/FlashSale';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import SingleBrand from './pages/SingleBrand';
 import TopProducts from './pages/TopProducts';
+import BrandProducts from './pages/BrandProducts';
+import BrandReviews from './pages/BrandReviews';
+import OrderSuccess from './pages/OrderSuccess';
 
 function App() {
   return (
@@ -22,9 +26,15 @@ function App() {
         <Route path='coupons' element={<Coupon />} />
         <Route path='top-products' element={<TopProducts />} />
         <Route path='all-brands' element={<AllBrands />} />
-        <Route path='brand' element={<SingleBrand />} />
+        <Route path='brand' element={<SingleBrand />}>
+          <Route index element={<CompanyInformation />} />
+          <Route index path='information' element={<CompanyInformation />} />
+          <Route path='products' element={<BrandProducts />} />
+          <Route path='reviews' element={<BrandReviews />} />
+        </Route>
         <Route path='products' element={<Products />} />
         <Route path='checkout' element={<Checkout />} />
+        <Route path='success' element={<OrderSuccess />} />
         {/* <Route path='/test' element={<Hamburger />} /> */}
       </Routes>
 
