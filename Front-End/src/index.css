@@ -73,7 +73,7 @@
   .btn-white.active {
     @apply bg-green text-white border-0;
   }
-  .btn-green {
+  .btngreen {
     @apply bg-green text-white rounded py-10 text-center capitalize;
   }
   .pagination {

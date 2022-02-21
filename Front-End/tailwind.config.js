@@ -75,5 +75,5 @@ module.exports = {
       20: '20px',
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 };
