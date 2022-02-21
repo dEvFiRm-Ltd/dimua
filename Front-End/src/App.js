@@ -14,6 +14,8 @@ import TopProducts from './pages/TopProducts';
 import BrandProducts from './pages/BrandProducts';
 import BrandReviews from './pages/BrandReviews';
 import OrderSuccess from './pages/OrderSuccess';
+import OrderFailed from './pages/OrderFailed';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -35,7 +37,8 @@ function App() {
         <Route path='products' element={<Products />} />
         <Route path='checkout' element={<Checkout />} />
         <Route path='success' element={<OrderSuccess />} />
-        {/* <Route path='/test' element={<Hamburger />} /> */}
+        <Route path='failed' element={<OrderFailed />} />
+        <Route path='user' element={<Profile />} />
       </Routes>
 
       <Footer />

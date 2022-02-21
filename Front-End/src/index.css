@@ -67,13 +67,13 @@
 
 /* Custom Classes */
 @layer components {
-  .btn-white {
+  .btnWhite {
     @apply bg-white text-black border border-solid border-green rounded py-10 text-center;
   }
-  .btn-white.active {
+  .btnWhite.active {
     @apply bg-green text-white border-0;
   }
-  .btngreen {
+  .btnGreen {
     @apply bg-green text-white rounded py-10 text-center capitalize;
   }
   .pagination {
