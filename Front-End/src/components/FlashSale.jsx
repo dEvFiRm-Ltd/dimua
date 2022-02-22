@@ -29,6 +29,7 @@ function FlashSale() {
       <div className='flex justify-center flex-wrap px-8'>
         {data.map((item, index) => (
           <div
+            key={index}
             className={`w-1/4 py-8 ${
               index % 4 === 0 || index === 0
                 ? 'pr-8'

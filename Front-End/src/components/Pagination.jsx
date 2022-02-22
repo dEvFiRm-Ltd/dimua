@@ -2,7 +2,7 @@ import React from 'react';
 
 function Pagination() {
   return (
-    <section className='container m-0 py-[36px] flex flex-row justify-between items-center '>
+    <section className='container m-0 py-36 flex flex-row justify-between items-center '>
       <button className='pagination indicators'>
         <i class='fa-solid fa-arrow-left'></i> Previous
       </button>

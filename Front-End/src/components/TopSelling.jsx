@@ -23,6 +23,7 @@ function TopSelling() {
       <div className='flex flex-row flex-wrap'>
         {data.map((item, index) => (
           <div
+            key={index}
             className={`w-1/5 py-8 ${
               index % 5 === 0 || index === 0
                 ? 'pr-8'

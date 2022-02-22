@@ -14,7 +14,7 @@ function Navigation() {
           <img src={`${url}/img/logo.svg`} alt='' className='img' />
         </Link>
       </div>
-      <div className='w-[605px] h-[36px] block m-12 relative '>
+      <div className='w-[605px] h-36 block m-12 relative '>
         <input
           type='text'
           name=''

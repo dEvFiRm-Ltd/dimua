@@ -21,6 +21,7 @@ function PromoProducts() {
       <div className='flex justify-center pt-16 flex-wrap '>
         {data.map((item, index) => (
           <div
+            key={index}
             className={`w-1/4 py-8 ${
               index % 4 === 0 || index === 0
                 ? 'pr-8'

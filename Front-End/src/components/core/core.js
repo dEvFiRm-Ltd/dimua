@@ -52,6 +52,58 @@ export const category = [
     slug: 'mother-baby',
   },
 ];
+export const categoryTwo = [
+  {
+    icon: `${process.env.PUBLIC_URL}/img/fashion.png`,
+    title: 'Fashion02Accessory',
+    slug: 'fashion-accessory',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/care.png`,
+    title: 'Care02House',
+    slug: 'care-house',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/children.png`,
+    title: 'Fashion02Children',
+    slug: 'fashion-children',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/equipment.png`,
+    title: 'Equipment02Appliance',
+    slug: 'equipment-appliance',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/mother.png`,
+    title: 'Mother02&02baby',
+    slug: 'mother-baby',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/fashion.png`,
+    title: 'Fashion02Accessory',
+    slug: 'fashion-accessory',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/care.png`,
+    title: 'Care02ouse',
+    slug: 'care-house',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/children.png`,
+    title: 'Fashion02hildren',
+    slug: 'fashion-children',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/equipment.png`,
+    title: 'Equipme02ppliance',
+    slug: 'equipment-appliance',
+  },
+  {
+    icon: `${process.env.PUBLIC_URL}/img/mother.png`,
+    title: 'Moth02by',
+    slug: 'mother-baby',
+  },
+];
 
 export const headerData = [
   {
