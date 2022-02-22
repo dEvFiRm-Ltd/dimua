@@ -58,7 +58,7 @@ function Suggetions() {
         <Slider {...settings} className=' px-16'>
           <button
             value=''
-            className='p-16 border-none bg-transparent text-2xl leading-[24px] font-bold capitalize relative'
+            className='p-16 border-none bg-transparent text-2xl leading-24 font-bold capitalize relative'
             type='button'
             defaultChecked
           >
@@ -69,7 +69,7 @@ function Suggetions() {
             <button
               value={item.slug}
               key={index}
-              className='p-16 border-none bg-transparent text-2xl leading-[24px] capitalize'
+              className='p-16 border-none bg-transparent text-2xl leading-24 capitalize'
               type='button'
             >
               {item.title}

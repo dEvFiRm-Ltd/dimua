@@ -35,7 +35,7 @@ function AllBrands() {
           <Slider {...settings}>
             <button
               value=''
-              className='p-16 border-none bg-transparent text-2xl leading-[24px] font-bold capitalize relative'
+              className='p-16 border-none bg-transparent text-2xl leading-24 font-bold capitalize relative'
               type='button'
               defaultChecked
             >
@@ -46,7 +46,7 @@ function AllBrands() {
               <button
                 value={item.slug}
                 key={index}
-                className='p-16 border-none bg-transparent text-2xl leading-[24px] capitalize'
+                className='p-16 border-none bg-transparent text-2xl leading-24 capitalize'
                 type='button'
               >
                 {item.title}
@@ -68,19 +68,19 @@ function AllBrands() {
         <div className='w-1/3 px-8'>
           <Link
             to='/brand'
-            className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
+            className='rounded-lg my-16 w-full px-24 py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
-              <div className='mr-[24px] w-[50px] h-[50px] '>
+              <div className='mr-24 w-[50px] h-[50px] '>
                 <img
                   src={`${url}/img/McDonalds-Icon.png`}
                   alt=''
                   className=' w-full h-full '
                 />
               </div>
-              <div className='flex flex-col mr-[24px]'>
-                <h3 className='mb-4 leading-[150%] font-medium'>McDonalds</h3>
-                <h5 className='leading-[150%] font-normal'>30 Products</h5>
+              <div className='flex flex-col mr-24'>
+                <h3 className='mb-4 leading-150 font-medium'>McDonalds</h3>
+                <h5 className='leading-150 font-normal'>30 Products</h5>
               </div>
             </div>
             <i className='fa-solid fa-angle-right'></i>
@@ -89,19 +89,19 @@ function AllBrands() {
         <div className='w-1/3 px-8'>
           <Link
             to='/brand'
-            className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
+            className='rounded-lg my-16 w-full px-24 py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
-              <div className='mr-[24px] w-[50px] h-[50px] '>
+              <div className='mr-24 w-[50px] h-[50px] '>
                 <img
                   src={`${url}/img/McDonalds-Icon.png`}
                   alt=''
                   className=' w-full h-full '
                 />
               </div>
-              <div className='flex flex-col mr-[24px]'>
-                <h3 className='mb-4 leading-[150%] font-medium'>McDonalds</h3>
-                <h5 className='leading-[150%] font-normal'>30 Products</h5>
+              <div className='flex flex-col mr-24'>
+                <h3 className='mb-4 leading-150 font-medium'>McDonalds</h3>
+                <h5 className='leading-150 font-normal'>30 Products</h5>
               </div>
             </div>
             <i className='fa-solid fa-angle-right'></i>
@@ -110,19 +110,19 @@ function AllBrands() {
         <div className='w-1/3 px-8'>
           <Link
             to='/brand'
-            className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
+            className='rounded-lg my-16 w-full px-24 py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
-              <div className='mr-[24px] w-[50px] h-[50px] '>
+              <div className='mr-24 w-[50px] h-[50px] '>
                 <img
                   src={`${url}/img/McDonalds-Icon.png`}
                   alt=''
                   className=' w-full h-full '
                 />
               </div>
-              <div className='flex flex-col mr-[24px]'>
-                <h3 className='mb-4 leading-[150%] font-medium'>McDonalds</h3>
-                <h5 className='leading-[150%] font-normal'>30 Products</h5>
+              <div className='flex flex-col mr-24'>
+                <h3 className='mb-4 leading-150 font-medium'>McDonalds</h3>
+                <h5 className='leading-150 font-normal'>30 Products</h5>
               </div>
             </div>
             <i className='fa-solid fa-angle-right'></i>
@@ -131,19 +131,19 @@ function AllBrands() {
         <div className='w-1/3 px-8'>
           <Link
             to='/brand'
-            className='rounded-lg my-16 w-full px-[24px] py-12 flex flex-row bg-white items-center justify-between'
+            className='rounded-lg my-16 w-full px-24 py-12 flex flex-row bg-white items-center justify-between'
           >
             <div className='flex flex-row'>
-              <div className='mr-[24px] w-[50px] h-[50px] '>
+              <div className='mr-24 w-[50px] h-[50px] '>
                 <img
                   src={`${url}/img/McDonalds-Icon.png`}
                   alt=''
                   className=' w-full h-full '
                 />
               </div>
-              <div className='flex flex-col mr-[24px]'>
-                <h3 className='mb-4 leading-[150%] font-medium'>McDonalds</h3>
-                <h5 className='leading-[150%] font-normal'>30 Products</h5>
+              <div className='flex flex-col mr-24'>
+                <h3 className='mb-4 leading-150 font-medium'>McDonalds</h3>
+                <h5 className='leading-150 font-normal'>30 Products</h5>
               </div>
             </div>
             <i className='fa-solid fa-angle-right'></i>

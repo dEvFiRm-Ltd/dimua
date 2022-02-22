@@ -22,7 +22,7 @@ function Prices({ classes, minPrice, maxPrice }) {
             : ` From ${minPrice} to ${maxPrice}`}{' '}
         </h5>
       </label>
-      <i class=' text-green absolute right-[14px] top-10 fa-solid fa-check scale-0 opacity-0 transition-all ease-in-out peer-checked:scale-[1] peer-checked:opacity-[1] '></i>
+      <i class=' text-green absolute right-14 top-10 fa-solid fa-check scale-0 opacity-0 transition-all ease-in-out peer-checked:scale-[1] peer-checked:opacity-[1] '></i>
     </div>
   );
 }

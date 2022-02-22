@@ -3,9 +3,9 @@ import React from 'react';
 function CheckoutForm() {
   return (
     <div className='flex-wrap w-[50%] pr-6 '>
-      <div className='flex flex-col w-full h-[950px] p-[24px] bg-white overflow-y-scroll '>
+      <div className='flex flex-col w-full h-[950px] p-24 bg-white overflow-y-scroll '>
         <div className='mb-16 flex justify-start items-center '>
-          <h2 className='leading-[150%] font-semibold'>Buyer Information</h2>
+          <h2 className='leading-150 font-semibold'>Buyer Information</h2>
         </div>
         {/* form-group  */}
         <div className='mb-16 flex flex-col justify-start '>
@@ -84,8 +84,8 @@ function CheckoutForm() {
         </div>
         <div className='mt-16 flex flex-col '>
           <div className='mb-8 flex flex-row '>
-            <h5 className='leading-[150%] '>Total: </h5>{' '}
-            <h2 className='leading-[150%] font-bold text-red'>1500$</h2>
+            <h5 className='leading-150 '>Total: </h5>{' '}
+            <h2 className='leading-150 font-bold text-red'>1500$</h2>
           </div>
           <button className='w-full text-center py-12 btngreen '>
             {' '}

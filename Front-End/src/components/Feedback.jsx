@@ -3,7 +3,7 @@ import url from './core/core';
 
 function Feedback() {
   return (
-    <div className='p-[24px] bg-white flex flex-row justify-between '>
+    <div className='p-24 bg-white flex flex-row justify-between '>
       <div className='flex flex-row '>
         <div className='w-[48px] h-[48px] mr-16 rounded-[50%] overflow-hidden '>
           <img src={`${url}/img/user.jpg`} alt='' className=' w-full h-full ' />
@@ -30,42 +30,42 @@ function Feedback() {
           </button>
         </div>
         <div className='flex flex-row '>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
-          <div className='w-[60px] h-[60px] mr-10 '>
+          <div className='w-60 h-60 mr-10 '>
             <img
               src={`${url}/img/item.jpg`}
               alt=''

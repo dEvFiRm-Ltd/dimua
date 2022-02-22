@@ -6,7 +6,7 @@ function BlankCheckout() {
   return (
     <div className='flex-wrap w-[50%] pr-6 '>
       <div className='flex flex-col w-full h-[950px] p-16 bg-white overflow-y-scroll pt-[80px] '>
-        <div className='flex items-center flex-col w-full mb-[32px] '>
+        <div className='flex items-center flex-col w-full mb-32 '>
           <img
             src={`${url}/img/cart.svg`}
             alt=''

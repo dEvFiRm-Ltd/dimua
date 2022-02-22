@@ -16,6 +16,7 @@ import BrandReviews from './pages/BrandReviews';
 import OrderSuccess from './pages/OrderSuccess';
 import OrderFailed from './pages/OrderFailed';
 import Profile from './pages/Profile';
+import ProfileDashboard from './pages/ProfileDashboard';
 
 function App() {
   return (
@@ -38,7 +39,10 @@ function App() {
         <Route path='checkout' element={<Checkout />} />
         <Route path='success' element={<OrderSuccess />} />
         <Route path='failed' element={<OrderFailed />} />
-        <Route path='user' element={<Profile />} />
+        <Route path='user' element={<Profile />}>
+          <Route index element={<ProfileDashboard />} />
+          <Route path='update' element={<ProfileDashboard />} />
+        </Route>
       </Routes>
 
       <Footer />

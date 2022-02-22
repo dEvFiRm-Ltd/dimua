@@ -4,9 +4,9 @@ import url from '../core/core';
 function Footer() {
   return (
     <>
-      <section className='container flex flex-row mb-8 bg-ash py-[30px]'>
+      <section className='container flex flex-row mb-8 bg-ash py-30'>
         <div className='flex flex-col w-1/4'>
-          <h5 className='leading-[150%] uppercase mb-16'>HELP CUSTOMERS</h5>
+          <h5 className='leading-150 uppercase mb-16'>HELP CUSTOMERS</h5>
           <p className='leading-6 text-left capitalize mb-10'>Shopping guide</p>
           <p className='leading-6 text-left capitalize mb-10'>Payment</p>
           <p className='leading-6 text-left capitalize mb-10'>Transport</p>
@@ -21,7 +21,7 @@ function Footer() {
           </p>
         </div>
         <div className='flex flex-col w-1/4'>
-          <h5 className='leading-[150%] uppercase mb-16'>Company area</h5>
+          <h5 className='leading-150 uppercase mb-16'>Company area</h5>
           <p className='leading-6 text-left capitalize mb-10'>About Us</p>
           <p className='leading-6 text-left capitalize mb-10'>Privacy Policy</p>
           <p className='leading-6 text-left capitalize mb-10'>
@@ -32,7 +32,7 @@ function Footer() {
           <p className='leading-6 text-left capitalize mb-10'>Contact</p>
         </div>
         <div className='flex flex-col w-1/4'>
-          <h5 className='leading-[150%] uppercase mb-16'>Connect with Us </h5>
+          <h5 className='leading-150 uppercase mb-16'>Connect with Us </h5>
           <div className='text-left flex flex-row items-center mb-10 '>
             <i className=' text-3xl fa-brands fa-facebook-square'></i>{' '}
             <p className='leading-6 capitalize ml-10 '>facebook</p>
@@ -51,7 +51,7 @@ function Footer() {
           </div>
         </div>
         <div className='flex flex-col w-1/4'>
-          <h5 className='leading-[150%] uppercase mb-16'>Downloads</h5>
+          <h5 className='leading-150 uppercase mb-16'>Downloads</h5>
           <a href='!' target='_blank' className='mb-10'>
             <img src={`${url}/img/play-store.jpg`} alt='' className='' />
           </a>

@@ -10,9 +10,9 @@ function FilterBar() {
   return (
     <div className='flex flex-wrap w-full bg-white '>
       <div className='px-16 flex-col '>
-        <h3 className='my-12 leading-[120%] font-semibold '>Product filter</h3>
-        <div className='pb-[30px] '>
-          <h5 className='leading-[120%] mb-12'>Delivery Location</h5>
+        <h3 className='my-12 leading-120 font-semibold '>Product filter</h3>
+        <div className='pb-30 '>
+          <h5 className='leading-120 mb-12'>Delivery Location</h5>
           {/* checkbox */}
           <Location data='dhaka' type='checkbox' classes='mb-12' />
           <Location data='narayanganj' type='checkbox' classes='mb-12' />
@@ -31,20 +31,20 @@ function FilterBar() {
             ></i>
           </button>
         </div>
-        <div className='pb-[30px] '>
-          <h5 className='leading-[120%] mb-12'>Evaluate</h5>
+        <div className='pb-30 '>
+          <h5 className='leading-120 mb-12'>Evaluate</h5>
           {/* checkbox */}
           <Evaluate classes='mb-12' stars='5' />
           <Evaluate classes='mb-12' stars='4' />
           <Evaluate classes='mb-12' stars='3' />
         </div>
-        <div className='pb-[30px] '>
-          <h5 className='leading-[120%] mb-12'>Evaluate</h5>
+        <div className='pb-30 '>
+          <h5 className='leading-120 mb-12'>Evaluate</h5>
           {/* checkbox */}
           <Prices classes='mb-12' minPrice='500' />
           <Prices classes='mb-12' minPrice='500' maxPrice='1000' />
           <Prices classes='mb-19' maxPrice='5000' />
-          <h5 className='leading-[120%] mb-10'>Choose Price Range</h5>
+          <h5 className='leading-120 mb-10'>Choose Price Range</h5>
           <div className='flex flex-row justify-between items-center mb-19'>
             <input
               type='text'
@@ -63,7 +63,7 @@ function FilterBar() {
             Apply
           </button>
         </div>
-        <div className='pb-[30px] '></div>
+        <div className='pb-30 '></div>
       </div>
     </div>
   );

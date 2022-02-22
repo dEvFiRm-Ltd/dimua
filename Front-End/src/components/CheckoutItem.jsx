@@ -14,7 +14,7 @@ function CheckoutItem() {
             />
           </div>
           <div className='flex flex-col w-[265px] justify-start '>
-            <h3 className='leading-[150%] font-normal '>
+            <h3 className='leading-150 font-normal '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur, rerum?{' '}
             </h3>
@@ -22,19 +22,19 @@ function CheckoutItem() {
         </div>
       </div>
       <div className='flex justify-between'>
-        <h5 className='leading-[140%] font-semibold '>Transport Fee</h5>
-        <h5 className='leading-[140%] font-semibold '>60$</h5>
+        <h5 className='leading-140 font-semibold '>Transport Fee</h5>
+        <h5 className='leading-140 font-semibold '>60$</h5>
       </div>
       <div className='flex justify-between'>
-        <h5 className='leading-[140%] font-semibold '>Unit Price</h5>
-        <h5 className='leading-[140%] font-semibold '>90$</h5>
+        <h5 className='leading-140 font-semibold '>Unit Price</h5>
+        <h5 className='leading-140 font-semibold '>90$</h5>
       </div>
       <div className='flex justify-start my-20'>
-        <button className='w-[30px] h-[30px] border border-ash active:bg-slate-300 rounded-tl rounded-bl '>
+        <button className='w-30 h-30 border border-ash active:bg-slate-300 rounded-tl rounded-bl '>
           -
         </button>
-        <input type='text' value='1' className='w-[45px] border-ash h-[30px]' />
-        <button className='w-[30px] h-[30px] border border-ash active:bg-slate-300 rounded-tr rounded-br '>
+        <input type='text' value='1' className='w-[45px] border-ash h-30' />
+        <button className='w-30 h-30 border border-ash active:bg-slate-300 rounded-tr rounded-br '>
           +
         </button>
       </div>

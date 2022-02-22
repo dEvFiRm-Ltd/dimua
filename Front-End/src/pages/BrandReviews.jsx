@@ -10,8 +10,8 @@ function BrandReviews() {
           <h3 className='font-normal mb-16'>Product Reviews</h3>
           <div className='flex flex-row'>
             <div className='flex flex-row mr-16'>
-              <h2 className='text-[30px] font-semibold text-[#767676] '>5/</h2>
-              <h2 className='text-[24px] font-semibold text-[#767676] '>5</h2>
+              <h2 className='text-30 font-semibold text-[#767676] '>5/</h2>
+              <h2 className='text-24 font-semibold text-[#767676] '>5</h2>
             </div>
             <div className='flex flex-row text-yellow '>
               <i class='fa-solid fa-star'></i>

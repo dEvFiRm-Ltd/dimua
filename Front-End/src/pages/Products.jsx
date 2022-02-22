@@ -25,7 +25,7 @@ function Products() {
         <div className='flex-wrap w-[69%] pr-6 '>
           <div className='flex flex-col bg-white'>
             <div className='py-12 px-16 flex justify-start items-center '>
-              <h5 className='font-semibold leading-[120%] '>
+              <h5 className='font-semibold leading-120 '>
                 Fashion Accessories
               </h5>
             </div>
