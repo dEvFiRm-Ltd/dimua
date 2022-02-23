@@ -20,8 +20,12 @@ function Home() {
       <FlashSale />
       <Coupons />
       <TopSelling />
-      <Link to={'/'} className=' h-[110px] my-8 inline-block '>
-        <img src={`${url}/img/advertise.jpg`} alt='' className='w-[full]' />
+      <Link to={'/'} className=' container my-8 p-0 '>
+        <img
+          src={`${url}/img/advertise.jpg`}
+          alt=''
+          className='w-full object-contain'
+        />
       </Link>
       <FeaturedBrand />
       <PromoProducts />

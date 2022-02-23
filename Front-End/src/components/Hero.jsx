@@ -13,7 +13,7 @@ function Hero() {
     slidesToScroll: 1,
   };
   return (
-    <section className='container p-0 h-[300px] m-0'>
+    <section className='container p-0 h-[300px] my-0'>
       <Slider {...settings}>
         <div className='h-[300px] bg-white block'>
           <img

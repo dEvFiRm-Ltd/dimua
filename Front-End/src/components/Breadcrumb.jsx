@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Breadcrumb() {
   return (
-    <section className='container m-0 py-16 flex flex-row'>
+    <section className='container my-0 py-16 flex flex-row'>
       <Link to='/' className=''>
         <h5 className=' leading-120 font-normal'> Home </h5>
       </Link>

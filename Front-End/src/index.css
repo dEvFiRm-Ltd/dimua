@@ -89,6 +89,6 @@
     @apply bg-green text-white hover:border-green;
   }
   .container {
-    @apply my-8 pb-16 inline-block;
+    @apply my-8 pb-16 block;
   }
 }

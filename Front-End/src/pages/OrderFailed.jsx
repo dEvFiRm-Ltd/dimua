@@ -3,7 +3,7 @@ import url from '../components/core/core';
 
 function OrderFailed() {
   return (
-    <section className='container m-0 py-16 flex'>
+    <section className='container my-0 py-16 flex'>
       <div className='w-full bg-white p-32 flex flex-col items-center'>
         <div className='w-[110px] h-[110px] rounded-[50%] mb-30 '>
           <img src={`${url}/img/failed.png`} alt='' className='' />

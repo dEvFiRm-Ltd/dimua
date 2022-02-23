@@ -18,7 +18,7 @@ function TopSelling() {
   }, []);
 
   return (
-    <section className='container bg-topSelling inline-block'>
+    <section className='container bg-topSelling'>
       <SectionTitle title='Top selling products' slug='top-products' />
       <div className='flex flex-row flex-wrap'>
         {data.map((item, index) => (

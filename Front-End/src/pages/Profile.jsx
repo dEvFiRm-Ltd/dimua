@@ -4,7 +4,7 @@ import ProfileSidebar from '../components/ProfileSidebar';
 
 function Profile() {
   return (
-    <section className='container m-0 py-16 flex flex-row'>
+    <section className='container my-0 py-16 flex flex-row'>
       <div className='w-1/3 bg-white py-[23px] mr-8 rounded-lg '>
         <ProfileSidebar />
       </div>
