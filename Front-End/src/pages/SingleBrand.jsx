@@ -1,7 +1,7 @@
 import { Link, Outlet } from 'react-router-dom';
-import Breadcrumb from '../components/Breadcrumb';
-import url from '../components/core/core';
-import Hero from '../components/Hero';
+import Breadcrumb from '../components/UserPanel/Breadcrumb';
+import url from '../components/UserPanel/core/core';
+import Hero from '../components/UserPanel/Hero';
 
 function SingleBrand() {
   return (

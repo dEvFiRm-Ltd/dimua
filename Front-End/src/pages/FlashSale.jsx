@@ -1,11 +1,11 @@
 // import { useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-import Breadcrumb from '../components/Breadcrumb';
-import { FlashSaleData } from '../components/core/core';
-import Hero from '../components/Hero';
-import Pagination from '../components/Pagination';
-import SingleItem from '../components/SingleItem';
-import TimeLaps from '../components/TimeLaps';
+import Breadcrumb from '../components/UserPanel/Breadcrumb';
+import { FlashSaleData } from '../components/UserPanel/core/core';
+import Hero from '../components/UserPanel/Hero';
+import Pagination from '../components/UserPanel/Pagination';
+import SingleItem from '../components/UserPanel/SingleItem';
+import TimeLaps from '../components/UserPanel/TimeLaps';
 
 function FlashSale() {
   const [product, setProduct] = useState([]);

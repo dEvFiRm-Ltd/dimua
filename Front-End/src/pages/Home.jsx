@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Category from '../components/Category';
-import url from '../components/core/core';
-import Coupons from '../components/coupones/Coupons';
-import FeaturedBrand from '../components/FeaturedBrand';
-import FlashSale from '../components/FlashSale';
-import Hero from '../components/Hero';
-import HotComponent from '../components/HotComponent';
-import PromoProducts from '../components/PromoProducts';
-import Suggetions from '../components/Suggetions';
-import TopSelling from '../components/TopSelling';
+import Category from '../components/UserPanel/Category';
+import url from '../components/UserPanel/core/core';
+import Coupons from '../components/UserPanel/coupones/Coupons';
+import FeaturedBrand from '../components/UserPanel/FeaturedBrand';
+import FlashSale from '../components/UserPanel/FlashSale';
+import Hero from '../components/UserPanel/Hero';
+import HotComponent from '../components/UserPanel/HotComponent';
+import PromoProducts from '../components/UserPanel/PromoProducts';
+import Suggetions from '../components/UserPanel/Suggetions';
+import TopSelling from '../components/UserPanel/TopSelling';
 
 function Home() {
   return (

@@ -1,14 +1,14 @@
 // import { useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-import Breadcrumb from '../components/Breadcrumb';
-import { couponData } from '../components/core/core';
-import SingleCoupon from '../components/coupones/SingleCoupon';
-import Hero from '../components/Hero';
-import Pagination from '../components/Pagination';
-import Modal from '../components/partials/Modal';
+import Breadcrumb from '../components/UserPanel/Breadcrumb';
+import { couponData } from '../components/UserPanel/core/core';
+import SingleCoupon from '../components/UserPanel/coupones/SingleCoupon';
+import Hero from '../components/UserPanel/Hero';
+import Pagination from '../components/UserPanel/Pagination';
+import Modal from '../components/UserPanel/partials/Modal';
 // eslint-disable-next-line
-import SingleItem from '../components/SingleItem';
-import TimeLaps from '../components/TimeLaps';
+import SingleItem from '../components/UserPanel/SingleItem';
+import TimeLaps from '../components/UserPanel/TimeLaps';
 
 function Coupon() {
   const [coupon, setCoupon] = useState([]);

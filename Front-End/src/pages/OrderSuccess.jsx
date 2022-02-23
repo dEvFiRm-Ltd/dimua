@@ -1,5 +1,5 @@
 import React from 'react';
-import url from '../components/core/core';
+import url from '../components/UserPanel/core/core';
 
 function OrderSuccess() {
   return (

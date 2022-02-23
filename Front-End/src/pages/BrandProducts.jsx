@@ -1,7 +1,7 @@
 // import { useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-import { topSellingData } from '../components/core/core';
-import SingleItem from '../components/SingleItem';
+import { topSellingData } from '../components/UserPanel/core/core';
+import SingleItem from '../components/UserPanel/SingleItem';
 
 function BrandProducts() {
   const [data, setData] = useState([]);
