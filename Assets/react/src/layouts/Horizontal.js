@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Container } from 'reactstrap';
 import { connect } from 'react-redux';
 
@@ -12,58 +12,43 @@ const Navbar = React.lazy(() => import('../components/Navbar'));
 const Footer = React.lazy(() => import('../components/Footer'));
 const loading = () => <div className='text-center'></div>;
 
-class HorizontalLayout extends Component {
-  constructor(props) {
-    super(props);
+const HorizontalLayout = (props) => {
+  const [isMenuOpened, setMenuOpened] = useState(false);
 
-    this.openMenu = this.openMenu.bind(this);
-    this.state = {
-      isMenuOpened: false,
-    };
-  }
-
-  /**
-   *
-   */
-  componentDidMount = () => {
-    this.props.changeLayout(layoutConstants.LAYOUT_HORIZONTAL);
-  };
+  useEffect(() => {
+    props.changeLayout(layoutConstants.LAYOUT_HORIZONTAL);
+  }, [props]);
 
   /**
    * Opens the menu - mobile
    */
-  openMenu = (e) => {
+  const openMenu = (e) => {
     e.preventDefault();
-    this.setState({ isMenuOpened: !this.state.isMenuOpened });
+    setMenuOpened(!isMenuOpened);
   };
+  const children = props.children || null;
 
-  render() {
-    // get the child view which we would like to render
-    const children = this.props.children || null;
-    return (
-      <React.Fragment>
-        <div id='wrapper'>
-          <Suspense fallback={loading()}>
-            <Topbar openLeftMenuCallBack={this.openMenu} {...this.props} />
-          </Suspense>
-          <Suspense fallback={loading()}>
-            <Navbar isMenuOpened={this.state.isMenuOpened} {...this.props} />
-          </Suspense>
+  return (
+    <div id='wrapper'>
+      <Suspense fallback={loading()}>
+        <Topbar openLeftMenuCallBack={openMenu} {...props} />
+      </Suspense>
+      <Suspense fallback={loading()}>
+        <Navbar isMenuOpened={isMenuOpened} {...props} />
+      </Suspense>
 
-          <div className='content-page'>
-            <div className='content'>
-              <Container fluid>
-                <Suspense fallback={loading()}>{children}</Suspense>
-              </Container>
-            </div>
-
-            <Footer />
-          </div>
+      <div className='content-page'>
+        <div className='content'>
+          <Container fluid>
+            <Suspense fallback={loading()}>{children}</Suspense>
+          </Container>
         </div>
-      </React.Fragment>
-    );
-  }
-}
+
+        <Footer />
+      </div>
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
