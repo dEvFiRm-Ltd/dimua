@@ -1,5 +1,5 @@
 // @flow
-import React, { Component, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { connect } from 'react-redux';
 
 import { isUserAuthenticated } from '../helpers/authUtils';
@@ -14,54 +14,48 @@ const AuthLayout = React.lazy(() => import('../layouts/Auth'));
 const VerticalLayout = React.lazy(() => import('../layouts/Vertical'));
 const HorizontalLayout = React.lazy(() => import('../layouts/Horizontal'));
 
-
 /**
  * Exports the component with layout wrapped to it
  * @param {} WrappedComponent
  */
 const withLayout = (WrappedComponent) => {
-    const HOC = class extends Component {
-        /**
-         * Returns the layout component based on different properties
-         */
-        getLayout = () => {
-            if (!isUserAuthenticated()) return AuthLayout;
+  const HOC = (props) => {
+    /**
+     * Returns the layout component based on different properties
+     */
+    const getLayout = () => {
+      if (!isUserAuthenticated()) return AuthLayout;
 
-            let layoutCls = VerticalLayout;
+      let layoutCls = VerticalLayout;
 
-            switch (this.props.layout.layoutType) {
-                case layoutConstants.LAYOUT_HORIZONTAL:
-                    layoutCls = HorizontalLayout;
-                    break;
-                default:
-                    layoutCls = VerticalLayout;
-                    break;
-            }
-            return layoutCls;
-        };
-
-        render() {
-            const Layout = this.getLayout();
-            return (
-                <Suspense fallback={loading()}>
-                    <Layout {...this.props}>
-                        <WrappedComponent {...this.props} />
-                    </Layout>
-                </Suspense>
-            );
-        }
+      switch (props.layout.layoutType) {
+        case layoutConstants.LAYOUT_HORIZONTAL:
+          layoutCls = HorizontalLayout;
+          break;
+        default:
+          layoutCls = VerticalLayout;
+          break;
+      }
+      return layoutCls;
     };
 
-    const mapStateToProps = state => {
-        return {
-            layout: state.Layout,
-        };
-    };
+    const Layout = getLayout();
+    return (
+      <Suspense fallback={loading()}>
+        <Layout {...props}>
+          <WrappedComponent {...props} />
+        </Layout>
+      </Suspense>
+    );
+  };
 
-    return connect(
-        mapStateToProps,
-        null
-    )(HOC);
+  const mapStateToProps = (state) => {
+    return {
+      layout: state.Layout,
+    };
+  };
+
+  return connect(mapStateToProps, null)(HOC);
 };
 
 export default withLayout;
