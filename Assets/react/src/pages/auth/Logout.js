@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 import { logoutUser } from '../../redux/actions';
 
-class Logout extends Component {
+const Logout = (props) => {
+  useEffect(() => {
+    props.logoutUser(props.history);
+  }, [props]);
 
-    componentDidMount() {
-        this.props.logoutUser(this.props.history);
-    }
-
-    render() {
-        return (<React.Fragment>
-        </React.Fragment>)
-    }
-}
+  return <React.Fragment></React.Fragment>;
+};
 
 export default withRouter(connect(null, { logoutUser })(Logout));
