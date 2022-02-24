@@ -5,16 +5,11 @@ import { connect } from 'react-redux';
 
 import { changeSidebarTheme, changeSidebarType } from '../redux/actions';
 import * as layoutConstants from '../constants/layout';
-
-import ThemeCustomizer from '../components/ThemeCustomizer';
-
 // code splitting and lazy loading
 // https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52
 const LeftSidebar = React.lazy(() => import('../components/LeftSidebar'));
 const Topbar = React.lazy(() => import('../components/Topbar'));
 const Footer = React.lazy(() => import('../components/Footer'));
-const RightSidebar = React.lazy(() => import('../components/RightSidebar'));
-
 // loading
 const emptyLoading = () => <div></div>;
 const loading = () => <div className='text-center'></div>;
@@ -87,12 +82,6 @@ class VerticalLayout extends Component {
             </Suspense>
           </div>
         </div>
-
-        <Suspense fallback={emptyLoading()}>
-          <RightSidebar title='Customize' {...this.props}>
-            <ThemeCustomizer />
-          </RightSidebar>
-        </Suspense>
       </div>
     );
   }
