@@ -43,13 +43,6 @@ const ForgetPassword = (props) => {
   }, []);
 
   /**
-   * On error dismiss
-   */
-  function onDismiss() {
-    setPasswordResetSuccessful(false);
-  }
-
-  /**
    * Handles the submit
    */
   const handleValidSubmit = (event, values) => {
