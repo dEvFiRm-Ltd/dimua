@@ -1,12 +1,12 @@
 // import { useEffect, useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-// import BlankCheckout from '../components/UserPanel/BlankCheckout';
-import Breadcrumb from '../components/UserPanel/Breadcrumb';
-import CheckoutForm from '../components/UserPanel/CheckoutForm';
-import { topSellingData } from '../components/UserPanel/core/core';
-import SectionTitle from '../components/UserPanel/partials/SectionTitle';
-import ProductCheckout from '../components/UserPanel/ProductCheckout';
-import SingleItem from '../components/UserPanel/SingleItem';
+// import BlankCheckout from '../components/BlankCheckout';
+import Breadcrumb from '../components/Breadcrumb';
+import CheckoutForm from '../components/CheckoutForm';
+import { topSellingData } from '../components/core/core';
+import SectionTitle from '../components/partials/SectionTitle';
+import ProductCheckout from '../components/ProductCheckout';
+import SingleItem from '../components/SingleItem';
 
 function Checkout() {
   const [product, setProduct] = useState([]);

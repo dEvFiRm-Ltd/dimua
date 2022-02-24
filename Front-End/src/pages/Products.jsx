@@ -1,10 +1,10 @@
 // import { useEffect, useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-import Breadcrumb from '../components/UserPanel/Breadcrumb';
-import { topSellingData } from '../components/UserPanel/core/core';
-import FilterBar from '../components/UserPanel/FilterBar';
-import Pagination from '../components/UserPanel/Pagination';
-import SingleItem from '../components/UserPanel/SingleItem';
+import Breadcrumb from '../components/Breadcrumb';
+import { topSellingData } from '../components/core/core';
+import FilterBar from '../components/FilterBar';
+import Pagination from '../components/Pagination';
+import SingleItem from '../components/SingleItem';
 
 function Products() {
   const [product, setProduct] = useState([]);

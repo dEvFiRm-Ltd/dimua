@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick/lib/slider';
 // import { useState } from 'react/cjs/react.production.min';
 import { useEffect, useState } from 'react/cjs/react.development';
-import Breadcrumb from '../components/UserPanel/Breadcrumb';
-import url, { category } from '../components/UserPanel/core/core';
-import Hero from '../components/UserPanel/Hero';
+import Breadcrumb from '../components/Breadcrumb';
+import url, { category } from '../components/core/core';
+import Hero from '../components/Hero';
 
 function AllBrands() {
   const [collections, setCollections] = useState([]);

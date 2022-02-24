@@ -1,6 +1,6 @@
 import React from 'react';
-import Feedback from '../components/UserPanel/Feedback';
-import Stars from '../components/UserPanel/Stars';
+import Feedback from '../components/Feedback';
+import Stars from '../components/Stars';
 
 function BrandReviews() {
   return (

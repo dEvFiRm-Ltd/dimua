@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import Footer from './components/UserPanel/partials/Footer';
-import Header from './components/UserPanel/partials/Header';
-import Navigation from './components/UserPanel/partials/Navigation';
+import Footer from './components/partials/Footer';
+import Header from './components/partials/Header';
+import Navigation from './components/partials/Navigation';
 import AllBrands from './pages/AllBrands';
 import Checkout from './pages/Checkout';
 import CompanyInformation from './pages/BrandInformation';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import ProfileSidebar from '../components/UserPanel/ProfileSidebar';
+import ProfileSidebar from '../components/ProfileSidebar';
 
 function Profile() {
   return (
