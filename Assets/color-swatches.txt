@@ -1,0 +1,9 @@
+Black: #0D0D0D
+White: #F2F2F2
+Cream: #736555
+Green-Black: #5EBF80
+Green-White: #5FD98A
+
+Color Pallette from 
+https://www.behance.net/gallery/11821749/WordPress-Admin-Theme-ReDesign
+
