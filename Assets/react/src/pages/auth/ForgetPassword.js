@@ -30,6 +30,7 @@ import logo from '../../assets/images/logo.png';
 const ForgetPassword = (props) => {
   let email;
   const [isMounted, setMounted] = useState(false);
+  // eslint-disable-next-line
   const [passwordResetSuccessful, setPasswordResetSuccessful] = useState(false);
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
