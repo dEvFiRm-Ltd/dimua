@@ -28,10 +28,10 @@ import { isUserAuthenticated } from '../../helpers/authUtils';
 import Loader from '../../components/Loader';
 import logo from '../../assets/images/logo.png';
 
-function Login(props) {
+const Login = (props) => {
+  const [isMounted, setMounted] = useState(false);
   const username = 'test';
   const password = 'test';
-  const [isMounted, setMounted] = useState(test);
 
   useEffect(() => {
     setMounted(true);
@@ -204,7 +204,7 @@ function Login(props) {
       )}
     </React.Fragment>
   );
-}
+};
 
 const mapStateToProps = (state) => {
   const { user, loading, error } = state.Auth;
