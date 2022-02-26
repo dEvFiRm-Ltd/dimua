@@ -1,58 +1,94 @@
 import * as React from 'react';
 import Link from '@mui/material/Link';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import { DataGrid } from '@mui/x-data-grid';
 import Title from './Title';
 
 // Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
+const columns = [
+  {
+    field: 'date',
+    headerName: 'Order Date',
+    width: 90,
+  },
+  {
+    field: 'sku',
+    headerName: 'ID',
+    width: 70,
+    description: 'This column has a value getter and is not sortable.',
+    sortable: false,
+  },
+  { field: 'productName', headerName: 'Products Name', width: 130 },
+  {
+    field: 'status',
+    headerName: 'Status',
+    width: 90,
+  },
+];
 
 const rows = [
-  createData(
-    0,
-    '16 Mar, 2019',
-    'Elvis Presley',
-    'Tupelo, MS',
-    'VISA ⠀•••• 3719',
-    312.44
-  ),
-  createData(
-    1,
-    '16 Mar, 2019',
-    'Paul McCartney',
-    'London, UK',
-    'VISA ⠀•••• 2574',
-    866.99
-  ),
-  createData(
-    2,
-    '16 Mar, 2019',
-    'Tom Scholz',
-    'Boston, MA',
-    'MC ⠀•••• 1253',
-    100.81
-  ),
-  createData(
-    3,
-    '16 Mar, 2019',
-    'Michael Jackson',
-    'Gary, IN',
-    'AMEX ⠀•••• 2000',
-    654.39
-  ),
-  createData(
-    4,
-    '15 Mar, 2019',
-    'Bruce Springsteen',
-    'Long Branch, NJ',
-    'VISA ⠀•••• 5919',
-    212.79
-  ),
+  {
+    id: 1,
+    productName: 'Snow',
+    date: '20 Mar, 2019',
+    sku: 'ABC123',
+    status: 'Pending',
+  },
+  {
+    id: 2,
+    productName: 'Lannister',
+    date: '16 Mar, 2019',
+    sku: 'ABCD123',
+    status: 'Processing',
+  },
+  {
+    id: 3,
+    productName: 'Lannister',
+    date: '18 Mar, 2019',
+    sku: 'ABCs123',
+    status: 'Shipped',
+  },
+  {
+    id: 4,
+    productName: 'Stark',
+    date: '14 Mar, 2019',
+    sku: 'ABCf123',
+    status: 'Cancelled',
+  },
+  {
+    id: 5,
+    productName: 'Targaryen',
+    date: '06 Mar, 2019',
+    sku: 'ABC1253',
+    status: 'Refunded',
+  },
+  {
+    id: 6,
+    productName: 'Melisandre',
+    date: '16 Apr, 2019',
+    sku: 'ABC1823',
+    status: 'Processing',
+  },
+  {
+    id: 7,
+    productName: 'Clifford',
+    date: '26 May, 2019',
+    sku: 'ABC6123',
+    status: 'Pending',
+  },
+  {
+    id: 8,
+    productName: 'Frances',
+    date: '12 Mar, 2019',
+    sku: 'ABC7123',
+    status: 'Shipped',
+  },
+  {
+    id: 9,
+    productName: 'Roxie',
+    date: '11 Mar, 2019',
+    sku: 'ABC1253',
+    status: 'Pending',
+  },
 ];
 
 function preventDefault(event) {
@@ -63,28 +99,13 @@ export default function Orders() {
   return (
     <React.Fragment>
       <Title>Recent Orders</Title>
-      <Table size='small'>
-        <TableHead>
-          <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align='right'>Sale Amount</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align='right'>{`$${row.amount}`}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+        checkboxSelection
+      />
       <Link color='primary' href='#' onClick={preventDefault} sx={{ mt: 3 }}>
         See more orders
       </Link>

@@ -70,7 +70,7 @@ export default function SignUp() {
               <TextField
                 required
                 fullWidth
-                color='green'
+                color='greenDark'
                 id='username'
                 label='User Name'
                 name='username'

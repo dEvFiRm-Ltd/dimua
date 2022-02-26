@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import Copyright from './Copyright';
+import Cards from './Cards';
+import Products from './Products';
 
 function Home() {
   return (
@@ -24,7 +26,25 @@ function Home() {
     >
       <Toolbar />
       <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
-        <Grid container spacing={3}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            justifyContent: 'space-evenly',
+            justifyItems: 'center',
+            alignContent: 'space-evenly',
+            alignItems: 'center',
+          }}
+        >
+          <Grid item lg={3}>
+            <Cards title='Products' value='120' />
+          </Grid>
+          <Grid item lg={3}>
+            <Cards title='Orders' value='120' />
+          </Grid>
+          <Grid item lg={3}>
+            <Cards title='Customers' value='120' />
+          </Grid>
           {/* Chart */}
           <Grid item xs={12} md={8} lg={9}>
             <Paper
@@ -55,6 +75,11 @@ function Home() {
           <Grid item xs={12}>
             <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
               <Orders />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+              <Products />
             </Paper>
           </Grid>
         </Grid>
