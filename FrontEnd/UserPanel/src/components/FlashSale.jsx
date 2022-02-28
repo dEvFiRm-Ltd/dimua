@@ -17,7 +17,7 @@ function FlashSale() {
   }, []);
 
   return (
-    <section className='container px-8 bg-cyan inline-block'>
+    <section className='container px-8 bg-cyan'>
       <div className='px-8'>
         <SectionTitle
           title='flash-sale'
