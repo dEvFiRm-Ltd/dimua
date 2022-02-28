@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function SingleCoupon({ classes }) {
   return (
     <div
-      className={`flex rounded-md border border-solid border-base flex-row w-[310px] ${classes} `}
+      className={`flex rounded-md border border-solid border-base flex-row w-[310px] h-[112px] ${classes} `}
     >
       <div className='flex flex-col justify-center items-center w-1/3 h-full '>
         <h3>LVLM002</h3>
@@ -22,7 +22,7 @@ function SingleCoupon({ classes }) {
             className='mr-4'
           />
           <h6 className=''>2 days left</h6>
-          <Link to={`/`} className='btn-green ml-auto px-10'>
+          <Link to={`/`} className='btnGreen ml-auto px-10 py-6'>
             buy now
           </Link>
         </div>
