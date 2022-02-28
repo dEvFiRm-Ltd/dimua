@@ -8,7 +8,7 @@ import CompanyInformation from './pages/BrandInformation';
 import Coupon from './pages/Coupon';
 import FlashSale from './pages/FlashSale';
 import Home from './pages/Home';
-import Products from './pages/Products';
+import AllProducts from './pages/AllProducts';
 import SingleBrand from './pages/SingleBrand';
 import TopProducts from './pages/TopProducts';
 import BrandProducts from './pages/BrandProducts';
@@ -17,6 +17,8 @@ import OrderSuccess from './pages/OrderSuccess';
 import OrderFailed from './pages/OrderFailed';
 import Profile from './pages/Profile';
 import ProfileDashboard from './pages/ProfileDashboard';
+import ProductDetails from './pages/ProductDetails';
+import Playground from './pages/Playground';
 
 function App() {
   return (
@@ -35,7 +37,9 @@ function App() {
           <Route path='products' element={<BrandProducts />} />
           <Route path='reviews' element={<BrandReviews />} />
         </Route>
-        <Route path='products' element={<Products />} />
+        <Route path='products' element={<AllProducts />} />
+        <Route path='product-details' element={<ProductDetails />} />
+        <Route path='test' element={<Playground />} />
         <Route path='checkout' element={<Checkout />} />
         <Route path='success' element={<OrderSuccess />} />
         <Route path='failed' element={<OrderFailed />} />

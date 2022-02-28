@@ -6,7 +6,7 @@ import FilterBar from '../components/FilterBar';
 import Pagination from '../components/Pagination';
 import SingleItem from '../components/SingleItem';
 
-function Products() {
+function AllProducts() {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -64,4 +64,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default AllProducts;

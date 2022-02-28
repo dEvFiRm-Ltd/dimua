@@ -91,4 +91,8 @@
   .container {
     @apply my-8 pb-16 block;
   }
+  .itemSlide .slick-track {
+    width: 100% !important;
+    @apply flex justify-center;
+  }
 }
