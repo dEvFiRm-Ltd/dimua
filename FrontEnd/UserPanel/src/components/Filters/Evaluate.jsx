@@ -3,11 +3,11 @@ import React from 'react';
 function Evaluate({ classes, stars }) {
   const star = [];
   for (let i = 0; i < stars; i++) {
-    star.push(<i className='text-yellow fa-solid fa-star'></i>);
+    star.push(<i key={i * 5} className='text-yellow fa-solid fa-star'></i>);
   }
   if (stars < 5) {
     for (let i = 0; i < 5 - stars; i++) {
-      star.push(<i className='text-gray fa-solid fa-star'></i>);
+      star.push(<i key={i * 2 + 1} className='text-gray fa-solid fa-star'></i>);
     }
   }
   return (
@@ -25,7 +25,7 @@ function Evaluate({ classes, stars }) {
         <span className='mr-6'>{star}</span>
         <h5 className='font-normal'>From {stars} Stars</h5>
       </label>
-      <i class=' text-green absolute right-14 top-10 fa-solid fa-check scale-0 opacity-0 transition-all ease-in-out peer-checked:scale-[1] peer-checked:opacity-[1] '></i>
+      <i className=' text-green absolute right-14 top-10 fa-solid fa-check scale-0 opacity-0 transition-all ease-in-out peer-checked:scale-[1] peer-checked:opacity-[1] '></i>
     </div>
   );
 }

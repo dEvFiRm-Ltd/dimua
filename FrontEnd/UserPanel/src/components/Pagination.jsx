@@ -4,7 +4,7 @@ function Pagination() {
   return (
     <section className='container my-0 py-36 flex flex-row justify-between items-center '>
       <button className='pagination indicators'>
-        <i class='fa-solid fa-arrow-left'></i> Previous
+        <i className='fa-solid fa-arrow-left'></i> Previous
       </button>
       <div className='counts'>
         <button className='pagination count'>1</button>
@@ -13,7 +13,7 @@ function Pagination() {
         <button className='pagination count'>4</button>
       </div>
       <button className='pagination indicators'>
-        Next <i class='fa-solid fa-arrow-right'></i>
+        Next <i className='fa-solid fa-arrow-right'></i>
       </button>
     </section>
   );

@@ -15,7 +15,7 @@ function BrandProducts() {
     <>
       <div className='container pb-0 my-10 flex flex-row flex-wrap justify-start '>
         <button className='py-[2px] px-4 mr-8 text-[16px] leading-5 font-normal text-green '>
-          Selling <i class='fa-solid fa-bolt'></i>
+          Selling <i className='fa-solid fa-bolt'></i>
         </button>
         <button className='py-[2px] px-4 mr-8 text-[16px] leading-5 font-normal text-black '>
           New Products

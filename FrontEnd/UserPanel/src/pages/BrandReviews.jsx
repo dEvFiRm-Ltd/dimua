@@ -14,10 +14,10 @@ function BrandReviews() {
               <h2 className='text-24 font-semibold text-[#767676] '>5</h2>
             </div>
             <div className='flex flex-row text-yellow '>
-              <i class='fa-solid fa-star'></i>
-              <i class='fa-solid fa-star'></i>
-              <i class='fa-solid fa-star'></i>
-              <i class='fa-solid fa-star-half'></i>
+              <i className='fa-solid fa-star'></i>
+              <i className='fa-solid fa-star'></i>
+              <i className='fa-solid fa-star'></i>
+              <i className='fa-solid fa-star-half'></i>
             </div>
           </div>
           <h3 className='leading-[230%] font-normal '>(20 Reviews)</h3>

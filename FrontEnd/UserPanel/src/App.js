@@ -37,7 +37,7 @@ function App() {
           <Route path='products' element={<BrandProducts />} />
           <Route path='reviews' element={<BrandReviews />} />
         </Route>
-        <Route path='products' element={<AllProducts />} />
+        <Route path='category/:id' element={<AllProducts />} />
         <Route path='product-details' element={<ProductDetails />} />
         <Route path='test' element={<Playground />} />
         <Route path='checkout' element={<Checkout />} />

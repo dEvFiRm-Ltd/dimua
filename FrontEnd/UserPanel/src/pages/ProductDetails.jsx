@@ -3,6 +3,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import Slider from 'react-slick';
 import ProductAttributes from '../components/ProductAttributes';
 import SingleCoupon from '../components/coupones/SingleCoupon';
+import SingleItem from '../components/SingleItem';
 const contents = [
   { img: `${process.env.PUBLIC_URL}/test/burger.jpg` },
   { img: `${process.env.PUBLIC_URL}/test/curry.jpg` },
@@ -175,6 +176,19 @@ function ProductDetails() {
                 Transport fee
               </h5>
               <SingleCoupon />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='container px-0 pb-16 flex flex-wrap'>
+        <div className='w-[65%] bg-white p-8 '></div>
+        <div className='w-[35%] pl-16'>
+          <div className='bg-white flex flex-col'>
+            <div className='py-10 text-center '>
+              <h5 className='text-center'>Product Suggestions</h5>
+            </div>
+            <div className='flex-row'>
+              <SingleItem />
             </div>
           </div>
         </div>

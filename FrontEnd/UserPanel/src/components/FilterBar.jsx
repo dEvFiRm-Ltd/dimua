@@ -25,7 +25,7 @@ function FilterBar() {
             {' '}
             see more{' '}
             <i
-              class={` ${
+              className={` ${
                 click ? '-rotate-90' : 'rotate-90'
               }  ml-10 fa-solid transition fa-angle-left`}
             ></i>
