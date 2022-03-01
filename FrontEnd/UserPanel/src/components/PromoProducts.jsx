@@ -6,12 +6,9 @@ import SingleItem from './SingleItem';
 
 function PromoProducts() {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
   useEffect(() => {
     setData(FlashSaleData);
-    setCount(FlashSaleData.length - 1);
     return () => {
-      setCount(0);
       setData([]);
     };
   }, []);
@@ -22,13 +19,7 @@ function PromoProducts() {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`w-1/4 py-8 ${
-              index % 4 === 0 || index === 0
-                ? 'pr-8'
-                : index === count || index % 3 === 0
-                ? 'pl-8'
-                : 'px-8'
-            }`}
+            className={`w-1/4 p-8 first:pl-0 fourth:pr-0 fifth:pl-0`}
           >
             <SingleItem
               key={index}

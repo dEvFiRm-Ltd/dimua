@@ -85,5 +85,15 @@ module.exports = {
       150: '150%',
     },
   },
-  plugins: [require('tailwindcss'), require('autoprefixer')],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    function ({ addVariant }) {
+      // Add a `third` variant, ie. `third:pb-0`
+      addVariant('third', '&:nth-child(3n)');
+      addVariant('fourth', '&:nth-child(4n)');
+      addVariant('fifth', '&:nth-child(5n)');
+      addVariant('sixth', '&:nth-child(6n)');
+    },
+  ],
 };

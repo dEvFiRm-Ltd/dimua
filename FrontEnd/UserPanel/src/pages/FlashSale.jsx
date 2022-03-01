@@ -9,13 +9,10 @@ import TimeLaps from '../components/TimeLaps';
 
 function FlashSale() {
   const [product, setProduct] = useState([]);
-  const [productCount, setProductCount] = useState(0);
 
   useEffect(() => {
     setProduct(FlashSaleData);
-    setProductCount(FlashSaleData.length - 1);
     return () => {
-      setProductCount(0);
       setProduct([]);
     };
   }, []);
@@ -33,9 +30,7 @@ function FlashSale() {
             <SingleItem
               key={index}
               content={item}
-              classes={
-                index === 0 ? 'mr-8' : index === productCount ? 'ml-8' : 'mx-8'
-              }
+              classes={'mx-8 first:mr-0'}
               size='229px'
               showDiscount={true}
             />
