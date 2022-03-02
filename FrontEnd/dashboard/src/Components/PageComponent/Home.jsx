@@ -1,14 +1,14 @@
 import Box from '@mui/material/Box';
-import Chart from '../Components/Chart';
-import Deposits from '../Components/Deposits';
-import Orders from '../Components/Orders';
+import Chart from '../Chart';
+import Deposits from '../Deposits';
+import Orders from '../Orders';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
-import Copyright from './Copyright';
-import Cards from './Cards';
-import Products from './Products';
+import Copyright from '../Copyright';
+import Cards from '../Cards';
+import Products from '../Products';
 
 function Home() {
   return (

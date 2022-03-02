@@ -12,6 +12,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import { Collapse, List } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const MainListItems = () => {
   const [open, setOpen] = React.useState(false);
@@ -19,6 +20,7 @@ export const MainListItems = () => {
   const handleClick = () => {
     setOpen(!open);
   };
+
   return (
     <React.Fragment>
       <ListItemButton>
@@ -49,10 +51,12 @@ export const MainListItems = () => {
       <Collapse in={open} timeout='auto' unmountOnExit>
         <List component='div' disablePadding>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary='Main Category' />
+            <Link to='/'>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary='Main Category' />
+            </Link>
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
