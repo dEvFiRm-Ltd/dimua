@@ -4,8 +4,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -23,23 +21,17 @@ export const MainListItems = () => {
 
   return (
     <React.Fragment>
-      <ListItemButton>
+      <ListItemButton component={Link} to='/'>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
         <ListItemText primary='Dashboard' />
       </ListItemButton>
-      <ListItemButton>
+      <ListItemButton component={Link} to='form'>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary='Orders' />
-      </ListItemButton>
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary='Customers' />
+        <ListItemText primary='Form' />
       </ListItemButton>
       <ListItemButton onClick={handleClick}>
         <ListItemIcon>
@@ -50,13 +42,11 @@ export const MainListItems = () => {
       </ListItemButton>
       <Collapse in={open} timeout='auto' unmountOnExit>
         <List component='div' disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <Link to='/'>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary='Main Category' />
-            </Link>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Main Category' />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>

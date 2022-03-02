@@ -148,7 +148,9 @@ function DashboardContent() {
             <SecondaryListItems />
           </List>
         </Drawer>
+        {/* OutLet */}
         <Outlet />
+        {/* OutLet */}
       </Box>
       <Popover
         id={id}
