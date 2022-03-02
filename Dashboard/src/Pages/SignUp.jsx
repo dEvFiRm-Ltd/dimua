@@ -12,18 +12,36 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Copyright from '../Components/Copyright';
 import { Link } from 'react-router-dom';
+import { Alert } from '@mui/material';
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const [response, setResponse] = React.useState(null);
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
+
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+    const user = await fetch(
+      'https://devfirm-ecommerce.herokuapp.com/auth/signup',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          username: data.get('username'),
+          email: data.get('email'),
+          password: data.get('password'),
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    setResponse(await user.json());
   };
+  console.log(response);
 
   return (
     <Container maxWidth='xs'>
@@ -39,12 +57,24 @@ export default function SignUp() {
         <Avatar sx={{ m: 1 }}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component='h1' variant='h5'>
+        <Typography component='h1' sx={{ mb: 8 }} variant='h5'>
           Sign up
+          {response && (
+            <Alert
+              severity={response.message ? 'success' : 'error'}
+              sx={{
+                top: '170px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                position: 'absolute',
+              }}
+            >
+              {response.message ? response.message : response.error}
+            </Alert>
+          )}
         </Typography>
         <Box
           component='form'
-          noValidate
           onSubmit={handleSubmit}
           method='post'
           sx={{ mt: 3 }}
@@ -52,39 +82,16 @@ export default function SignUp() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
-                autoComplete='given-name'
-                name='firstName'
+                name='username'
                 required
                 fullWidth
                 style={{ backgroundColor: 'white' }}
-                id='firstName'
-                label='First Name'
+                id='username'
+                label='Username'
                 autoFocus
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                required
-                fullWidth
-                id='lastName'
-                label='Last Name'
-                style={{ backgroundColor: 'white' }}
-                name='lastName'
-                autoComplete='family-name'
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id='username'
-                label='User Name'
-                name='username'
-                style={{ backgroundColor: 'white' }}
-                autoComplete='Preferred Username'
-              />
-            </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={6}>
               <TextField
                 required
                 fullWidth
@@ -95,7 +102,7 @@ export default function SignUp() {
                 autoComplete='email'
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={6}>
               <TextField
                 required
                 fullWidth

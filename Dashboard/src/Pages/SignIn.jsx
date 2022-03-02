@@ -11,21 +11,41 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Copyright from '../Components/Copyright';
+import { Alert } from '@mui/material';
 
 const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  const [response, setResponse] = React.useState(null);
+  let navigate = useNavigate();
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
+
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+    const user = await fetch(
+      'https://devfirm-ecommerce.herokuapp.com/auth/local',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          username: data.get('email'),
+          password: data.get('password'),
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    setResponse(await user.json());
+    response.success && navigate('/');
   };
+  console.log(response);
 
   return (
     <ThemeProvider theme={theme}>
@@ -63,25 +83,38 @@ export default function SignIn() {
             <Typography component='h1' variant='h5'>
               Sign in
             </Typography>
+            {response?.success && (
+              <Alert
+                severity={response.success ? 'success' : 'error'}
+                sx={{
+                  top: '170px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  position: 'absolute',
+                }}
+              >
+                {response.success}
+              </Alert>
+            )}
             <Box
               component='form'
-              noValidate
+              method='post'
               onSubmit={handleSubmit}
               sx={{ mt: 1 }}
             >
               <TextField
                 margin='normal'
-                required
+                // required
                 fullWidth
                 id='email'
-                label='Email Address'
+                label='Email or Password'
                 name='email'
-                autoComplete='email'
+                type={'text'}
                 autoFocus
               />
               <TextField
                 margin='normal'
-                required
+                // required
                 fullWidth
                 name='password'
                 label='Password'
