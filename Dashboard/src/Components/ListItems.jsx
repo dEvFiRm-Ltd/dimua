@@ -9,6 +9,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import CountertopsIcon from '@mui/icons-material/Countertops';
 import { Collapse, List } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -62,6 +63,12 @@ export const MainListItems = () => {
           </ListItemButton>
         </List>
       </Collapse>
+      <ListItemButton component={Link} to='brands'>
+        <ListItemIcon>
+          <CountertopsIcon />
+        </ListItemIcon>
+        <ListItemText primary='Brands' />
+      </ListItemButton>
     </React.Fragment>
   );
 };
