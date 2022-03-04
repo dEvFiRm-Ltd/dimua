@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 function SingleItem({ content, size, showDiscount }) {
   return (
     <Link
-      to={`/${content.slug}`}
-      className={`bg-white rounded-lg h-[${size}] border-[#E5EBED] border block transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
+      to={`/product/${content.id}`}
+      className={`bg-white rounded-lg ${
+        size && `h-[${size}]`
+      }  border-[#E5EBED] border block transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
     >
       <div
         className={`rounded-lg p-16 w-full flex justify-center items-center `}
@@ -13,7 +15,11 @@ function SingleItem({ content, size, showDiscount }) {
         <img src={content.image} alt='' className='h-full' />
       </div>
       <div className='p-16 w-full flex flex-col '>
-        <h6 className='text-black capitalize mb-4'>{content.title}</h6>
+        <div className='w-full h-[42px] whitespace-nowrap '>
+          <h6 className='text-black capitalize mb-4 text-ellipsis overflow-hidden '>
+            {content.title}
+          </h6>
+        </div>
         <h3 className='text-black'>
           {content.currency}. {content.price - content.discount}
         </h3>

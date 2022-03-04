@@ -5,16 +5,18 @@ import url from '../core/core';
 
 function Navigation() {
   return (
-    <section className='container bg-green flex flex-row my-0 py-0'>
-      <div className='w-[50px] h-[50px] px-12 '>
-        <Hamburger />
+    <section className='container bg-green flex flex-row my-0 py-0 justify-between '>
+      <div className='w-[21%] flex flex-row '>
+        <div className='w-[50px] h-[50px] px-12 '>
+          <Hamburger />
+        </div>
+        <div className='w-[155px] py-10 pr-10 pl-0 '>
+          <Link to='/' className='block '>
+            <img src={`${url}/img/logo.svg`} alt='' className='img' />
+          </Link>
+        </div>
       </div>
-      <div className='w-[155px] py-10 pr-10 pl-0 '>
-        <Link to='/' className='block '>
-          <img src={`${url}/img/logo.svg`} alt='' className='img' />
-        </Link>
-      </div>
-      <div className='w-[605px] h-36 block m-12 relative '>
+      <div className='w-[61%] h-36 block m-12 relative '>
         <input
           type='text'
           name=''

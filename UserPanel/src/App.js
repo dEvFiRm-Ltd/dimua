@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Footer from './components/partials/Footer';
 import Header from './components/partials/Header';
 import Navigation from './components/partials/Navigation';
@@ -19,11 +19,23 @@ import Profile from './pages/Profile';
 import ProfileDashboard from './pages/ProfileDashboard';
 import ProductDetails from './pages/ProductDetails';
 import Playground from './pages/Playground';
+import { useEffect } from 'react';
+
+const RouteTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   return (
     <>
       <Header />
+      <RouteTop />
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -38,7 +50,7 @@ function App() {
           <Route path='reviews' element={<BrandReviews />} />
         </Route>
         <Route path='category/:id' element={<AllProducts />} />
-        <Route path='product-details' element={<ProductDetails />} />
+        <Route path='product/:id' element={<ProductDetails />} />
         <Route path='test' element={<Playground />} />
         <Route path='checkout' element={<Checkout />} />
         <Route path='success' element={<OrderSuccess />} />

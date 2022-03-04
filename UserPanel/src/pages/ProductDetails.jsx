@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import ProductAttributes from '../components/ProductAttributes';
 import SingleCoupon from '../components/coupones/SingleCoupon';
 import SingleItem from '../components/SingleItem';
+import { FlashSaleData } from '../components/core/core';
 const contents = [
   { img: `${process.env.PUBLIC_URL}/test/burger.jpg` },
   { img: `${process.env.PUBLIC_URL}/test/curry.jpg` },
@@ -15,6 +16,7 @@ const contents = [
 ];
 
 function ProductDetails() {
+  const [suggested, setSuggested] = useState([]);
   const [data, setData] = useState([]);
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
@@ -23,6 +25,7 @@ function ProductDetails() {
   let slider2 = useRef(null);
 
   useEffect(() => {
+    setSuggested(FlashSaleData);
     setNav1(slider1);
     setNav2(slider2);
     setData(contents);
@@ -46,8 +49,8 @@ function ProductDetails() {
   return (
     <>
       <Breadcrumb />
-      <section className='container bg-white flex py-16 flex-row'>
-        <div className='w-[391px] flex flex-col mr-16'>
+      <section className='container bg-white flex py-16 mb-16 flex-row'>
+        <div className='w-2/5 flex flex-col mr-16'>
           <div className='w-full'>
             <Slider {...settingsOne}>
               {data.map((v, i) => (
@@ -70,7 +73,7 @@ function ProductDetails() {
             </Slider>
           </div>
         </div>
-        <div className='w-[525px]  '>
+        <div className='w-3/5  '>
           <div className='flex flex-col pb-12 border-b border-ash '>
             <h3 className='capitalize mb-6'>
               vikoda natural mineral water 5L Pomelo Emer hair growth booster
@@ -168,7 +171,7 @@ function ProductDetails() {
               </span>
             </div>
           </div>
-          <div className='flex flex-col pb-12 border-b border-ash '>
+          <div className='flex flex-col '>
             <div className='flex flex-col my-6 first:mt-12 last:mb-12 '>
               <h5 className='text-md leading-[150%] mb-12 relative pl-10  '>
                 {' '}
@@ -181,14 +184,42 @@ function ProductDetails() {
         </div>
       </section>
       <section className='container px-0 pb-16 flex flex-wrap'>
-        <div className='w-[65%] bg-white p-8 '></div>
+        <div className='w-[65%] bg-white p-8 flex flex-col '>
+          <div className='flex flex-row '>
+            <button
+              className='w-1/2 py-10 text-center relative active:bg-ash '
+              type='button'
+            >
+              <h5 className='leading-[150%] capitalize text-green '>
+                Overview
+              </h5>
+              <span className='absolute bottom-[3px] left-1/2 -translate-x-1/2 h-[2px] w-36 bg-green  '></span>
+            </button>
+            <button
+              className='w-1/2 py-10 text-center relative active:bg-ash '
+              type='button'
+            >
+              <h5 className='leading-[150%] capitalize text-green '>
+                Overview
+              </h5>
+              <span className='absolute bottom-[3px] left-1/2 -translate-x-1/2 h-[2px] w-36 bg-green  '></span>
+            </button>
+          </div>
+        </div>
         <div className='w-[35%] pl-16'>
           <div className='bg-white flex flex-col'>
             <div className='py-10 text-center '>
               <h5 className='text-center'>Product Suggestions</h5>
             </div>
-            <div className='flex-row'>
-              <SingleItem />
+            <div className=' flex flex-row flex-wrap'>
+              {suggested.map((item, index) => (
+                <div
+                  className='w-1/2 pb-16 px-8 odd:pl-0 even:pr-0 '
+                  key={index}
+                >
+                  <SingleItem content={item} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

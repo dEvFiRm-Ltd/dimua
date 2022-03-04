@@ -27,7 +27,7 @@ function PrimaryMenu({ clickData, updateClick }) {
   return (
     <>
       {' '}
-      <div className='absolute left-0 top-0 z-10 w-[280px] py-36 h-screen bg-white flex flex-col '>
+      <div className='absolute left-0 top-0 z-10 w-[29%] xl:w-[16%] py-36 h-screen bg-white flex flex-col '>
         <div className='py-10 px-16 flex justify-between flex-row items-center '>
           <h3>Browse Category</h3>
           <div className='w-[18px] h-[18px] '>

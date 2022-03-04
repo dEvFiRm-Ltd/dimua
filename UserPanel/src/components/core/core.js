@@ -126,68 +126,84 @@ export const headerData = [
 
 export const FlashSaleData = [
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '29',
     image: `${url}/img/kettele.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '229',
     image: `${url}/img/cooker.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '19',
     image: `${url}/img/dipar.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '12',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '29',
     image: `${url}/img/kettele.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '229',
     image: `${url}/img/cooker.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '19',
     image: `${url}/img/dipar.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '12',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
 ];
 
@@ -220,84 +236,104 @@ export const couponData = [
 
 export const topSellingData = [
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '29',
     image: `${url}/img/kettele.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '129',
     image: `${url}/img/cooker.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '122',
     image: `${url}/img/dipar.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '229',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '19',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '29',
     image: `${url}/img/kettele.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '129',
     image: `${url}/img/cooker.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '122',
     image: `${url}/img/dipar.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '229',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur adipisicing...',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis?',
     price: '1229',
     discount: '19',
     image: `${url}/img/pan.jpg`,
     slug: 'flash-sale',
     currency: 'BDT',
+    id: 'asdhoaidshgdiaadufiu',
   },
 ];
 

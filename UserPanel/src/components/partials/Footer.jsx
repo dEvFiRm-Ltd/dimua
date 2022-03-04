@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import url from '../core/core';
 
 function Footer() {
@@ -6,19 +7,36 @@ function Footer() {
     <>
       <section className='container flex flex-row mb-8 bg-ash py-30'>
         <div className='flex flex-col w-1/4'>
-          <h5 className='leading-150 uppercase mb-16'>HELP CUSTOMERS</h5>
-          <p className='leading-6 text-left capitalize mb-10'>Shopping guide</p>
-          <p className='leading-6 text-left capitalize mb-10'>Payment</p>
-          <p className='leading-6 text-left capitalize mb-10'>Transport</p>
-          <p className='leading-6 text-left capitalize mb-10'>
-            Returns &amp; Refunds
-          </p>
-          <p className='leading-6 text-left capitalize mb-10'>
-            Purchase Policy
-          </p>
-          <p className='leading-6 text-left capitalize mb-10'>
-            Warranty Policy
-          </p>
+          <Link to='/'>
+            <h5 className='leading-150 uppercase mb-16'>HELP CUSTOMERS</h5>
+          </Link>
+
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>
+              Shopping guide
+            </p>
+          </Link>
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>Payment</p>
+          </Link>
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>Transport</p>
+          </Link>
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>
+              Returns &amp; Refunds
+            </p>
+          </Link>
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>
+              Purchase Policy
+            </p>
+          </Link>
+          <Link to='/'>
+            <p className='leading-6 text-left capitalize mb-10'>
+              Warranty Policy
+            </p>
+          </Link>
         </div>
         <div className='flex flex-col w-1/4'>
           <h5 className='leading-150 uppercase mb-16'>Company area</h5>

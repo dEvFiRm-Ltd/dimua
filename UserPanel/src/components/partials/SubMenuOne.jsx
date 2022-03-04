@@ -2,7 +2,7 @@ import url from '../core/core';
 
 function SubMenuOne({ data, closed }) {
   return (
-    <div className='absolute left-[280px] z-20 top-0 w-[280px] py-36 h-screen bg-white flex flex-col '>
+    <div className='absolute left-[305px] z-20 top-0 w-[280px] py-36 h-screen bg-white flex flex-col '>
       <button
         onClick={() => closed()}
         className='py-10 px-16 flex justify-between flex-row items-center '
