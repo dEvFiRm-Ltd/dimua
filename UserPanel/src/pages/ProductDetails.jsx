@@ -5,6 +5,8 @@ import ProductAttributes from '../components/ProductAttributes';
 import SingleCoupon from '../components/coupones/SingleCoupon';
 import SingleItem from '../components/SingleItem';
 import { FlashSaleData } from '../components/core/core';
+import Stars from '../components/Stars';
+import Feedback from '../components/Feedback';
 const contents = [
   { img: `${process.env.PUBLIC_URL}/test/burger.jpg` },
   { img: `${process.env.PUBLIC_URL}/test/curry.jpg` },
@@ -20,6 +22,7 @@ function ProductDetails() {
   const [data, setData] = useState([]);
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
+  const [collapse, setCollapse] = useState(1);
 
   let slider1 = useRef(null);
   let slider2 = useRef(null);
@@ -187,24 +190,91 @@ function ProductDetails() {
         <div className='w-[65%] bg-white p-8 flex flex-col '>
           <div className='flex flex-row '>
             <button
-              className='w-1/2 py-10 text-center relative active:bg-ash '
+              onClick={() => setCollapse(1)}
+              className={`w-1/2 py-10 text-center relative active:bg-ash ${
+                collapse === 1 ? '' : 'hover:bg-gray'
+              }`}
               type='button'
             >
-              <h5 className='leading-[150%] capitalize text-green '>
+              <h5
+                className={`leading-[150%] capitalize ${
+                  collapse === 1 ? 'text-green' : 'text-black'
+                } `}
+              >
                 Overview
               </h5>
-              <span className='absolute bottom-[3px] left-1/2 -translate-x-1/2 h-[2px] w-36 bg-green  '></span>
+              <span
+                className={`absolute bottom-[3px] left-1/2 transition-all -translate-x-1/2 h-[2px] w-0 ${
+                  collapse === 1 && 'w-36'
+                } bg-green  `}
+              ></span>
             </button>
             <button
-              className='w-1/2 py-10 text-center relative active:bg-ash '
+              onClick={() => setCollapse(2)}
+              className={`w-1/2 py-10 text-center relative active:bg-ash ${
+                collapse === 2 ? '' : 'hover:bg-gray'
+              }`}
               type='button'
             >
-              <h5 className='leading-[150%] capitalize text-green '>
-                Overview
+              <h5
+                className={`leading-[150%] capitalize ${
+                  collapse === 2 ? 'text-green' : 'text-black'
+                } `}
+              >
+                Rating &amp; Reviews
               </h5>
-              <span className='absolute bottom-[3px] left-1/2 -translate-x-1/2 h-[2px] w-36 bg-green  '></span>
+              <span
+                className={`absolute bottom-[3px] left-1/2 transition-all -translate-x-1/2 h-[2px] w-0 ${
+                  collapse === 2 && 'w-36'
+                } bg-green  `}
+              ></span>
             </button>
           </div>
+          {/* Descriptions */}
+          <div className='flex flex-col '></div>
+          {/* Descriptions */}
+          {/* Rating & Reviews */}
+
+          <div
+            className={` flex-col transition-all ${
+              collapse === 2 ? 'flex ' : 'hidden'
+            } `}
+          >
+            <div className='my-16 pt-16 pb-[1px] bg-white flex flex-row justify-around'>
+              <div className='flex flex-col'>
+                <h3 className='font-normal mb-16'>Product Reviews</h3>
+                <div className='flex flex-row'>
+                  <div className='flex flex-row mr-16'>
+                    <h2 className='text-30 font-semibold text-[#767676] '>
+                      5/
+                    </h2>
+                    <h2 className='text-24 font-semibold text-[#767676] '>5</h2>
+                  </div>
+                  <div className='flex flex-row text-yellow '>
+                    <i className='fa-solid fa-star'></i>
+                    <i className='fa-solid fa-star'></i>
+                    <i className='fa-solid fa-star'></i>
+                    <i className='fa-solid fa-star-half'></i>
+                  </div>
+                </div>
+                <h3 className='leading-[230%] font-normal '>(20 Reviews)</h3>
+              </div>
+              <div className='flex flex-col'>
+                <Stars count={5} />
+                <Stars count={4} />
+                <Stars count={3} />
+                <Stars count={2} />
+                <Stars count={1} />
+              </div>
+            </div>
+            <div className=''>
+              <Feedback />
+              <Feedback />
+              <Feedback />
+            </div>
+          </div>
+
+          {/* Rating & Reviews */}
         </div>
         <div className='w-[35%] pl-16'>
           <div className='bg-white flex flex-col'>

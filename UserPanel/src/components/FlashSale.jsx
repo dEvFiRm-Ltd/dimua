@@ -27,7 +27,7 @@ function FlashSale() {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`w-1/4 p-8 first:pl-0 fourth:pr-0 fifth:pl-0  `}
+            className={`p-8 lg:w-1/4 xl:w-1/5 first:pl-0 lg:fourth:pr-0 lg:fifth:pl-0 xl:fourth:pr-8 xl:fifth:pl-8 xl:fifth:pr-0 xl:sixth:pl-0  `}
           >
             <SingleItem
               key={index}
