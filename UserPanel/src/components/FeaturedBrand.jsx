@@ -23,7 +23,7 @@ function FeaturedBrand() {
       <div className='flex flex-row justify-center w-full px-12 py-16 '>
         {data.map((item, index) => (
           <Link
-            to={''}
+            to={'brand/1'}
             key={index}
             className={` ${
               index === count ? '' : 'mr-[43px]'

@@ -10,7 +10,7 @@ function CompanyInformation() {
             <img
               src={`${url}/img/location.svg`}
               alt=''
-              className=' mr-[8.60px]'
+              className='mr-[8.60px]'
             />
             <h3 className='font-normal'> Company Name </h3>
           </div>

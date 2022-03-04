@@ -16,12 +16,6 @@ module.exports = {
       '3xl': ['24px', '29px'],
     },
     extend: {
-      fontFamily: {
-        googleRegular: ['google-regular', 'Helvetica', 'Arial', 'sans-serif'],
-        googleMedium: ['google-medium', 'Helvetica', 'Arial', 'sans-serif'],
-        googleBold: ['google-bold', 'Helvetica', 'Arial', 'sans-serif'],
-        openSans: ['Open Sans', 'sans-serif'],
-      },
       colors: {
         white: '#ffffff',
         black: '#383838',
@@ -47,21 +41,12 @@ module.exports = {
     screens: {
       xs: { max: '575.98px' },
       // => @media (max-width: 575.98px) { ... }
-
       sm: '576px',
       // => @media (min-width: 576px) { ... }
-
       md: '768px',
-      // => @media (min-width: 768px) { ... }
-
       lg: '992px',
-      // => @media (min-width: 992px) { ... }
-
       xl: '1200px',
-      // => @media (min-width: 1200px) { ... }
-
       '2xl': '1400px',
-      // => @media (min-width: 1400px) { ... }
     },
     spacing: {
       0: '0',

@@ -43,7 +43,7 @@ function App() {
         <Route path='coupons' element={<Coupon />} />
         <Route path='top-products' element={<TopProducts />} />
         <Route path='all-brands' element={<AllBrands />} />
-        <Route path='brand' element={<SingleBrand />}>
+        <Route path='brand/:id' element={<SingleBrand />}>
           <Route index element={<CompanyInformation />} />
           <Route index path='information' element={<CompanyInformation />} />
           <Route path='products' element={<BrandProducts />} />
