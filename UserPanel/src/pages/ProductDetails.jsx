@@ -231,7 +231,19 @@ function ProductDetails() {
             </button>
           </div>
           {/* Descriptions */}
-          <div className='flex flex-col '></div>
+          <div className='flex flex-col '>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil amet
+            dolores ut dolor nisi doloremque dicta porro voluptatibus quia,
+            beatae vel provident quaerat temporibus eos eius saepe tenetur
+            nostrum illum est, debitis ipsam nesciunt assumenda quam. Maxime
+            dolores minus similique dignissimos quod sed voluptatibus et eius
+            modi! Aut asperiores architecto debitis labore culpa deserunt enim
+            nulla minus neque molestias expedita illum a, repudiandae cum ipsa
+            at pariatur est qui saepe unde quos odio ratione. Numquam maxime
+            debitis, voluptates ad itaque perspiciatis natus corporis nam?
+            Eveniet, dolor nam? Itaque, perspiciatis nulla expedita illo dolore
+            facilis culpa, maiores voluptatem dignissimos porro eos?
+          </div>
           {/* Descriptions */}
           {/* Rating & Reviews */}
 
