@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react/cjs/react.production.min';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import url, { category, categoryTwo } from '../core/core';
 import SubMenuOne from './SubMenuOne';
 

@@ -1,5 +1,4 @@
-// import { useState } from 'react/cjs/react.production.min';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import url, { FeaturedBrandData } from './core/core';
 import SectionTitle from './partials/SectionTitle';

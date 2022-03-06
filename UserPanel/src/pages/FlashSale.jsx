@@ -1,5 +1,4 @@
-// import { useState } from 'react/cjs/react.production.min';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import { FlashSaleData } from '../components/core/core';
 import Hero from '../components/Hero';

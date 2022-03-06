@@ -33,11 +33,8 @@ export default function Forms() {
     images: [],
   });
 
-  const [images, setImages] = useState({});
-
   const updateUploadedFiles = (files) => {
     setNewUserInfo({ ...newUserInfo, images: files });
-    setImages({ ...images, ...files });
   };
 
   const parentCheck = (event) => {

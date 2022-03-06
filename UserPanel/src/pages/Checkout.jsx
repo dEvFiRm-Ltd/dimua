@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react/cjs/react.production.min';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 // import BlankCheckout from '../components/BlankCheckout';
 import Breadcrumb from '../components/Breadcrumb';
 import CheckoutForm from '../components/CheckoutForm';

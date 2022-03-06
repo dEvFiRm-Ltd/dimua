@@ -1,6 +1,6 @@
 // import { useEffect, useState } from 'react/cjs/react.production.min';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import { topSellingData } from '../components/core/core';
 import FilterBar from '../components/FilterBar';

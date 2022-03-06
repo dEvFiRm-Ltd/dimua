@@ -1,5 +1,4 @@
-// import { useState } from 'react/cjs/react.production.min';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import { headerData } from '../core/core';
 
 function Header() {

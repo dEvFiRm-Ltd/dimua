@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-// import { useState } from 'react/cjs/react.production.min';
+
 import Evaluate from './Filters/Evaluate';
 import Location from './Filters/Location';
 import Prices from './Filters/Prices';
