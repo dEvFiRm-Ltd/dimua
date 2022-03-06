@@ -80,6 +80,80 @@ function Footer() {
       </section>
       <footer className='container flex justify-center items-center py-20 bg-[#687481] '>
         <p className='text-center text-white text-lg'>Developed By DevFiRm</p>
+        <span className='hidden'>
+          Photo by{' '}
+          <a href='https://unsplash.com/@giorgiotrovato?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Giorgio Trovato
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@jacintachristos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Jacinta Christos
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@reubenmansell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Reuben Mansell
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@revolt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            REVOLT
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@revolt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            REVOLT
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@cdx2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            C D-X
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/products?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@arturorey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Arturo Rey
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/shopping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@freestocks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            freestocks
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/shopping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+          Photo by{' '}
+          <a href='https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            charlesdeluvio
+          </a>{' '}
+          on{' '}
+          <a href='https://unsplash.com/s/photos/shopping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+            Unsplash
+          </a>
+        </span>
       </footer>
     </>
   );

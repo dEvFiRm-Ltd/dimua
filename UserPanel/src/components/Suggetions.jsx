@@ -80,7 +80,7 @@ function Suggetions() {
             key={index}
             className={`w-1/5 p-8 first:pl-0 fifth:pr-0 sixth:pl-0`}
           >
-            <SingleItem key={index} content={item} size='180px' />
+            <SingleItem key={index} content={item} size='h-180' />
           </div>
         ))}
       </div>

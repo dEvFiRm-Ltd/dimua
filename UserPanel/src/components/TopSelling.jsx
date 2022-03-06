@@ -30,7 +30,7 @@ function TopSelling() {
             <SingleItem
               key={index}
               content={item}
-              size='318px'
+              size='h-318'
               showDiscount={true}
             />
           </div>

@@ -18,7 +18,6 @@ import OrderFailed from './pages/OrderFailed';
 import Profile from './pages/Profile';
 import ProfileDashboard from './pages/ProfileDashboard';
 import ProductDetails from './pages/ProductDetails';
-import Playground from './pages/Playground';
 import { useEffect } from 'react';
 
 const RouteTop = () => {
@@ -51,7 +50,6 @@ function App() {
         </Route>
         <Route path='category/:id' element={<AllProducts />} />
         <Route path='product/:id' element={<ProductDetails />} />
-        <Route path='test' element={<Playground />} />
         <Route path='checkout' element={<Checkout />} />
         <Route path='success' element={<OrderSuccess />} />
         <Route path='failed' element={<OrderFailed />} />
@@ -60,17 +58,7 @@ function App() {
           <Route path='update' element={<ProfileDashboard />} />
         </Route>
       </Routes>
-
       <Footer />
-
-      {/* Blank */}
-      {/* <section className=''>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12'></div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

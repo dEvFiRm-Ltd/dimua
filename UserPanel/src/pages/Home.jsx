@@ -20,13 +20,13 @@ function Home() {
       <FlashSale />
       <Coupons />
       <TopSelling />
-      <Link to={'/'} className=' container my-8 p-0 '>
+      {/* <Link to={'/'} className=' container my-8 p-0 '>
         <img
           src={`${url}/img/advertise.jpg`}
           alt=''
           className='w-full object-contain'
         />
-      </Link>
+      </Link> */}
       <FeaturedBrand />
       <PromoProducts />
       <Suggetions />

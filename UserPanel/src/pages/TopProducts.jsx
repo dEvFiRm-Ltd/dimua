@@ -35,7 +35,7 @@ function TopProducts() {
               classes={
                 index === 0 ? 'mr-8' : index === productCount ? 'ml-8' : 'mx-8'
               }
-              size='229px'
+              size='h-229'
               showDiscount={true}
             />
           ))}

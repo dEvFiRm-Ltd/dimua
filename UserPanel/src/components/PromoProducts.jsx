@@ -23,7 +23,7 @@ function PromoProducts() {
             <SingleItem
               key={index}
               content={item}
-              size='229px'
+              size='h-229'
               showDiscount={true}
             />
           </div>

@@ -30,7 +30,7 @@ function FlashSale() {
               key={index}
               content={item}
               classes={'mx-8 first:mr-0'}
-              size='229px'
+              size='h-229'
               showDiscount={true}
             />
           ))}

@@ -8,12 +8,11 @@ import { FlashSaleData } from '../components/core/core';
 import Stars from '../components/Stars';
 import Feedback from '../components/Feedback';
 const contents = [
-  { img: `${process.env.PUBLIC_URL}/test/burger.jpg` },
-  { img: `${process.env.PUBLIC_URL}/test/curry.jpg` },
-  { img: `${process.env.PUBLIC_URL}/test/noodles.jpg` },
-  { img: `${process.env.PUBLIC_URL}/test/pasta.jpg` },
-  { img: `${process.env.PUBLIC_URL}/test/pizza.jpg` },
-  { img: `${process.env.PUBLIC_URL}/test/steak.jpg` },
+  { img: `${process.env.PUBLIC_URL}/img/item01.jpg` },
+  { img: `${process.env.PUBLIC_URL}/img/item-2.jpg` },
+  { img: `${process.env.PUBLIC_URL}/img/item-3.jpg` },
+  { img: `${process.env.PUBLIC_URL}/img/item-04.jpg` },
+  { img: `${process.env.PUBLIC_URL}/img/item-05.jpg` },
   // {img:}
 ];
 
@@ -76,7 +75,7 @@ function ProductDetails() {
             </Slider>
           </div>
         </div>
-        <div className='w-3/5  '>
+        <div className='w-3/5'>
           <div className='flex flex-col pb-12 border-b border-ash '>
             <h3 className='capitalize mb-6'>
               vikoda natural mineral water 5L Pomelo Emer hair growth booster
@@ -231,7 +230,11 @@ function ProductDetails() {
             </button>
           </div>
           {/* Descriptions */}
-          <div className='flex flex-col '>
+          <div
+            className={` flex-col transition-all ${
+              collapse === 1 ? 'flex ' : 'hidden'
+            } `}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil amet
             dolores ut dolor nisi doloremque dicta porro voluptatibus quia,
             beatae vel provident quaerat temporibus eos eius saepe tenetur

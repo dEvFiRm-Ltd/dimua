@@ -8,7 +8,7 @@ function CheckoutItem() {
         <div className='flex flex-row'>
           <div className='w-[100px] h-[100px] rounded overflow-hidden mr-16 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className='w-full h-full '
             />

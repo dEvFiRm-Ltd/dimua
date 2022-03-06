@@ -6,7 +6,11 @@ function Feedback() {
     <div className='p-24 bg-white flex flex-row justify-between '>
       <div className='flex flex-row '>
         <div className='w-[48px] h-[48px] mr-16 rounded-[50%] overflow-hidden '>
-          <img src={`${url}/img/user.jpg`} alt='' className=' w-full h-full ' />
+          <img
+            src={`${url}/img/profile.png`}
+            alt=''
+            className=' w-full h-full '
+          />
         </div>
         <div className='flex flex-col '>
           <h3>Yifei Chen</h3>
@@ -32,42 +36,42 @@ function Feedback() {
         <div className='flex flex-row '>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />
           </div>
           <div className='w-60 h-60 mr-10 '>
             <img
-              src={`${url}/img/item.jpg`}
+              src={`${url}/img/item01.jpg`}
               alt=''
               className=' w-full h-full '
             />

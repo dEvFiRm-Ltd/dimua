@@ -61,7 +61,7 @@ function AllProducts() {
             <div className='flex flex-row py-8 px-16 flex-wrap '>
               {product.map((item, index) => (
                 <div key={index} className={`w-1/4 py-8 px-8`}>
-                  <SingleItem content={item} size='180px' showDiscount={true} />
+                  <SingleItem content={item} size='h-180' showDiscount={true} />
                 </div>
               ))}
             </div>

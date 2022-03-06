@@ -33,7 +33,7 @@ function Checkout() {
               <SingleItem
                 key={index}
                 content={item}
-                size='180px'
+                size='h-180'
                 showDiscount={true}
               />
             </div>
