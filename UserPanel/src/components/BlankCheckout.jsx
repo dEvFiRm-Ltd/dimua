@@ -10,7 +10,7 @@ function BlankCheckout() {
           <img
             src={`${url}/img/cart.svg`}
             alt=''
-            className='w-[328px] h-[129px] mb-16 '
+            className='w-[328px] h-129 mb-16 '
           />
           <h3>You have no items in your shopping cart</h3>
         </div>

@@ -34,9 +34,6 @@ module.exports = {
         'text-dark': '#424242',
         'text-blue': '#0097e6',
       },
-      backgroundImage: {
-        topSelling: `url('../public/img/top-selling.jpg')`,
-      },
     },
     screens: {
       xs: { max: '575.98px' },
@@ -66,6 +63,7 @@ module.exports = {
       36: '36px',
       60: '60px',
       120: '120%',
+      129: '129px',
       140: '140%',
       150: '150%',
     },

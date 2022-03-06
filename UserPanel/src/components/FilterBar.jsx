@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react/cjs/react.development';
+import React, { useState } from 'react';
 
 import Evaluate from './Filters/Evaluate';
 import Location from './Filters/Location';

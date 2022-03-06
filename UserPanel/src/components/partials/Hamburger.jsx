@@ -1,5 +1,4 @@
-// import { useEffect, useState } from 'react/cjs/react.production.min';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import './hamburger.css';
 import PrimaryMenu from './PrimaryMenu';
 

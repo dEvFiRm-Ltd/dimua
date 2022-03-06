@@ -14,7 +14,12 @@ function TopSelling() {
   }, []);
 
   return (
-    <section className='container bg-topSelling'>
+    <section
+      className='container'
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/img/top-selling.jpg)`,
+      }}
+    >
       <SectionTitle title='Top selling products' slug='top-products' />
       <div className='flex flex-row flex-wrap'>
         {data.map((item, index) => (
