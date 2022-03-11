@@ -1,11 +1,9 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
@@ -14,10 +12,38 @@ import { Collapse, List } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export const MainListItems = () => {
-  const [open, setOpen] = React.useState(false);
+  const [category, setCategory] = useState(false);
+  const [blog, setBlog] = useState(false);
+  const [faq, setFaq] = useState(false);
+  const [commerce, setCommerce] = useState(false);
+  const [products, setProducts] = useState(false);
+  const [payment, setPayment] = useState(false);
+  const [settings, setSettings] = useState(false);
+  const [admin, setAdmin] = useState(false);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleCategory = () => {
+    setCategory(!category);
+  };
+  const handleBlog = () => {
+    setBlog(!blog);
+  };
+  const handleFaq = () => {
+    setFaq(!faq);
+  };
+  const handleCommerce = () => {
+    setCommerce(!commerce);
+  };
+  const handleProducts = () => {
+    setProducts(!products);
+  };
+  const handlePayments = () => {
+    setPayment(!payment);
+  };
+  const handleSettings = () => {
+    setSettings(!settings);
+  };
+  const handleAdmin = () => {
+    setAdmin(!admin);
   };
 
   return (
@@ -34,14 +60,14 @@ export const MainListItems = () => {
         </ListItemIcon>
         <ListItemText primary='Form' />
       </ListItemButton>
-      <ListItemButton onClick={handleClick}>
+      <ListItemButton onClick={handleCategory}>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
         <ListItemText primary='All Category' />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {category ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <Collapse in={open} timeout='auto' unmountOnExit>
+      <Collapse in={category} timeout='auto' unmountOnExit>
         <List component='div' disablePadding>
           <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
             <ListItemIcon>
@@ -63,40 +89,269 @@ export const MainListItems = () => {
           </ListItemButton>
         </List>
       </Collapse>
+      {/* DropDown */}
+      <ListItemButton onClick={handleBlog}>
+        <ListItemIcon>
+          <LayersIcon />
+        </ListItemIcon>
+        <ListItemText primary='Blogs' />
+        {blog ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={blog} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Posts' />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Categories' />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Tags' />
+          </ListItemButton>
+        </List>
+      </Collapse>
+      {/* DropDown */}
+      <ListItemButton onClick={handleFaq}>
+        <ListItemIcon>
+          <LayersIcon />
+        </ListItemIcon>
+        <ListItemText primary='Faq' />
+        {faq ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={faq} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='All' />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Categories' />
+          </ListItemButton>
+        </List>
+      </Collapse>
       <ListItemButton component={Link} to='brands'>
         <ListItemIcon>
           <CountertopsIcon />
         </ListItemIcon>
-        <ListItemText primary='Brands' />
+        <ListItemText primary='Ads' />
       </ListItemButton>
-    </React.Fragment>
-  );
-};
-
-export const SecondaryListItems = () => {
-  return (
-    <React.Fragment>
-      <ListSubheader component='div' inset>
-        Saved reports
-      </ListSubheader>
-      <ListItemButton>
+      <ListItemButton component={Link} to='brands'>
         <ListItemIcon>
-          <AssignmentIcon />
+          <CountertopsIcon />
         </ListItemIcon>
-        <ListItemText primary='Current month' />
+        <ListItemText primary='Testimonials' />
       </ListItemButton>
-      <ListItemButton>
+      {/* DropDown */}
+      <ListItemButton onClick={handleCommerce}>
         <ListItemIcon>
-          <AssignmentIcon />
+          <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary='Last quarter' />
+        <ListItemText primary='Ecommerce' />
+        {commerce ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
-      <ListItemButton>
+      <Collapse in={commerce} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Report' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Flash Sale' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Orders' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Incomplete Orders' />
+          </ListItemButton>
+          <ListItemButton onClick={handleProducts}>
+            <ListItemIcon>
+              <LayersIcon />
+            </ListItemIcon>
+            <ListItemText primary='Products' />
+            {products ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={products} timeout='auto' unmountOnExit>
+            <List component='div' disablePadding>
+              <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary='Import' />
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary='Export' />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Product Categories' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Product Attributes' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Brands' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Reviews' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Shipping' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Discount' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Coupons' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Settings' />
+          </ListItemButton>
+        </List>
+      </Collapse>
+      {/* DropDown */}
+      <ListItemButton onClick={handlePayments}>
         <ListItemIcon>
-          <AssignmentIcon />
+          <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary='Year-end sale' />
+        <ListItemText primary='Payment' />
+        {payment ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
+      <Collapse in={payment} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Transaction' />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Payment Methods' />
+          </ListItemButton>
+        </List>
+      </Collapse>
+      {/* DropDown */}
+      <ListItemButton onClick={handleSettings}>
+        <ListItemIcon>
+          <LayersIcon />
+        </ListItemIcon>
+        <ListItemText primary='Settings' />
+        {settings ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={settings} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Email' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='General' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Permalink' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Social Login' />
+          </ListItemButton>
+        </List>
+      </Collapse>
+      {/* DropDown */}
+      <ListItemButton onClick={handleAdmin}>
+        <ListItemIcon>
+          <LayersIcon />
+        </ListItemIcon>
+        <ListItemText primary='Administration' />
+        {admin ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={admin} timeout='auto' unmountOnExit>
+        <List component='div' disablePadding>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Role &amp; permissions' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Users' />
+          </ListItemButton>
+          <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary='Activity Log' />
+          </ListItemButton>
+        </List>
+      </Collapse>
     </React.Fragment>
   );
 };

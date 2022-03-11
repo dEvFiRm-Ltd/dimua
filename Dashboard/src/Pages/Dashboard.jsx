@@ -20,7 +20,7 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { MainListItems, SecondaryListItems } from '../Components/ListItems';
+import { MainListItems } from '../Components/ListItems';
 
 import { Outlet } from 'react-router-dom';
 
@@ -145,7 +145,6 @@ function DashboardContent() {
           <List component='nav'>
             <MainListItems />
             <Divider sx={{ my: 1 }} />
-            <SecondaryListItems />
           </List>
         </Drawer>
         {/* OutLet */}
