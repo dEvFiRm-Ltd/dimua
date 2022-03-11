@@ -24,7 +24,7 @@ import { MainListItems } from '../Components/ListItems';
 
 import { Outlet } from 'react-router-dom';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -142,9 +142,15 @@ function DashboardContent() {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component='nav'>
+          <List
+            component='nav'
+            sx={{
+              overflow: 'auto',
+              maxHeight: '90vh',
+            }}
+          >
             <MainListItems />
-            <Divider sx={{ my: 1 }} />
+            {/* <Divider sx={{ my: 1 }} /> */}
           </List>
         </Drawer>
         {/* OutLet */}
