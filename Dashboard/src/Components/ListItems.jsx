@@ -7,10 +7,18 @@ import LayersIcon from '@mui/icons-material/Layers';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import CategoryIcon from '@mui/icons-material/Category';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import CategoryTwoToneIcon from '@mui/icons-material/CategoryTwoTone';
+import BookIcon from '@mui/icons-material/Book';
+import CommentIcon from '@mui/icons-material/Comment';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import ClearAllIcon from '@mui/icons-material/ClearAll';
+import AlignVerticalBottomIcon from '@mui/icons-material/AlignVerticalBottom';
 import CountertopsIcon from '@mui/icons-material/Countertops';
 import { Collapse, List } from '@mui/material';
 import { Link } from 'react-router-dom';
-
 export const MainListItems = () => {
   const [category, setCategory] = useState(false);
   const [blog, setBlog] = useState(false);
@@ -56,13 +64,13 @@ export const MainListItems = () => {
       </ListItemButton>
       <ListItemButton component={Link} to='form'>
         <ListItemIcon>
-          <DashboardIcon />
+          <AssignmentIcon />
         </ListItemIcon>
         <ListItemText primary='Form' />
       </ListItemButton>
       <ListItemButton onClick={handleCategory}>
         <ListItemIcon>
-          <LayersIcon />
+          <AlignVerticalBottomIcon />
         </ListItemIcon>
         <ListItemText primary='All Category' />
         {category ? <ExpandLess /> : <ExpandMore />}
@@ -71,19 +79,19 @@ export const MainListItems = () => {
         <List component='div' disablePadding>
           <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
             <ListItemIcon>
-              <StarBorder />
+              <CategoryIcon />
             </ListItemIcon>
             <ListItemText primary='Main Category' />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
-              <StarBorder />
+              <CategoryOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary='Sub Category' />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
-              <StarBorder />
+              <CategoryTwoToneIcon />
             </ListItemIcon>
             <ListItemText primary='Child Category' />
           </ListItemButton>
@@ -92,7 +100,7 @@ export const MainListItems = () => {
       {/* DropDown */}
       <ListItemButton onClick={handleBlog}>
         <ListItemIcon>
-          <LayersIcon />
+          <BookIcon />
         </ListItemIcon>
         <ListItemText primary='Blogs' />
         {blog ? <ExpandLess /> : <ExpandMore />}
@@ -101,7 +109,7 @@ export const MainListItems = () => {
         <List component='div' disablePadding>
           <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
             <ListItemIcon>
-              <StarBorder />
+              <ChatBubbleOutlineIcon />
             </ListItemIcon>
             <ListItemText primary='Posts' />
           </ListItemButton>
@@ -122,7 +130,7 @@ export const MainListItems = () => {
       {/* DropDown */}
       <ListItemButton onClick={handleFaq}>
         <ListItemIcon>
-          <LayersIcon />
+          <ClearAllIcon />
         </ListItemIcon>
         <ListItemText primary='Faq' />
         {faq ? <ExpandLess /> : <ExpandMore />}
@@ -232,7 +240,7 @@ export const MainListItems = () => {
           </ListItemButton>
           <ListItemButton component={Link} to='category' sx={{ pl: 4 }}>
             <ListItemIcon>
-              <StarBorder />
+              <CommentIcon />
             </ListItemIcon>
             <ListItemText primary='Reviews' />
           </ListItemButton>
