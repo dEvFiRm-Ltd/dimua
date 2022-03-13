@@ -21,7 +21,7 @@
     @apply bg-base overflow-x-hidden;
   }
   img {
-    @apply max-w-full object-contain h-auto block;
+    @apply max-w-full object-contain h-auto relative w-full h-full block;
   }
   input {
     @apply bg-white rounded py-8 px-12 border border-solid box-border border-inputColor focus:border-green;
