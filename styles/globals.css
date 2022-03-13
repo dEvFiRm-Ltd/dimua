@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base CSS */
+@layer base {
+  button,
+  a {
+    @apply no-underline hover:no-underline outline-none;
+  }
+  ol,
+  ul {
+    @apply list-none;
+  }
+
+  textarea {
+    @apply resize-none;
+  }
+
+  body {
+    @apply bg-base overflow-x-hidden;
+  }
+  img {
+    @apply max-w-full object-contain h-auto block;
+  }
+  input {
+    @apply bg-white rounded py-8 px-12 border border-solid box-border border-inputColor focus:border-green;
+  }
+  h1 {
+    @apply text-3xl font-medium;
+  }
+  h2 {
+    @apply text-2xl font-medium;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h4 {
+    @apply text-lg font-bold;
+  }
+  h5 {
+    @apply text-md font-bold;
+  }
+  h6 {
+    @apply text-sm font-normal;
+  }
+  p {
+    @apply text-xs font-normal;
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .btnWhite {
+    @apply bg-white text-black border border-solid border-green rounded py-10 text-center;
+  }
+  .btnWhite.active {
+    @apply bg-green text-white border-0;
+  }
+  .btnGreen {
+    @apply bg-green text-white rounded py-10 text-center capitalize;
+  }
+  .pagination {
+    @apply bg-white text-black border border-solid border-borderGray rounded-lg text-md font-bold px-13 py-10 text-center transition-all;
+  }
+  .pagination.indicators {
+    @apply hover:bg-green hover:text-white hover:border-green;
+  }
+  .pagination.count {
+    @apply bg-transparent border-transparent border mx-4 hover:border-borderGray;
+  }
+  .pagination.count.active {
+    @apply bg-green text-white hover:border-green;
+  }
+  .container {
+    @apply my-8 pb-16 block;
+  }
+  .itemSlide .slick-track {
+    width: 100% !important;
+    @apply flex justify-center;
+  }
+}
