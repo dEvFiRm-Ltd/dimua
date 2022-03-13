@@ -58,3 +58,15 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+/build
+
+*/p-key.txt
+
+/.firebase
+
+.firebaserc
+firebase.json
+yarn.lock
+
+package-lock.json
