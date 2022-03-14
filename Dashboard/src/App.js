@@ -14,7 +14,7 @@ function App() {
 
   const getUser = async () => {
     const user = await fetch(
-      `https://devfirm-ecommerce.herokuapp.com/auth/isloggedin`
+      `${process.env.REACT_APP_API_KEY}/auth/isloggedin`
     );
     const userData = await user.json();
     setUser(userData);
@@ -22,7 +22,6 @@ function App() {
   useEffect(() => {
     getUser();
   }, []);
-  console.log(user);
 
   return (
     <Routes>
