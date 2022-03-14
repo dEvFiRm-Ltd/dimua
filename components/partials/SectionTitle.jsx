@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import TimeLaps from '../TimeLaps';
+import Link from 'next/link';
 
 function SectionTitle({ title, duration, slug, background }) {
   return (
@@ -16,7 +16,7 @@ function SectionTitle({ title, duration, slug, background }) {
         {duration && <TimeLaps />}
       </div>
       {slug && (
-        <Link to={`/${slug}`} className=' ml-auto'>
+        <Link passHref href={`/${slug}`} className=' ml-auto'>
           <i
             className={`fa-solid fa-chevron-right ${
               background ? 'text-white' : 'text-black'

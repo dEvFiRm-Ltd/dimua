@@ -17,7 +17,7 @@ function TopSelling() {
     <section
       className='container'
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/img/top-selling.jpg)`,
+        backgroundImage: `url(/img/top-selling.jpg)`,
       }}
     >
       <SectionTitle title='Top selling products' slug='top-products' />
