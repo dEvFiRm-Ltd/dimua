@@ -45,7 +45,8 @@ export default function SignIn() {
     setResponse(await user.json());
     response.success && navigate('/');
   };
-  console.log(response);
+
+  console.log(response.statusCode);
 
   return (
     <ThemeProvider theme={theme}>

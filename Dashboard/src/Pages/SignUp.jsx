@@ -21,12 +21,14 @@ export default function SignUp() {
 
     const data = new FormData(event.currentTarget);
 
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
+    console.log( process.env.MAIN_URL);
+    console.log(process.env.name);
     const user = await fetch(
-      'https://devfirm-ecommerce.herokuapp.com/auth/signup',
+      `https://devfirm-ecommerce.herokuapp.com/auth/signup`,
       {
         method: 'POST',
         body: JSON.stringify({
@@ -39,9 +41,11 @@ export default function SignUp() {
         },
       }
     );
+    console.log(user.headers.status);
     setResponse(await user.json());
   };
-  console.log(response);
+  // console.log(response);
+  console.log(response?.headers);
 
   return (
     <Container maxWidth='xs'>
