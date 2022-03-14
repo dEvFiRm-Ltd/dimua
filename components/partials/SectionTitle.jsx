@@ -16,12 +16,14 @@ function SectionTitle({ title, duration, slug, background }) {
         {duration && <TimeLaps />}
       </div>
       {slug && (
-        <Link passHref href={`/${slug}`} className=' ml-auto'>
-          <i
-            className={`fa-solid fa-chevron-right ${
-              background ? 'text-white' : 'text-black'
-            }`}
-          ></i>
+        <Link passHref href={`/${slug}`}>
+          <a className=' ml-auto'>
+            <i
+              className={`fa-solid fa-chevron-right ${
+                background ? 'text-white' : 'text-black'
+              }`}
+            ></i>
+          </a>
         </Link>
       )}
     </div>

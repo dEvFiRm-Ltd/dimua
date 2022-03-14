@@ -19,11 +19,15 @@ function SingleCoupon({ classes }) {
             ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sit.
           </p>
         </div>
-        <div className='flex flex-row items-center relative w-full'>
-          <Image layout='fill' src={`/img/clock.svg`} alt='' className='mr-4' />
+        <div className='flex flex-row items-center w-full'>
+          <span className='relative w-12 h-12 mr-4'>
+            <Image layout='fill' src={`/img/clock.svg`} alt='' className='' />
+          </span>
           <h6 className=''>2 days left</h6>
-          <Link passHref href={`/`} className='btnGreen ml-auto px-10 py-6'>
-            buy now
+          <Link passHref href={`/`}>
+            <button type='button' className='btnGreen ml-auto px-10 py-6'>
+              buy now
+            </button>
           </Link>
         </div>
       </div>

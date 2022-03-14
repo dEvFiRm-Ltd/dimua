@@ -4,14 +4,12 @@ import Image from 'next/image';
 
 function SingleItem({ content, size, showDiscount }) {
   return (
-    <Link
-      passHref
-      href={`/product/${content.id}`}
-      className={`bg-[#F8E6E4] rounded-lg h-full  border-[#E5EBED] border block transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
-    >
-      <>
+    <Link href={`/product/${content.id}`}>
+      <a
+        className={`bg-[#F8E6E4] rounded-lg h-full  border-[#E5EBED] border block transition-all duration-300 ease-in-out hover:shadow-[1px_1px_9px_0px_rgba(0,0,0,0.75)] `}
+      >
         <div
-          className={`rounded-lg p-16 w-full flex justify-center items-center ${size} `}
+          className={`rounded-lg p-16 w-full flex justify-center items-center ${size} relative `}
         >
           <Image layout='fill' src={content.image} alt='' className='h-full' />
         </div>
@@ -32,7 +30,7 @@ function SingleItem({ content, size, showDiscount }) {
             <h5 className='text-blue'>Save: {content.discount}</h5>
           )}
         </div>
-      </>
+      </a>
     </Link>
   );
 }

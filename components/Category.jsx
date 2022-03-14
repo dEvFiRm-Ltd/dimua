@@ -22,14 +22,9 @@ function Category() {
       <div className='flex flex-row justify-center'>
         {content.map((item, index) => {
           return (
-            <Link
-              href={`/category/${item._id}`}
-              passHref
-              key={index}
-              className='w-[66px] mx-8 flex transition-all flex-col hover:bg-zinc-200 '
-            >
-              <>
-                <div className='w-full h-[40px] '>
+            <Link href={`/category/${item._id}`} key={index}>
+              <a className='w-[66px] mx-8 flex transition-all flex-col hover:bg-zinc-200 '>
+                <div className='w-full h-[40px] relative '>
                   <Image
                     layout='fill'
                     src={`https://devfirm-ecommerce.herokuapp.com${item.icon}`}
@@ -42,7 +37,7 @@ function Category() {
                     {item.title}
                   </p>
                 </div>
-              </>
+              </a>
             </Link>
           );
         })}

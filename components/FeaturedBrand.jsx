@@ -22,20 +22,19 @@ function FeaturedBrand() {
       <SectionTitle title='Featured brand' slug='all-brands' />
       <div className='flex flex-row justify-center w-full px-12 py-16 '>
         {data.map((item, index) => (
-          <Link
-            passHref
-            href={'brand/1'}
-            key={index}
-            className={` ${
-              index === count ? '' : 'mr-[43px]'
-            } w-[65px] h-[65px] `}
-          >
-            <Image
-              layout='fill'
-              src={`/img/brand.png`}
-              alt=''
-              className='h-full w-full '
-            />
+          <Link href={'brand/1'} key={index}>
+            <a
+              className={` ${
+                index === count ? '' : 'mr-[43px]'
+              } w-[65px] h-[65px] relative `}
+            >
+              <Image
+                layout='fill'
+                src={`/img/brand.png`}
+                alt=''
+                className='h-full w-full '
+              />
+            </a>
           </Link>
         ))}
       </div>

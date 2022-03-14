@@ -6,6 +6,7 @@ import Footer from '../components/partials/Footer';
 import Header from '../components/partials/Header';
 import Navigation from '../components/partials/Navigation';
 import '../styles/globals.css';
+import '../styles/all.min.css';
 
 function MyApp({ Component, pageProps }) {
   const RouteTop = () => {
