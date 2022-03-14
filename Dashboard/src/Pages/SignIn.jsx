@@ -46,8 +46,6 @@ export default function SignIn() {
     response.success && navigate('/');
   };
 
-  console.log(response.statusCode);
-
   return (
     <ThemeProvider theme={theme}>
       <Grid container component='main' sx={{ height: '100vh' }}>
