@@ -15,12 +15,14 @@ function SubMenuOne({ data, closed }) {
           className='py-[7px] px-16 flex justify-between flex-row items-center active:bg-ash '
         >
           <div className='flex flex-row items-center'>
-            <Image
-              layout='fill'
-              src={`/img/fashion.png`}
-              alt=''
-              className='w-30 h-30 mr-10 '
-            />
+            <div className='w-30 h-30 mr-10 relative '>
+              <Image
+                layout='fill'
+                src={`/img/fashion.png`}
+                alt=''
+                className='w-full h-full '
+              />
+            </div>
             <h5 className='text-green font-semibold '>{item.title}</h5>
           </div>
           <i className='fa-solid fa-chevron-right'></i>

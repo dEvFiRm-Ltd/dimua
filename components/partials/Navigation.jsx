@@ -10,7 +10,7 @@ function Navigation() {
         <div className='w-[50px] h-[50px] px-12 '>
           <Hamburger />
         </div>
-        <div className='w-[155px] py-10 pr-10 pl-0 '>
+        <div className='w-[155px] pb-16 pr-10 pl-0 '>
           <Link href='/'>
             <a className='w-full block h-120 relative'>
               <Image
@@ -45,7 +45,7 @@ function Navigation() {
       </div>
       <ul className='flex flex-row'>
         <li className='my-auto'>
-          <button type='button' className='p-16 h-fit relative'>
+          <button type='button' className='m-16 w-[22px] h-[22px] relative'>
             <Image
               src={`/img/navigation/cart.svg`}
               layout='fill'
@@ -55,7 +55,7 @@ function Navigation() {
           </button>
         </li>
         <li className='my-auto'>
-          <button type='button' className='p-16 h-fit relative'>
+          <button type='button' className='m-16 w-[22px] h-[22px] relative'>
             <Image
               layout='fill'
               src={`/img/navigation/notification.svg`}
@@ -65,7 +65,7 @@ function Navigation() {
           </button>
         </li>
         <li className='my-auto'>
-          <button type='button' className='p-16 h-fit relative'>
+          <button type='button' className='m-16 w-[22px] h-[22px] relative'>
             <Image
               layout='fill'
               src={`/img/navigation/user.svg`}

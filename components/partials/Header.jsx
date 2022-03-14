@@ -21,11 +21,11 @@ function Header() {
       <ul className='features flex flex-row'>
         {data.map((data, i) => (
           <li className='relative py-7 px-10' key={i}>
-            <h6>
-              <span className='pr-6 h-[15px] relative inline-block mt-4 '>
+            <h6 className='flex flex-row'>
+              <span className='mr-6 h-[15px] w-[15px] relative block mt-4 '>
                 <Image
                   layout='fill'
-                  className='h-full mt-[2px]'
+                  className='h-full mt-[5px]'
                   src={data.icon}
                   alt=''
                 />

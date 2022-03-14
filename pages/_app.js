@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Footer from '../components/partials/Footer';
 import Header from '../components/partials/Header';
 import Navigation from '../components/partials/Navigation';
 import '../styles/globals.css';
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
       <Navigation />
       <RouteTop />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

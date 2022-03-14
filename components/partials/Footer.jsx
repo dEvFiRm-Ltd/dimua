@@ -70,7 +70,11 @@ function Footer() {
         </div>
         <div className='flex flex-col w-1/4'>
           <h5 className='leading-150 uppercase mb-16'>Downloads</h5>
-          <a href='!' target='_blank' className='mb-10'>
+          <a
+            href='!'
+            target='_blank'
+            className='mb-10 w-[140px] h-[42px] relative '
+          >
             <Image
               layout='fill'
               src={`/img/play-store.jpg`}
@@ -78,7 +82,7 @@ function Footer() {
               className=''
             />
           </a>
-          <a href='!' target='_blank' className=''>
+          <a href='!' target='_blank' className=' w-[140px] h-[42px] relative '>
             <Image
               layout='fill'
               src={`/img/apple-store.jpg`}
