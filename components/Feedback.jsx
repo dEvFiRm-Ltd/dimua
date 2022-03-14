@@ -5,7 +5,7 @@ function Feedback() {
   return (
     <div className='p-24 bg-white flex flex-row justify-between '>
       <div className='flex flex-row '>
-        <div className='w-[48px] h-[48px] mr-16 rounded-[50%] overflow-hidden '>
+        <div className='w-[48px] h-[48px] mr-16 rounded-[50%] overflow-hidden relative '>
           <Image
             layout='fill'
             src={`/img/profile.png`}
