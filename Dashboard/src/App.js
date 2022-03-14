@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Categories from './Components/PageComponent/Categories';
 import Forms from './Components/PageComponent/Forms';
 import Home from './Components/PageComponent/Home';
@@ -10,7 +10,6 @@ import Test from './Pages/Test';
 import SignUp from './Pages/SignUp';
 
 function App() {
-  const navigate = useNavigate();
   const [user, setUser] = useState({});
 
   const getUser = async () => {
@@ -22,7 +21,6 @@ function App() {
   };
   useEffect(() => {
     getUser();
-    // !user.isLoggedIn && navigate('/login');
   }, []);
   console.log(user);
 
