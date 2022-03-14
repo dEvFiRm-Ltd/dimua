@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-function SingleCoupon({ classes }) {
+function SingleCoupon({ classes, setView }) {
   return (
     <div
       className={`flex rounded-md border border-solid border-base flex-row w-[310px] ${classes} `}
@@ -24,11 +24,13 @@ function SingleCoupon({ classes }) {
             <Image layout='fill' src={`/img/clock.svg`} alt='' className='' />
           </span>
           <h6 className=''>2 days left</h6>
-          <Link passHref href={`/`}>
-            <button type='button' className='btnGreen ml-auto px-10 py-6'>
-              buy now
-            </button>
-          </Link>
+          <button
+            type='button'
+            onClick={() => setView(true)}
+            className='btnGreen ml-auto px-10 py-6'
+          >
+            buy now
+          </button>
         </div>
       </div>
     </div>
