@@ -37,8 +37,8 @@ export default function Products() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
+          {rows.map((row, i) => (
+            <TableRow key={i}>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.quantity}</TableCell>
               <TableCell>{row.amount}</TableCell>

@@ -13,12 +13,10 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import Copyright from '../Components/Copyright';
-import { Alert } from '@mui/material';
 
 const theme = createTheme();
 
 export default function SignIn() {
-  const [response, setResponse] = React.useState(null);
   let navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -42,8 +40,7 @@ export default function SignIn() {
         },
       }
     );
-    setResponse(await user.json());
-    response.success && navigate('/');
+    user.status === 200 && navigate('/dashboard');
   };
 
   return (
@@ -82,19 +79,7 @@ export default function SignIn() {
             <Typography component='h1' variant='h5'>
               Sign in
             </Typography>
-            {response?.success && (
-              <Alert
-                severity={response.success ? 'success' : 'error'}
-                sx={{
-                  top: '170px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  position: 'absolute',
-                }}
-              >
-                {response.success}
-              </Alert>
-            )}
+
             <Box
               component='form'
               method='post'

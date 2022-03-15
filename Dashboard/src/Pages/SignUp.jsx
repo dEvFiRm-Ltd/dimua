@@ -11,11 +11,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Copyright from '../Components/Copyright';
-import { Link } from 'react-router-dom';
-import { Alert } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
-  const [response, setResponse] = React.useState(null);
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -25,9 +24,7 @@ export default function SignUp() {
     //   email: data.get('email'),
     //   password: data.get('password'),
     // });
-    console.log( process.env.MAIN_URL);
-    console.log(process.env.name);
-    const user = await fetch(
+    const signup = await fetch(
       `https://devfirm-ecommerce.herokuapp.com/auth/signup`,
       {
         method: 'POST',
@@ -41,11 +38,23 @@ export default function SignUp() {
         },
       }
     );
-    console.log(user.headers.status);
-    setResponse(await user.json());
+    if (signup.status === 201) {
+      const signin = await fetch(
+        'https://devfirm-ecommerce.herokuapp.com/auth/local',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            username: data.get('email'),
+            password: data.get('password'),
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      signin.status === 200 && navigate('/dashboard');
+    }
   };
-  // console.log(response);
-  console.log(response?.headers);
 
   return (
     <Container maxWidth='xs'>
@@ -63,19 +72,6 @@ export default function SignUp() {
         </Avatar>
         <Typography component='h1' sx={{ mb: 8 }} variant='h5'>
           Sign up
-          {response && (
-            <Alert
-              severity={response.message ? 'success' : 'error'}
-              sx={{
-                top: '170px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                position: 'absolute',
-              }}
-            >
-              {response.message ? response.message : response.error}
-            </Alert>
-          )}
         </Typography>
         <Box
           component='form'
