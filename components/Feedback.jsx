@@ -36,7 +36,7 @@ function Feedback() {
           </button>
         </div>
         <div className='flex flex-row '>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}
@@ -44,7 +44,7 @@ function Feedback() {
               className=' w-full h-full '
             />
           </div>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}
@@ -52,7 +52,7 @@ function Feedback() {
               className=' w-full h-full '
             />
           </div>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}
@@ -60,7 +60,7 @@ function Feedback() {
               className=' w-full h-full '
             />
           </div>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}
@@ -68,7 +68,7 @@ function Feedback() {
               className=' w-full h-full '
             />
           </div>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}
@@ -76,7 +76,7 @@ function Feedback() {
               className=' w-full h-full '
             />
           </div>
-          <div className='w-60 h-60 mr-10 '>
+          <div className='w-60 h-60 mr-10 relative '>
             <Image
               layout='fill'
               src={`/img/item01.jpg`}

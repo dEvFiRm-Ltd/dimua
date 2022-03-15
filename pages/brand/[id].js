@@ -2,9 +2,12 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Breadcrumb from '../../components/Breadcrumb';
 import Hero from '../../components/Hero';
+import BrandProducts from '../../components/BrandProducts';
+import BrandReviews from '../../components/BrandReviews';
+import BrandInfo from '../../components/BrandInfo';
 
 function SingleBrand() {
-  const [collapse, setCollapse] = useState(1);
+  const [collapse, setCollapse] = useState(2);
 
   const handleCollapse = (e) => {
     setCollapse(e);
@@ -73,7 +76,13 @@ function SingleBrand() {
       </section>
 
       {/* Collapse Area */}
-
+      {collapse === 1 ? (
+        <BrandProducts />
+      ) : collapse === 2 ? (
+        <BrandInfo />
+      ) : (
+        <BrandReviews />
+      )}
       {/* Area 01 */}
     </>
   );
