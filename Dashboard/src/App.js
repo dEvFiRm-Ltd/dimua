@@ -38,6 +38,8 @@ function App() {
   console.log(user)
   // getUser();
 
+  
+
   return (
     <Routes>
       <Route path='/' exact element={<Navigate to='dashboard' />} />
