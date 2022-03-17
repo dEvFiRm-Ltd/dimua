@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import Copyright from '../Components/Copyright';
+import axios from 'axios';
 
 const theme = createTheme();
 
@@ -42,6 +43,46 @@ export default function SignIn() {
     );
     user.status === 200 && navigate('/dashboard');
   };
+
+  // React.useEffect(() => {
+
+  //  console.log( window.Cookies.get());
+  // },[])
+
+  const fetchAuthUser = async () => {
+    const response = await axios
+      .get("http://localhost:5000/auth/isloggedin", { withCredentials: true })
+      .catch((err) => {
+        console.log("Not properly authenticated");
+        // dispatch(setIsAuthenticated(false));
+        // dispatch(setAuthUser(null));
+        // history.push("/login/error");
+      });
+
+    if (response && response.data) {
+      console.log("User: ", response.data);
+      // dispatch(setIsAuthenticated(true));
+      // dispatch(setAuthUser(response.data));
+      // history.push("/welcome");
+    }
+  };
+
+  const loginWithGoogle = () => {
+    // eslint-disable-next-line no-unused-vars
+    
+    const newWindow = window.open('http://localhost:5000/auth/google', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    if (newWindow) {
+     let timer = setInterval(() => {
+        if (newWindow.closed) {
+          console.log("Yay we're authenticated");
+          fetchAuthUser();
+          if (timer) clearInterval(timer);
+        }
+      }, 500);
+    }
+
+  };
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -118,6 +159,8 @@ export default function SignIn() {
               >
                 Sign In
               </Button>
+
+
               <Grid container>
                 <Grid item xs>
                   <Link to='/' variant='body2'>
@@ -133,6 +176,7 @@ export default function SignIn() {
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
+          <button onClick={() => loginWithGoogle()}>log in with Google</button>
         </Grid>
       </Grid>
     </ThemeProvider>
