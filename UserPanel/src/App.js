@@ -19,6 +19,8 @@ import Profile from './pages/Profile';
 import ProfileDashboard from './pages/ProfileDashboard';
 import ProductDetails from './pages/ProductDetails';
 import { useEffect } from 'react';
+import SignIn from './pages/Signin';
+import Success from './pages/Success';
 
 const RouteTop = () => {
   const { pathname } = useLocation();
@@ -38,6 +40,8 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/login' element={<SignIn />} />
+        <Route path='/success' element={<Success />} />
         <Route path='flash-sale' element={<FlashSale />} />
         <Route path='coupons' element={<Coupon />} />
         <Route path='top-products' element={<TopProducts />} />
