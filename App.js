@@ -1,15 +1,35 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Text, View } from 'react-native';
-
+import { View, Image, StatusBar } from 'react-native';
+let color = '#FF4B3A';
 const App = () => {
   return (
-    <View>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-        explicabo.
-      </Text>
-    </View>
+    <>
+      <StatusBar backgroundColor={color} />
+      <View style={{ backgroundColor: color, flex: 1 }}>
+        <View
+          style={{
+            padding: 49,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <View
+            style={{
+              width: 73,
+              height: 73,
+              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: 50,
+              backgroundColor: '#ffffff',
+            }}
+          >
+            <Image source={require('./assets/img/logo.png')} />
+          </View>
+        </View>
+      </View>
+    </>
   );
 };
 
