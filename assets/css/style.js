@@ -169,5 +169,36 @@ const style = StyleSheet.create({
     },
     title: { ...text3, color: color.red },
   },
+  /* Auth Screen */
+  auths: {
+    container: {
+      flex: 1,
+    },
+    upperContainer: {
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      backgroundColor: color.white,
+      width: '100%',
+      height: 382,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'relative',
+    },
+    lowerContainer: {},
+    btnArea: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+    },
+    imgContainer: {
+      width: 150,
+      height: 150,
+    },
+  },
 });
 export default style;

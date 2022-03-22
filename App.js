@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, ImageBackground } from 'react-native';
-import { Immersive } from 'react-native-immersive';
+import AuthScreen from './screens/AuthScreen';
+import { View } from 'react-native';
+import { color } from './assets/css/style';
 const App = () => {
-  Immersive.on();
   return (
-    <View>
-      <Text>Your Contents</Text>
+    <View style={{ backgroundColor: color.base, flex: 1 }}>
+      <AuthScreen />
     </View>
   );
 };
