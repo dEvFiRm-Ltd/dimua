@@ -28,6 +28,10 @@
 		EAF40207955B45F896C4A463 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36A31A77BDD470C95C312CD /* Octicons.ttf */; };
 		E5F523556B3A4EA0946CDE7F /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6C1E187E5CA467189D920A9 /* SimpleLineIcons.ttf */; };
 		D39FA3D74126406F9E4F6FB0 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A697B0FC94E04F75B7F479DF /* Zocial.ttf */; };
+		3BC07944A8314D6193CB4718 /* SF-Pro-Rounded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4F16B0EC6534C5A9D856BE4 /* SF-Pro-Rounded-Bold.ttf */; };
+		1EF6777AA4B24B5F8CC44B1D /* SF-Pro-Rounded-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E7516B1FF574AA6A59BED21 /* SF-Pro-Rounded-Heavy.ttf */; };
+		E4153053228246C687F33EE1 /* SF-Pro-Rounded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A71D78AD959D4545966BB8C7 /* SF-Pro-Rounded-Regular.ttf */; };
+		1AE9A3C44CFD443296AA0F3C /* SF-Pro-Rounded-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A017E5FDB0F4418A1DE79D1 /* SF-Pro-Rounded-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		D36A31A77BDD470C95C312CD /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A6C1E187E5CA467189D920A9 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A697B0FC94E04F75B7F479DF /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A4F16B0EC6534C5A9D856BE4 /* SF-Pro-Rounded-Bold.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Bold.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E7516B1FF574AA6A59BED21 /* SF-Pro-Rounded-Heavy.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Heavy.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A71D78AD959D4545966BB8C7 /* SF-Pro-Rounded-Regular.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Regular.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A017E5FDB0F4418A1DE79D1 /* SF-Pro-Rounded-Semibold.ttf */ = {isa = PBXFileReference; name = "SF-Pro-Rounded-Semibold.ttf"; path = "../assets/fonts/SF-Pro-Rounded-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,10 @@
 				D36A31A77BDD470C95C312CD /* Octicons.ttf */,
 				A6C1E187E5CA467189D920A9 /* SimpleLineIcons.ttf */,
 				A697B0FC94E04F75B7F479DF /* Zocial.ttf */,
+				A4F16B0EC6534C5A9D856BE4 /* SF-Pro-Rounded-Bold.ttf */,
+				4E7516B1FF574AA6A59BED21 /* SF-Pro-Rounded-Heavy.ttf */,
+				A71D78AD959D4545966BB8C7 /* SF-Pro-Rounded-Regular.ttf */,
+				2A017E5FDB0F4418A1DE79D1 /* SF-Pro-Rounded-Semibold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,6 +299,10 @@
 				EAF40207955B45F896C4A463 /* Octicons.ttf in Resources */,
 				E5F523556B3A4EA0946CDE7F /* SimpleLineIcons.ttf in Resources */,
 				D39FA3D74126406F9E4F6FB0 /* Zocial.ttf in Resources */,
+				3BC07944A8314D6193CB4718 /* SF-Pro-Rounded-Bold.ttf in Resources */,
+				1EF6777AA4B24B5F8CC44B1D /* SF-Pro-Rounded-Heavy.ttf in Resources */,
+				E4153053228246C687F33EE1 /* SF-Pro-Rounded-Regular.ttf in Resources */,
+				1AE9A3C44CFD443296AA0F3C /* SF-Pro-Rounded-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
