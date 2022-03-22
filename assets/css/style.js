@@ -37,61 +37,61 @@ const semibold = {
 const h1 = {
   fontSize: 65,
   lineHeight: 56.44,
-  color: '#ffffff',
+  color: color.white,
   ...heavy,
 };
 const h2 = {
   fontSize: 34,
   lineHeight: 40.57,
-  color: '#ffffff',
+  color: color.white,
   ...bold,
 };
 const h3 = {
   fontSize: 28,
   lineHeight: 33.41,
-  color: '#ffffff',
+  color: color.white,
   ...bold,
 };
 const h4 = {
   fontSize: 22,
   lineHeight: 22.29,
-  color: '#ffffff',
+  color: color.white,
   ...semibold,
 };
 const h5 = {
   fontSize: 18,
   lineHeight: 21.48,
-  color: '#ffffff',
+  color: color.white,
   ...semibold,
 };
 const h6 = {
   fontSize: 17,
   lineHeight: 20.29,
-  color: '#ffffff',
+  color: color.white,
   ...semibold,
 };
 const h7 = {
   fontSize: 15,
   lineHeight: 17.9,
-  color: '#ffffff',
+  color: color.white,
   ...semibold,
 };
 const text1 = {
   fontSize: 15,
   lineHeight: 17.9,
-  color: '#ffffff',
+  color: color.white,
   ...regular,
 };
 const text2 = {
   fontSize: 13,
   lineHeight: 15.51,
-  color: '#ffffff',
+  color: color.white,
   ...regular,
 };
 const text3 = {
   fontSize: 10,
   lineHeight: 11.93,
-  color: '#ffffff',
+  color: color.white,
   ...regular,
 };
 
@@ -113,7 +113,7 @@ const style = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 50,
-      backgroundColor: '#ffffff',
+      backgroundColor: color.white,
     },
     title: { ...h1, paddingLeft: 2, paddingTop: 31 },
   },
