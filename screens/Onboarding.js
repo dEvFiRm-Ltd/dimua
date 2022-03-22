@@ -27,7 +27,7 @@ const App = () => {
               <Text style={onboarding.btntxt}>Let's get started!</Text>
             </Pressable>
           </LinearGradient>
-          <Image source={require('./assets/img/onboarding.png')} />
+          <Image source={require('../assets/img/onboarding.png')} />
         </View>
       </View>
     </>
