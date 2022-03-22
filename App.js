@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Text, ImageBackground } from 'react-native';
-import style from './assets/css/style';
+import style, { color } from './assets/css/style';
 import Logo from './assets/img/logo.svg';
-import { RotationHoleLoader } from 'react-native-indicator';
 const { loading } = style;
 const App = () => {
   useEffect(() => {}, []);
@@ -17,7 +16,6 @@ const App = () => {
         <View style={loading.section}>
           <Logo width='40%' height='40%' style={loading.logo} />
           <Text style={loading.title}>Food for Everyone</Text>
-          <RotationHoleLoader color={'#FF470B'} size={50} />
         </View>
       </ImageBackground>
     </View>
