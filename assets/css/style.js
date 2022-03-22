@@ -85,8 +85,8 @@ const text3 = {
   ...regular,
 };
 
-/* Onboarding Screen */
 const style = StyleSheet.create({
+  /* Onboarding Screen */
   onboarding: {
     container: {
       backgroundColor: color.red,
@@ -143,6 +143,31 @@ const style = StyleSheet.create({
       ...h6,
       color: color.red,
     },
+  },
+  /* Loading Screen */
+  loading: {
+    container: {
+      flex: 1,
+    },
+    background: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    section: {
+      width: 262,
+      height: 262,
+      borderRadius: 262 * 0.5,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      backgroundColor: color.white,
+    },
+    logo: {
+      animation: 'spin infinite 20s linear',
+    },
+    title: { ...text3, color: color.red },
   },
 });
 export default style;

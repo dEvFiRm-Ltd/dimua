@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StatusBar, Text, Image, Pressable } from 'react-native';
-import Logo from './assets/img/logo.svg';
+import Logo from '../assets/img/logo.svg';
 import LinearGradient from 'react-native-linear-gradient';
 import style, { color } from '../assets/css/style';
 const { onboarding } = style;
