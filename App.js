@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, StatusBar } from 'react-native';
+import Logo from './assets/img/logo.svg';
 let color = '#FF4B3A';
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
               backgroundColor: '#ffffff',
             }}
           >
-            <Image source={require('./assets/img/logo.png')} />
+            <Logo width='100%' height='100%' />
           </View>
         </View>
       </View>
