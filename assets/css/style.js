@@ -37,61 +37,51 @@ const semibold = {
 const h1 = {
   fontSize: 65,
   lineHeight: 56.44,
-  color: color.white,
   ...heavy,
 };
 const h2 = {
   fontSize: 34,
   lineHeight: 40.57,
-  color: color.white,
   ...bold,
 };
 const h3 = {
   fontSize: 28,
   lineHeight: 33.41,
-  color: color.white,
   ...bold,
 };
 const h4 = {
   fontSize: 22,
   lineHeight: 22.29,
-  color: color.white,
   ...semibold,
 };
 const h5 = {
   fontSize: 18,
   lineHeight: 21.48,
-  color: color.white,
   ...semibold,
 };
 const h6 = {
   fontSize: 17,
   lineHeight: 20.29,
-  color: color.white,
   ...semibold,
 };
 const h7 = {
   fontSize: 15,
   lineHeight: 17.9,
-  color: color.white,
   ...semibold,
 };
 const text1 = {
   fontSize: 15,
   lineHeight: 17.9,
-  color: color.white,
   ...regular,
 };
 const text2 = {
   fontSize: 13,
   lineHeight: 15.51,
-  color: color.white,
   ...regular,
 };
 const text3 = {
   fontSize: 10,
   lineHeight: 11.93,
-  color: color.white,
   ...regular,
 };
 
@@ -101,7 +91,13 @@ const style = StyleSheet.create({
     container: {
       backgroundColor: color.red,
       flex: 1,
-      padding: 49,
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    header: {
+      paddingLeft: 49,
+      paddingTop: 56,
       display: 'flex',
       flexDirection: 'column',
     },
@@ -115,7 +111,38 @@ const style = StyleSheet.create({
       borderRadius: 50,
       backgroundColor: color.white,
     },
-    title: { ...h1, paddingLeft: 2, paddingTop: 31 },
+    title: { ...h1, paddingLeft: 2, paddingTop: 31, color: color.white },
+    footer: {
+      position: 'relative',
+      bottom: 0,
+      left: 0,
+      right: 0,
+    },
+    overlay: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      width: '100%',
+      zIndex: 1,
+      filter: 'blur(30px)',
+      height: 266,
+    },
+    button: {
+      backgroundColor: color.white,
+      borderRadius: 50,
+      padding: 25,
+      width: '70%',
+      alignSelf: 'center',
+      display: 'flex',
+      alignItems: 'center',
+      bottom: 36,
+      position: 'absolute',
+    },
+    btntxt: {
+      ...h6,
+      color: color.red,
+    },
   },
 });
 export default style;

@@ -1,21 +1,10 @@
 import React from 'react';
-import { View, StatusBar, Text } from 'react-native';
-import Logo from './assets/img/logo.svg';
-import style, { color } from './assets/css/style';
-const { onboarding } = style;
+import { View, Text } from 'react-native';
 const App = () => {
   return (
-    <>
-      <StatusBar backgroundColor={color.red} />
-      <View style={onboarding.container}>
-        <View style={onboarding.imgContainer}>
-          <Logo width='100%' height='100%' />
-        </View>
-        <View>
-          <Text style={onboarding.title}>Food for Everyone</Text>
-        </View>
-      </View>
-    </>
+    <View>
+      <Text>Your Contents</Text>
+    </View>
   );
 };
 
