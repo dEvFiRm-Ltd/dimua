@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import {
-  TouchableWithoutFeedback,
-  Keyboard,
-  View,
-  Text,
-  Pressable,
-} from 'react-native';
+import { TouchableWithoutFeedback, Keyboard, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 import Logo from '../assets/img/logo.svg';
 import style from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
 import SignupScreen from '../components/SignupScreen';
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 const { auths } = style;
 const Tab = createMaterialTopTabNavigator();
+
+/**
+ * @description AuthScreen is the screen that is displayed Login and Signup Screens.
+ */
 const AuthScreen = () => {
   const [keyboardStatus, setKeyboardStatus] = useState(false);
+
+  const scale = useSharedValue(330);
+  const heights = useSharedValue(150);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -30,22 +36,34 @@ const AuthScreen = () => {
       hideSubscription.remove();
     };
   }, []);
-  console.log(keyboardStatus);
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      height: scale.value,
+    };
+  });
+  const logoAnimation = useAnimatedStyle(() => {
+    return {
+      height: heights.value,
+      width: heights.value,
+    };
+  });
+
+  useEffect(() => {
+    scale.value = withTiming(keyboardStatus ? 100 : 330, { duration: 500 });
+    heights.value = withTiming(keyboardStatus ? 90 : 150, { duration: 500 });
+  }, [keyboardStatus]);
+
+  // console.log(keyboardStatus);
   return (
     <NavigationContainer>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={auths.container}>
-          <View
-            style={
-              keyboardStatus
-                ? auths.upperContainer(110)
-                : auths.upperContainer(330)
-            }
-          >
-            <View style={auths.imgContainer}>
+          <Animated.View style={[auths.upperContainer, animatedStyle]}>
+            <Animated.View style={[auths.imgContainer, logoAnimation]}>
               <Logo width='100%' height='100%' />
-            </View>
-          </View>
+            </Animated.View>
+          </Animated.View>
 
           <Tab.Navigator
             initialRouteName='Login'

@@ -174,18 +174,17 @@ const style = StyleSheet.create({
     container: {
       flex: 1,
     },
-    upperContainer: (e) => ({
+    upperContainer: {
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
       backgroundColor: color.white,
       width: '100%',
-      height: e,
       display: 'flex',
       TransitionEvent: 'all 0.5s ease-in-out',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'relative',
-    }),
+    },
     btnArea: {
       position: 'absolute',
       bottom: 0,
@@ -203,10 +202,17 @@ const style = StyleSheet.create({
   forms: {
     container: {
       marginTop: 41,
+      display: 'flex',
+      alignItems: 'flex-start',
+      paddingHorizontal: 50,
     },
     input: {
-      marginTop: 23,
-      marginBottom: 23,
+      width: '100%',
+    },
+    btn: {
+      ...h6,
+      color: color.red,
+      textTransform: 'capitalize',
     },
   },
 });
