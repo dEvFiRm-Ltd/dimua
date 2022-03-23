@@ -174,18 +174,18 @@ const style = StyleSheet.create({
     container: {
       flex: 1,
     },
-    upperContainer: {
+    upperContainer: (e) => ({
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
       backgroundColor: color.white,
       width: '100%',
-      height: 330,
+      height: e,
       display: 'flex',
+      TransitionEvent: 'all 0.5s ease-in-out',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'relative',
-    },
-    lowerContainer: {},
+    }),
     btnArea: {
       position: 'absolute',
       bottom: 0,
@@ -198,6 +198,15 @@ const style = StyleSheet.create({
     imgContainer: {
       width: 150,
       height: 150,
+    },
+  },
+  forms: {
+    container: {
+      marginTop: 41,
+    },
+    input: {
+      marginTop: 23,
+      marginBottom: 23,
     },
   },
 });
