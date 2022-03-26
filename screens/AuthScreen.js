@@ -6,14 +6,16 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Logo from '../assets/img/logo.svg';
-import style from '../assets/css/style';
+import style, { color } from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
 import SignupScreen from '../components/SignupScreen';
 import TabButton from '../components/TabButton';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 const { auths } = style;
-const Tab = createBottomTabNavigator();
+
+const Tab = createMaterialTopTabNavigator();
 
 /**
  * @description AuthScreen is the screen that is displayed Login and Signup Screens.
@@ -74,17 +76,24 @@ const AuthScreen = () => {
             initialRouteName='Login'
             screenOptions={{
               headerShown: false,
+              tabBarLabelStyle: { ...auths.tabBarLabel },
               tabBarActiveTintColor: '#000000',
-              tabBarLabelStyle: { fontSize: 16 },
               tabBarStyle: {
+                height: 36,
                 position: 'absolute',
-                top: 10,
+                top: 0,
                 left: 0,
                 right: 0,
-                backgroundColor: 'transparent',
+                backgroundColor: color.white,
                 shadowOpacity: 0,
+                elevation: 0,
                 borderBottomStartRadius: 20,
                 borderBottomEndRadius: 20,
+              },
+              tabBarIndicatorStyle: {
+                backgroundColor: color.red,
+                width: '30%',
+                marginLeft: 50,
               },
             }}
           >
@@ -94,8 +103,7 @@ const AuthScreen = () => {
                 name={tab.title}
                 component={tab.component}
                 options={{
-                  tabBarShowLabel: false,
-                  tabBar: (props) => <TabButton {...props} item={tab} />,
+                  tabBarLabel: tab.title,
                 }}
               />
             ))}

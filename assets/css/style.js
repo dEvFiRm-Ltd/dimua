@@ -175,11 +175,10 @@ const style = StyleSheet.create({
       flex: 1,
     },
     upperContainer: {
-      borderBottomLeftRadius: 20,
-      borderBottomRightRadius: 20,
       backgroundColor: color.white,
       width: '100%',
       display: 'flex',
+      zIndex: 1,
       TransitionEvent: 'all 0.5s ease-in-out',
       justifyContent: 'center',
       alignItems: 'center',
@@ -197,6 +196,11 @@ const style = StyleSheet.create({
     imgContainer: {
       width: 150,
       height: 150,
+    },
+    tabBarLabel: {
+      fontSize: 18,
+      fontFamily: 'SF-Pro-Rounded-Semibold',
+      lineHeight: 18,
     },
   },
   forms: {
