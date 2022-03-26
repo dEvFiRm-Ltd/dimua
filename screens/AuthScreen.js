@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TouchableWithoutFeedback, Keyboard, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -11,8 +10,10 @@ import Logo from '../assets/img/logo.svg';
 import style from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
 import SignupScreen from '../components/SignupScreen';
+import TabButton from '../components/TabButton';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const { auths } = style;
-const Tab = createMaterialTopTabNavigator();
+const Tab = createBottomTabNavigator();
 
 /**
  * @description AuthScreen is the screen that is displayed Login and Signup Screens.
@@ -55,6 +56,10 @@ const AuthScreen = () => {
   }, [keyboardStatus]);
 
   // console.log(keyboardStatus);
+  const tabs = [
+    { route: 'login', title: 'Login', component: LoginScreen },
+    { route: 'signup', title: 'Signup', component: SignupScreen },
+  ];
   return (
     <NavigationContainer>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -68,20 +73,32 @@ const AuthScreen = () => {
           <Tab.Navigator
             initialRouteName='Login'
             screenOptions={{
+              headerShown: false,
               tabBarActiveTintColor: '#000000',
               tabBarLabelStyle: { fontSize: 16 },
+              tabBarStyle: {
+                position: 'absolute',
+                top: 10,
+                left: 0,
+                right: 0,
+                backgroundColor: 'transparent',
+                shadowOpacity: 0,
+                borderBottomStartRadius: 20,
+                borderBottomEndRadius: 20,
+              },
             }}
           >
-            <Tab.Screen
-              name='Login'
-              component={LoginScreen}
-              options={{ tabBarLabel: 'Login' }}
-            />
-            <Tab.Screen
-              name='Signup'
-              component={SignupScreen}
-              options={{ tabBarLabel: 'Signup' }}
-            />
+            {tabs.map((tab, i) => (
+              <Tab.Screen
+                key={i}
+                name={tab.title}
+                component={tab.component}
+                options={{
+                  tabBarShowLabel: false,
+                  tabBar: (props) => <TabButton {...props} item={tab} />,
+                }}
+              />
+            ))}
           </Tab.Navigator>
         </View>
       </TouchableWithoutFeedback>
