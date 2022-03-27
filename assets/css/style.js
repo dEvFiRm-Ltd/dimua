@@ -250,5 +250,12 @@ const style = StyleSheet.create({
       },
     },
   },
+  /* Home Screen */
+  home: {
+    container: {
+      paddingTop: 47,
+      paddingBottom: 70,
+    },
+  },
 });
 export default style;

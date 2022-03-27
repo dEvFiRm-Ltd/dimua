@@ -4,7 +4,7 @@ import Logo from '../assets/img/logo.svg';
 import LinearGradient from 'react-native-linear-gradient';
 import style, { color } from '../assets/css/style';
 const { onboarding } = style;
-const App = () => {
+const Onboarding = () => {
   return (
     <>
       <StatusBar backgroundColor={color.red} />
@@ -34,4 +34,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Onboarding;

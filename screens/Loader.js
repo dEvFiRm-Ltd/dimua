@@ -3,7 +3,7 @@ import { View, Text, ImageBackground } from 'react-native';
 import style, { color } from '../assets/css/style';
 import Logo from '../assets/img/logo.svg';
 const { loading } = style;
-const App = () => {
+const Loader = () => {
   useEffect(() => {}, []);
 
   return (
@@ -22,4 +22,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Loader;
