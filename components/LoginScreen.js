@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Pressable, Text, View, Keyboard } from 'react-native';
+import { Text, View, Keyboard, TouchableOpacity } from 'react-native';
 import style, { color } from '../assets/css/style';
 import Animated, {
   useAnimatedStyle,
@@ -12,7 +12,7 @@ const { forms } = style;
 /**
  * @description LoginScreen is the screen that is displayed Login Screen.
  */
-const Login = () => {
+const LoginScreen = () => {
   const [keyboardStatus, setKeyboardStatus] = useState(false);
   const [name, setName] = useState('');
   const heights = useSharedValue(23);
@@ -72,11 +72,14 @@ const Login = () => {
           secureTextEntry={true}
         />
       </Animated.View>
-      <Pressable>
+      <TouchableOpacity>
         <Text style={forms.btn}> forgot password ! </Text>
-      </Pressable>
+      </TouchableOpacity>
+      <TouchableOpacity style={forms.submit} activeOpacity={0.8}>
+        <Text style={forms.submit.btn}> Login </Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-export default Login;
+export default LoginScreen;

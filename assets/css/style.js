@@ -218,6 +218,37 @@ const style = StyleSheet.create({
       color: color.red,
       textTransform: 'capitalize',
     },
+    submit: {
+      width: 314,
+      paddingVertical: 20,
+      backgroundColor: color.red,
+      borderRadius: 30,
+      marginLeft: 'auto',
+      marginTop: 40,
+      btn: {
+        ...h6,
+        color: color.white,
+        textTransform: 'capitalize',
+        textAlign: 'center',
+      },
+    },
+    signup: {
+      submit: {
+        width: 200,
+        paddingVertical: 15,
+        backgroundColor: color.red,
+        borderRadius: 30,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 15,
+        btn: {
+          ...h6,
+          color: color.white,
+          textTransform: 'capitalize',
+          textAlign: 'center',
+        },
+      },
+    },
   },
 });
 export default style;

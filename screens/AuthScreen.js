@@ -11,7 +11,6 @@ import Logo from '../assets/img/logo.svg';
 import style, { color } from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
 import SignupScreen from '../components/SignupScreen';
-import TabButton from '../components/TabButton';
 
 const { auths } = style;
 
@@ -75,8 +74,12 @@ const AuthScreen = () => {
           <Tab.Navigator
             initialRouteName='Login'
             screenOptions={{
-              headerShown: false,
-              tabBarLabelStyle: { ...auths.tabBarLabel },
+              headerShown: true,
+              tabBarLabelStyle: {
+                fontSize: 18,
+                fontFamily: 'SF-Pro-Rounded-Semibold',
+                lineHeight: 18,
+              },
               tabBarActiveTintColor: '#000000',
               tabBarStyle: {
                 height: 36,
@@ -92,8 +95,8 @@ const AuthScreen = () => {
               },
               tabBarIndicatorStyle: {
                 backgroundColor: color.red,
-                width: '30%',
-                marginLeft: 50,
+                width: '20%',
+                marginLeft: 60,
               },
             }}
           >
