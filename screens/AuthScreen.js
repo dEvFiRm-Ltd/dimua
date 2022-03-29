@@ -10,6 +10,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Logo from '../assets/img/logo.svg';
 import style, { color } from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
+import TabBar from '../components/TabBar';
 import SignupScreen from '../components/SignupScreen';
 
 const { auths } = style;
@@ -19,10 +20,13 @@ const Tab = createMaterialTopTabNavigator();
 /**
  * @description AuthScreen is the screen that is displayed Login and Signup Screens.
  */
+
+const defaultSize = 250;
+
 const AuthScreen = () => {
   const [keyboardStatus, setKeyboardStatus] = useState(false);
 
-  const scale = useSharedValue(330);
+  const scale = useSharedValue(defaultSize);
   const heights = useSharedValue(150);
 
   useEffect(() => {
@@ -52,7 +56,9 @@ const AuthScreen = () => {
   });
 
   useEffect(() => {
-    scale.value = withTiming(keyboardStatus ? 100 : 330, { duration: 500 });
+    scale.value = withTiming(keyboardStatus ? 100 : defaultSize, {
+      duration: 500,
+    });
     heights.value = withTiming(keyboardStatus ? 90 : 150, { duration: 500 });
   }, [keyboardStatus]);
 
@@ -73,42 +79,10 @@ const AuthScreen = () => {
 
           <Tab.Navigator
             initialRouteName='Login'
-            screenOptions={{
-              headerShown: true,
-              tabBarLabelStyle: {
-                fontSize: 18,
-                fontFamily: 'SF-Pro-Rounded-Semibold',
-                lineHeight: 18,
-              },
-              tabBarActiveTintColor: '#000000',
-              tabBarStyle: {
-                height: 36,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                backgroundColor: color.white,
-                shadowOpacity: 0,
-                elevation: 0,
-                borderBottomStartRadius: 20,
-                borderBottomEndRadius: 20,
-              },
-              tabBarIndicatorStyle: {
-                backgroundColor: color.red,
-                width: '20%',
-                marginLeft: 60,
-              },
-            }}
+            tabBar={(props) => <TabBar {...props} />}
           >
             {tabs.map((tab, i) => (
-              <Tab.Screen
-                key={i}
-                name={tab.title}
-                component={tab.component}
-                options={{
-                  tabBarLabel: tab.title,
-                }}
-              />
+              <Tab.Screen key={i} name={tab.title} component={tab.component} />
             ))}
           </Tab.Navigator>
         </View>

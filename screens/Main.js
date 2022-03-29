@@ -3,6 +3,7 @@ import { Button, LogBox, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './HomeScreen';
+import { color } from '../assets/css/style';
 
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
@@ -17,6 +18,11 @@ export default function MainScreen() {
         screenOptions={{
           headerShown: false,
           swipeEnabled: false,
+          drawerType: 'back',
+          drawerStyle: {
+            backgroundColor: color.red,
+          },
+          sceneContainerStyle: {},
         }}
         initialRouteName='Home'
       >

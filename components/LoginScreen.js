@@ -54,7 +54,6 @@ const LoginScreen = () => {
           underlineActiveColor={color.ash}
           underlineColor={color.ash}
           onChangeText={handleInputChange}
-          autoFocus={true}
           // keyboardType='email-address'
           // secureTextEntry={true}
         />

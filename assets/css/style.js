@@ -173,34 +173,20 @@ const style = StyleSheet.create({
   auths: {
     container: {
       flex: 1,
+      position: 'relative',
     },
     upperContainer: {
       backgroundColor: color.white,
       width: '100%',
-      display: 'flex',
       zIndex: 1,
       TransitionEvent: 'all 0.5s ease-in-out',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'relative',
     },
-    btnArea: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-    },
     imgContainer: {
       width: 150,
       height: 150,
-    },
-    tabBarLabel: {
-      fontSize: 18,
-      fontFamily: 'SF-Pro-Rounded-Semibold',
-      lineHeight: 18,
     },
   },
   forms: {
