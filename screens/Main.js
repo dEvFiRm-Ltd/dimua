@@ -31,7 +31,8 @@ export default function MainScreen() {
     <NavigationContainer>
       <Drawer.Navigator
         drawerContent={(props) => {
-          animationValue.value = props.progress;
+          // animationValue.value = props.progress;
+          console.log(props.progress);
           return <Drawers {...props} />;
         }}
         screenOptions={{
