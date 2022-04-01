@@ -3,30 +3,49 @@ import { Button, View } from 'react-native';
 import { color } from '../assets/css/style';
 import { useDrawerStatus } from '@react-navigation/drawer';
 import Animated, {
+  Extrapolate,
+  interpolate,
   useAnimatedStyle,
   useSharedValue,
+  withTiming,
 } from 'react-native-reanimated';
 
 export default function HomeScreen({ navigation }) {
-  const scaleAnimation = useSharedValue(1);
+  const scaleAnimation = useSharedValue(0);
   const isDrawerOpen = useDrawerStatus();
-  console.log('isDrawerOpen', isDrawerOpen);
-  const animateScale = useAnimatedStyle(() => {
+  const animatedStyle = useAnimatedStyle(() => {
+    const scaled = interpolate(scaleAnimation.value, [0, 1], [1, 0.8], {
+      extrapolateRight: Extrapolate.CLAMP,
+    });
+    const translates = interpolate(scaleAnimation.value, [0, 1], [0, 60], {
+      extrapolateRight: Extrapolate.CLAMP,
+    });
+    const radious = interpolate(scaleAnimation.value, [0, 1], [0, 15], {
+      extrapolateRight: Extrapolate.CLAMP,
+    });
     return {
-      transform: [{ scale: scaleAnimation.value }],
+      transform: [{ scale: scaled }, { translateY: translates }],
+      borderRadius: radious,
     };
   });
+  React.useEffect(() => {
+    if (isDrawerOpen === 'open') {
+      scaleAnimation.value = withTiming(1, { duration: 500 });
+    } else {
+      scaleAnimation.value = withTiming(0, { duration: 500 });
+    }
+  }, [isDrawerOpen]);
+  console.log('isDrawerOpen', isDrawerOpen);
+
   return (
     <Animated.View
       style={[
         {
           flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
           backgroundColor: color.base,
-          transform: [{ scale: 0.75 }],
-          borderRadius: 15,
+          elevation: 10,
         },
+        animatedStyle,
       ]}
     >
       <Button onPress={() => navigation.toggleDrawer()} title='alem' />
