@@ -1,54 +1,49 @@
 import * as React from 'react';
 import { Button, View } from 'react-native';
 import { color } from '../assets/css/style';
-import { useDrawerStatus } from '@react-navigation/drawer';
+import { useDrawerProgress } from '@react-navigation/drawer';
 import Animated, {
   Extrapolate,
   interpolate,
+  interpolateNode,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
 
 export default function HomeScreen({ navigation }) {
-  const scaleAnimation = useSharedValue(0);
-  const isDrawerOpen = useDrawerStatus();
-  const animatedStyle = useAnimatedStyle(() => {
-    const scaled = interpolate(scaleAnimation.value, [0, 1], [1, 0.8], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const translates = interpolate(scaleAnimation.value, [0, 1], [0, 60], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const radious = interpolate(scaleAnimation.value, [0, 1], [0, 15], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    return {
-      transform: [{ scale: scaled }, { translateY: translates }],
-      borderRadius: radious,
-    };
+  const progress = useDrawerProgress();
+  const scale = interpolateNode(progress.value, {
+    inputRange: [0, 1],
+    outputRange: [1, 0.8],
+    extrapolate: Extrapolate.CLAMP,
   });
-  React.useEffect(() => {
-    if (isDrawerOpen === 'open') {
-      scaleAnimation.value = withTiming(1, { duration: 500 });
-    } else {
-      scaleAnimation.value = withTiming(0, { duration: 500 });
-    }
-  }, [isDrawerOpen]);
-  console.log('isDrawerOpen', isDrawerOpen);
+  const borderRadius = interpolateNode(progress.value, {
+    inputRange: [0, 1],
+    outputRange: [1, 20],
+    extrapolate: Extrapolate.CLAMP,
+  });
+  const animatedStyle = {
+    borderRadius,
+    transform: [{ scale }],
+  };
 
   return (
     <Animated.View
       style={[
         {
           flex: 1,
-          backgroundColor: color.base,
           elevation: 10,
+          overflow: 'hidden',
+          backgroundColor: color.base,
         },
         animatedStyle,
       ]}
     >
-      <Button onPress={() => navigation.toggleDrawer()} title='alem' />
+      <Button onPress={() => navigation.toggleDrawer()} title='aaslem' />
     </Animated.View>
+    // <View style={{ flex: 1, backgroundColor: color.base }}>
+    //   <Button onPress={() => navigation.toggleDrawer()} title='alem' />
+    // </View>
   );
 }

@@ -25,7 +25,7 @@ export default function App() {
             drawerType: 'slide',
             overlayColor: 'transparent',
             drawerStyle: {
-              backgroundColor: 'transparent',
+              backgroundColor: color.ash,
             },
             sceneContainerStyle: {
               backgroundColor: 'transparent',
