@@ -12,6 +12,8 @@ import style, { color } from '../assets/css/style';
 import Cart from '../assets/img/cart.svg';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { ScrollView } from 'react-native-gesture-handler';
+import { products } from '../mocks/data';
+import SingleProducts from './SingleProducts';
 
 const { home } = style;
 
@@ -62,7 +64,7 @@ const Home = ({ navigation }) => {
           { title: 'desserts' },
         ]}
         renderItem={({ item, index, separators }) => (
-          <TouchableHighlight key={index} style={{ height: 100 }}>
+          <TouchableHighlight key={index}>
             <View
               style={{
                 marginHorizontal: 10,
@@ -92,7 +94,7 @@ const Home = ({ navigation }) => {
           </TouchableHighlight>
         )}
       />
-      <View style={{ marginLeft: 'auto' }}>
+      <View style={{ marginLeft: 'auto', marginTop: 45 }}>
         <Pressable
           onPress={() => {
             navigation.toggleDrawer();
@@ -102,6 +104,20 @@ const Home = ({ navigation }) => {
           <Text style={{ color: color.red }}>See More</Text>
         </Pressable>
       </View>
+      <FlatList
+        style={{ flexGrow: 0 }}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        data={products}
+        renderItem={({ item, index, separators }) => (
+          <TouchableHighlight
+            key={index}
+            style={{ height: 270, marginTop: 72 }}
+          >
+            <SingleProducts data={item} />
+          </TouchableHighlight>
+        )}
+      />
     </>
   );
 };
