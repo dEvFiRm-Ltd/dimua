@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-  Keyboard,
-  Pressable,
-  Text,
-  TextInput,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
-import Cart from '../assets/img/cart.svg';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import style from '../assets/css/style';
 import { useDrawerStatus } from '@react-navigation/drawer';
 import Animated, {
@@ -17,8 +9,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faMugSaucer } from '@fortawesome/free-solid-svg-icons';
+import Home from '../components/Home';
 
 const { home } = style;
 
@@ -80,33 +71,9 @@ export default function HomeScreen({ navigation }) {
         ]}
       >
         <Animated.View style={[home.container, animatedStyle]}>
-          <View style={home.header}>
-            <Pressable
-              style={{ flexDirection: 'column' }}
-              onPress={() => {
-                navigation.toggleDrawer();
-                Keyboard.dismiss();
-              }}
-            >
-              <View style={home.drawerTop} />
-              <View style={home.drawerMiddle} />
-              <View style={home.drawerBottom} />
-            </Pressable>
-            <Pressable style={home.cartBtn}>
-              <Cart />
-            </Pressable>
-          </View>
-          <View style={{ width: 186, marginBottom: 28 }}>
-            <Text style={home.titleText}>Delicious food for you</Text>
-          </View>
-          <View>
-            <FontAwesomeIcon icon={faMugSaucer} />
-            <TextInput
-              style={home.searchBox}
-              placeholder='Search for food'
-              keyboardType='default'
-            />
-          </View>
+          {/* Main Component */}
+          <Home navigation={navigation} />
+          {/* Main Component */}
         </Animated.View>
       </Animated.View>
     </TouchableWithoutFeedback>

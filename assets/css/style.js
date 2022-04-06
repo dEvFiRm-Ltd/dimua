@@ -285,10 +285,11 @@ const style = StyleSheet.create({
       width: '100%',
       paddingVertical: 21,
       paddingLeft: 69,
-      borderWidth: 1,
-      borderColor: color.ash,
+      backgroundColor: '#EFEEEE',
       borderRadius: 30,
+      marginBottom: 36,
     },
+    searchIcon: { position: 'absolute', top: 25, left: 35, zIndex: 1 },
   },
 });
 export default style;
