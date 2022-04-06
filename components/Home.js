@@ -10,7 +10,6 @@ import {
 import React from 'react';
 import style, { color } from '../assets/css/style';
 import Cart from '../assets/img/cart.svg';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { products } from '../mocks/data';
 import SingleProducts from './SingleProducts';
