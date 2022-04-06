@@ -6,8 +6,9 @@ import MainScreen from './screens/Main';
 const App = () => {
   return (
     <View style={{ backgroundColor: color.base, flex: 1 }}>
-      <MainScreen />
+      {/* <MainScreen /> */}
       {/* <AuthScreen /> */}
+      <MainScreen />
     </View>
   );
 };

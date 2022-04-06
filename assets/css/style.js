@@ -240,7 +240,8 @@ const style = StyleSheet.create({
   home: {
     container: {
       paddingHorizontal: 40,
-      paddingVertical: 25,
+      paddingTop: 25,
+      paddingBottom: 5,
       flex: 1,
       elevation: 0,
       overflow: 'hidden',

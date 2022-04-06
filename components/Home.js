@@ -11,7 +11,7 @@ import React from 'react';
 import style, { color } from '../assets/css/style';
 import Cart from '../assets/img/cart.svg';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { ScrollView } from 'react-native-gesture-handler';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { products } from '../mocks/data';
 import SingleProducts from './SingleProducts';
 
@@ -40,7 +40,7 @@ const Home = ({ navigation }) => {
         <Text style={home.titleText}>Delicious food for you</Text>
       </View>
       <View style={{ position: 'relative' }}>
-        <Icon
+        <FontAwesome5
           style={home.searchIcon}
           name='search'
           size={18}
@@ -134,7 +134,7 @@ const Home = ({ navigation }) => {
             elevation: 20,
           }}
         >
-          <Icon
+          <FontAwesome5
             name='home'
             size={24}
             style={{
@@ -152,7 +152,7 @@ const Home = ({ navigation }) => {
             elevation: 20,
           }}
         >
-          <Icon
+          <FontAwesome5
             name='heart'
             size={24}
             style={{
@@ -170,7 +170,7 @@ const Home = ({ navigation }) => {
             elevation: 20,
           }}
         >
-          <Icon
+          <FontAwesome5
             name='user'
             size={24}
             style={{
@@ -188,8 +188,8 @@ const Home = ({ navigation }) => {
             elevation: 20,
           }}
         >
-          <Icon
-            name='clock-o'
+          <FontAwesome5
+            name='history'
             size={24}
             style={{
               shadowColor: color.ash,
