@@ -239,8 +239,55 @@ const style = StyleSheet.create({
   /* Home Screen */
   home: {
     container: {
-      paddingTop: 47,
-      paddingBottom: 70,
+      paddingHorizontal: 40,
+      paddingVertical: 25,
+      flex: 1,
+      elevation: 0,
+      overflow: 'hidden',
+      backgroundColor: color.base,
+    },
+    header: {
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+      marginBottom: 25,
+    },
+
+    drawerTop: {
+      width: 22,
+      height: 3,
+      borderRadius: 7,
+      marginVertical: 2,
+      backgroundColor: color.black,
+    },
+    drawerMiddle: {
+      width: 16,
+      height: 3,
+      borderRadius: 7,
+      marginVertical: 2,
+      backgroundColor: color.black,
+    },
+    drawerBottom: {
+      width: 22,
+      height: 3,
+      borderRadius: 7,
+      marginVertical: 2,
+      backgroundColor: color.black,
+    },
+    cartBtn: { width: 24, height: 24 },
+    titleText: {
+      textAlign: 'left',
+      fontSize: 34,
+      lineHeight: 34,
+      ...bold,
+      color: color.black,
+    },
+    searchBox: {
+      width: '100%',
+      paddingVertical: 21,
+      paddingLeft: 69,
+      borderWidth: 1,
+      borderColor: color.ash,
+      borderRadius: 30,
     },
   },
 });

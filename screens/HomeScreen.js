@@ -1,6 +1,14 @@
 import * as React from 'react';
-import { Button, View } from 'react-native';
-import { color } from '../assets/css/style';
+import {
+  Keyboard,
+  Pressable,
+  Text,
+  TextInput,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
+import Cart from '../assets/img/cart.svg';
+import style from '../assets/css/style';
 import { useDrawerStatus } from '@react-navigation/drawer';
 import Animated, {
   Extrapolate,
@@ -9,6 +17,10 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faMugSaucer } from '@fortawesome/free-solid-svg-icons';
+
+const { home } = style;
 
 export default function HomeScreen({ navigation }) {
   const scaleAnimation = useSharedValue(0);
@@ -55,29 +67,48 @@ export default function HomeScreen({ navigation }) {
   }, [isDrawerOpen]);
 
   return (
-    <Animated.View
-      style={[
-        {
-          backgroundColor: 'rgba(242, 242, 242, 0.2)',
-          flex: 1,
-          elevation: 0,
-        },
-        animatedParentStyle,
-      ]}
-    >
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <Animated.View
         style={[
           {
+            backgroundColor: 'rgba(242, 242, 242, 0.2)',
             flex: 1,
             elevation: 0,
-            overflow: 'hidden',
-            backgroundColor: color.base,
+            flexDirection: 'row',
           },
-          animatedStyle,
+          animatedParentStyle,
         ]}
       >
-        <Button onPress={() => navigation.toggleDrawer()} title='alem' />
+        <Animated.View style={[home.container, animatedStyle]}>
+          <View style={home.header}>
+            <Pressable
+              style={{ flexDirection: 'column' }}
+              onPress={() => {
+                navigation.toggleDrawer();
+                Keyboard.dismiss();
+              }}
+            >
+              <View style={home.drawerTop} />
+              <View style={home.drawerMiddle} />
+              <View style={home.drawerBottom} />
+            </Pressable>
+            <Pressable style={home.cartBtn}>
+              <Cart />
+            </Pressable>
+          </View>
+          <View style={{ width: 186, marginBottom: 28 }}>
+            <Text style={home.titleText}>Delicious food for you</Text>
+          </View>
+          <View>
+            <FontAwesomeIcon icon={faMugSaucer} />
+            <TextInput
+              style={home.searchBox}
+              placeholder='Search for food'
+              keyboardType='default'
+            />
+          </View>
+        </Animated.View>
       </Animated.View>
-    </Animated.View>
+    </TouchableWithoutFeedback>
   );
 }
