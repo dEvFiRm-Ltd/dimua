@@ -36,7 +36,7 @@ const Home = ({ navigation }) => {
           <Cart />
         </Pressable>
       </View>
-      <View style={{ width: 186, marginBottom: 28 }}>
+      <View style={{ width: 186, marginBottom: 18 }}>
         <Text style={home.titleText}>Delicious food for you</Text>
       </View>
       <View style={{ position: 'relative' }}>
@@ -94,7 +94,7 @@ const Home = ({ navigation }) => {
           </TouchableHighlight>
         )}
       />
-      <View style={{ marginLeft: 'auto', marginTop: 45 }}>
+      <View style={{ marginLeft: 'auto', marginTop: 25 }}>
         <Pressable
           onPress={() => {
             navigation.toggleDrawer();
@@ -118,6 +118,87 @@ const Home = ({ navigation }) => {
           </TouchableHighlight>
         )}
       />
+      <View
+        style={{
+          marginTop: 'auto',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexDirection: 'row',
+        }}
+      >
+        <Pressable
+          style={{
+            // shadowOffset: { width: 0, height: 1 },
+            shadowRadius: 2,
+            shadowOpacity: 0.4,
+            elevation: 20,
+          }}
+        >
+          <Icon
+            name='home'
+            size={24}
+            style={{
+              shadowColor: color.red,
+              padding: 7,
+            }}
+            color={color.red}
+          />
+        </Pressable>
+        <Pressable
+          style={{
+            // shadowOffset: { width: 0, height: 1 },
+            shadowRadius: 2,
+            shadowOpacity: 0.4,
+            elevation: 20,
+          }}
+        >
+          <Icon
+            name='heart'
+            size={24}
+            style={{
+              shadowColor: color.ash,
+              padding: 7,
+            }}
+            color={color.ash}
+          />
+        </Pressable>
+        <Pressable
+          style={{
+            // shadowOffset: { width: 0, height: 1 },
+            shadowRadius: 2,
+            shadowOpacity: 0.4,
+            elevation: 20,
+          }}
+        >
+          <Icon
+            name='user'
+            size={24}
+            style={{
+              shadowColor: color.ash,
+              padding: 7,
+            }}
+            color={color.ash}
+          />
+        </Pressable>
+        <Pressable
+          style={{
+            // shadowOffset: { width: 0, height: 1 },
+            shadowRadius: 2,
+            shadowOpacity: 0.4,
+            elevation: 20,
+          }}
+        >
+          <Icon
+            name='clock-o'
+            size={24}
+            style={{
+              shadowColor: color.ash,
+              padding: 7,
+            }}
+            color={color.ash}
+          />
+        </Pressable>
+      </View>
     </>
   );
 };

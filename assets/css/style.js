@@ -249,7 +249,7 @@ const style = StyleSheet.create({
     header: {
       justifyContent: 'space-between',
       flexDirection: 'row',
-      marginBottom: 25,
+      marginBottom: 15,
     },
 
     drawerTop: {
@@ -277,7 +277,7 @@ const style = StyleSheet.create({
     titleText: {
       textAlign: 'left',
       fontSize: 34,
-      lineHeight: 34,
+      lineHeight: 32,
       ...bold,
       color: color.black,
     },
@@ -287,7 +287,7 @@ const style = StyleSheet.create({
       paddingLeft: 69,
       backgroundColor: '#EFEEEE',
       borderRadius: 30,
-      marginBottom: 36,
+      marginBottom: 26,
     },
     searchIcon: { position: 'absolute', top: 25, left: 35, zIndex: 1 },
   },
