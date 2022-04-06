@@ -2,7 +2,10 @@ import { Dimensions, Pressable, Text, View } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
 import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Carousel, { ParallaxImage } from 'react-native-snap-carousel';
+import Carousel, {
+  Pagination,
+  ParallaxImage,
+} from 'react-native-snap-carousel';
 
 const ENTRIES1 = [
   {
@@ -48,6 +51,7 @@ const renderItem = ({ item, index }, parallaxProps) => {
 
 const ProductDetails = () => {
   const [entries, setEntries] = useState([]);
+  const [activeSlide, setActiveSlide] = useState();
   const carouselRef = useRef(null);
 
   const goForward = () => {
@@ -57,6 +61,31 @@ const ProductDetails = () => {
   useEffect(() => {
     setEntries(ENTRIES1);
   }, []);
+
+  const Paginations = () => {
+    return (
+      <Pagination
+        dotsLength={entries.length}
+        activeDotIndex={activeSlide}
+        containerStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.75)' }}
+        dotStyle={{
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          marginHorizontal: 8,
+          backgroundColor: 'rgba(255, 255, 255, 0.92)',
+        }}
+        inactiveDotStyle={
+          {
+            // Define styles for inactive dots here
+          }
+        }
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+      />
+    );
+  };
+
   return (
     <View
       style={{
@@ -88,7 +117,9 @@ const ProductDetails = () => {
           data={entries}
           renderItem={renderItem}
           hasParallaxImages={true}
+          onSnapToItem={(index) => setActiveSlide(index)}
         />
+        <Paginations />
       </View>
     </View>
   );
