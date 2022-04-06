@@ -3,6 +3,7 @@ import React from 'react';
 import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Slider from '../components/Slider';
+import { products } from '../mocks/data';
 
 const ProductDetails = () => {
   return (
@@ -27,7 +28,7 @@ const ProductDetails = () => {
           <FontAwesome5 name='heart' regular size={18} />
         </Pressable>
       </View>
-      <Slider />
+      <Slider data={products} />
     </View>
   );
 };

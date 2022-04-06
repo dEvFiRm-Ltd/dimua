@@ -3,11 +3,12 @@ import React from 'react';
 import style, { color } from '../assets/css/style';
 const { product } = style;
 const SingleProducts = ({ data }) => {
+  const imgUrl = { uri: data.image };
   return (
     <View style={product.container}>
       <View style={product.image}>
         <Image
-          source={data.image}
+          source={imgUrl}
           resizeMode='contain'
           style={{ width: null, height: null, flex: 1 }}
         />
