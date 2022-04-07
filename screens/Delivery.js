@@ -13,7 +13,7 @@ import { RadioButton } from 'react-native-paper';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const Checkout = () => {
+const Delivery = () => {
   const [checked, setChecked] = React.useState('first');
   return (
     <ScrollView
@@ -131,7 +131,7 @@ const Checkout = () => {
             paddingHorizontal: 16,
             paddingTop: 18,
             paddingBottom: 26,
-            marginBottom: 27,
+            marginBottom: 67,
             backgroundColor: color.white,
             overflow: 'hidden',
             justifyContent: 'flex-start',
@@ -143,13 +143,82 @@ const Checkout = () => {
             elevation: 10,
           }}
         >
-          <View style={{ flexDirection: 'column', marginLeft: 16 }}>
-            <RadioButton
-              value='first'
-              status={checked === 'first' ? 'checked' : 'unchecked'}
+          <View
+            style={{
+              flexDirection: 'column',
+              marginLeft: 16,
+              justifyContent: 'center',
+            }}
+          >
+            <Pressable
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingVertical: 15,
+              }}
               onPress={() => setChecked('first')}
+            >
+              <RadioButton
+                value='first'
+                status={checked === 'first' ? 'checked' : 'unchecked'}
+                onPress={() => setChecked('first')}
+                uncheckedColor='#9f9f9f'
+                color={color.red}
+              />
+              <View
+                style={{
+                  marginLeft: 15,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}
+              >
+                <Text>Door Delivery</Text>
+              </View>
+            </Pressable>
+            <View
+              style={{
+                width: 232,
+                height: 1,
+                backgroundColor: color.ash,
+              }}
             />
+            <Pressable
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingVertical: 15,
+              }}
+              onPress={() => setChecked('second')}
+            >
+              <RadioButton
+                value='second'
+                status={checked === 'second' ? 'checked' : 'unchecked'}
+                onPress={() => setChecked('second')}
+                uncheckedColor='#9f9f9f'
+                color={color.red}
+              />
+              <View
+                style={{
+                  marginLeft: 15,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}
+              >
+                <Text>Pick Up</Text>
+              </View>
+            </Pressable>
           </View>
+        </View>
+
+        <View
+          style={{
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            marginBottom: 48,
+          }}
+        >
+          <Text>Total PRice</Text>
+          <Text>$150</Text>
         </View>
 
         <Pressable
@@ -175,7 +244,7 @@ const Checkout = () => {
               textAlign: 'center',
             }}
           >
-            Update
+            proceed to payment
           </Text>
         </Pressable>
       </View>
@@ -183,4 +252,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default Delivery;
