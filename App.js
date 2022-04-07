@@ -8,6 +8,8 @@ import Payment from './screens/Payment';
 import ProductDetails from './screens/ProductDetails';
 import Profile from './screens/Profile';
 import SearchResult from './screens/SearchResult';
+import SearchFailed from './screens/SearchFailed';
+import HistoryFailed from './screens/HistoryFailed';
 const App = () => {
   return (
     <View style={{ backgroundColor: color.base, flex: 1 }}>
@@ -15,9 +17,11 @@ const App = () => {
       {/* <AuthScreen /> */}
       {/* <ProductDetails /> */}
       {/* <SearchResult /> */}
+      {/* <SearchFailed /> */}
+      <HistoryFailed />
       {/* <Profile /> */}
       {/* <Delivery /> */}
-      <Payment />
+      {/* <Payment /> */}
     </View>
   );
 };
