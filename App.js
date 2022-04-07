@@ -4,12 +4,14 @@ import { color } from './assets/css/style';
 import AuthScreen from './screens/AuthScreen';
 import MainScreen from './screens/Main';
 import ProductDetails from './screens/ProductDetails';
+import SearchResult from './screens/SearchResult';
 const App = () => {
   return (
     <View style={{ backgroundColor: color.base, flex: 1 }}>
       {/* <MainScreen /> */}
       {/* <AuthScreen /> */}
-      <ProductDetails />
+      {/* <ProductDetails /> */}
+      <SearchResult />
     </View>
   );
 };
