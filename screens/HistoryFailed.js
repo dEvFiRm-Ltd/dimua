@@ -63,7 +63,7 @@ const HistoryFailed = () => {
             paddingVertical: 20,
             backgroundColor: color.red,
             borderRadius: 30,
-            marginTop: 150,
+            marginTop: 55,
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
             shadowOffset: { width: 0, height: 2 },

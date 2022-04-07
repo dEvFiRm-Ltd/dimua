@@ -4,7 +4,7 @@ import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
-const OrderBlank = () => {
+const NoInternet = () => {
   return (
     <View
       style={{
@@ -50,10 +50,11 @@ const OrderBlank = () => {
           flexDirection: 'column',
         }}
       >
-        <FontAwesome5 name='shopping-cart' regular size={75} />
-        <Text style={{ textAlign: 'center', fontSize: 28 }}>No order Yet</Text>
+        <FontAwesome5 name='wifi' regular size={75} />
+        <Text style={{ textAlign: 'center', fontSize: 28 }}>No internet</Text>
         <Text style={{ textAlign: 'center', fontSize: 17 }}>
-          Hit the orange button down below to Create an order
+          Your internet connection is currently not available please check or
+          try again.
         </Text>
         <Pressable
           style={{
@@ -77,7 +78,7 @@ const OrderBlank = () => {
               textAlign: 'center',
             }}
           >
-            Make Order
+            Try Again
           </Text>
         </Pressable>
       </View>
@@ -85,4 +86,4 @@ const OrderBlank = () => {
   );
 };
 
-export default OrderBlank;
+export default NoInternet;

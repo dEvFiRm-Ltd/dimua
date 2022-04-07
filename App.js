@@ -10,6 +10,8 @@ import Profile from './screens/Profile';
 import SearchResult from './screens/SearchResult';
 import SearchFailed from './screens/SearchFailed';
 import HistoryFailed from './screens/HistoryFailed';
+import OrderBlank from './screens/OrderBlank';
+import NoInternet from './screens/NoInternet';
 const App = () => {
   return (
     <View style={{ backgroundColor: color.base, flex: 1 }}>
@@ -18,7 +20,9 @@ const App = () => {
       {/* <ProductDetails /> */}
       {/* <SearchResult /> */}
       {/* <SearchFailed /> */}
-      <HistoryFailed />
+      {/* <HistoryFailed /> */}
+      {/* <OrderBlank /> */}
+      <NoInternet />
       {/* <Profile /> */}
       {/* <Delivery /> */}
       {/* <Payment /> */}
