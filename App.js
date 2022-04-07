@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { color } from './assets/css/style';
 import AuthScreen from './screens/AuthScreen';
+import Checkout from './screens/Checkout';
 import MainScreen from './screens/Main';
 import ProductDetails from './screens/ProductDetails';
 import Profile from './screens/Profile';
@@ -13,7 +14,8 @@ const App = () => {
       {/* <AuthScreen /> */}
       {/* <ProductDetails /> */}
       {/* <SearchResult /> */}
-      <Profile />
+      {/* <Profile /> */}
+      <Checkout />
     </View>
   );
 };

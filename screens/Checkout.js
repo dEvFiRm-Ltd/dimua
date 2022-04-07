@@ -9,10 +9,12 @@ import {
 import React from 'react';
 import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { RadioButton } from 'react-native-paper';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const Profile = () => {
+const Checkout = () => {
+  const [checked, setChecked] = React.useState('first');
   return (
     <ScrollView
       style={{
@@ -45,7 +47,7 @@ const Profile = () => {
             textTransform: 'capitalize',
           }}
         >
-          Profile
+          Checkout
         </Text>
       </View>
       <Text
@@ -56,7 +58,7 @@ const Profile = () => {
           fontSize: 34,
         }}
       >
-        My Profile
+        Delivery
       </Text>
       <View
         style={{
@@ -70,7 +72,7 @@ const Profile = () => {
             marginBottom: 11,
           }}
         >
-          <Text>Personal details</Text>
+          <Text>Address details</Text>
           <Pressable>
             <Text style={{ color: color.red }}>change</Text>
           </Pressable>
@@ -93,24 +95,6 @@ const Profile = () => {
             elevation: 10,
           }}
         >
-          <View
-            style={{
-              width: 91,
-              height: 100,
-              borderRadius: 10,
-              overflow: 'hidden',
-            }}
-          >
-            <Image
-              source={require('../assets/img/user.png')}
-              style={{
-                width: null,
-                height: null,
-                resizeMode: 'contain',
-                flex: 1,
-              }}
-            />
-          </View>
           <View style={{ flexDirection: 'column', marginLeft: 16 }}>
             <Text style={{ fontSize: 18, marginBottom: 4 }}>Alem Bura</Text>
             <Text style={{ fontSize: 16, marginBottom: 4 }}>
@@ -123,22 +107,35 @@ const Profile = () => {
             <View
               style={{ width: 165, height: 1, backgroundColor: color.ash }}
             />
-            <Text style={{ fontSize: 16, marginBottom: 4, width: 190 }}>
+            <Text style={{ fontSize: 16, marginBottom: 4, width: 290 }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Architecto, nam!{' '}
             </Text>
           </View>
         </View>
-        <Pressable
+        <View
           style={{
-            marginBottom: 27,
-            borderRadius: 20,
-            paddingVertical: 20,
-            paddingHorizontal: 23,
-            justifyContent: 'space-between',
             flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginBottom: 11,
+          }}
+        >
+          <Text>Delivery Method</Text>
+          <Pressable>
+            <Text style={{ color: color.red }}>change</Text>
+          </Pressable>
+        </View>
+        <View
+          style={{
+            borderRadius: 20,
+            paddingHorizontal: 16,
+            paddingTop: 18,
+            paddingBottom: 26,
+            marginBottom: 27,
             backgroundColor: color.white,
-            alignItems: 'center',
+            overflow: 'hidden',
+            justifyContent: 'flex-start',
+            flexDirection: 'row',
             shadowColor: 'rgba(57,57,57,0.03)',
             shadowOffset: { width: 0, height: 2 },
             shadowRadius: 5,
@@ -146,69 +143,15 @@ const Profile = () => {
             elevation: 10,
           }}
         >
-          <Text>Orders</Text>
-          <FontAwesome5 name='chevron-right' solid />
-        </Pressable>
-        <Pressable
-          style={{
-            marginBottom: 27,
-            borderRadius: 20,
-            paddingVertical: 20,
-            paddingHorizontal: 23,
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            backgroundColor: color.white,
-            alignItems: 'center',
-            shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
-            shadowRadius: 5,
-            shadowRadius: 5,
-            elevation: 10,
-          }}
-        >
-          <Text>Pending Reviews</Text>
-          <FontAwesome5 name='chevron-right' solid />
-        </Pressable>
-        <Pressable
-          style={{
-            marginBottom: 27,
-            borderRadius: 20,
-            paddingVertical: 20,
-            paddingHorizontal: 23,
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            backgroundColor: color.white,
-            alignItems: 'center',
-            shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
-            shadowRadius: 5,
-            shadowRadius: 5,
-            elevation: 10,
-          }}
-        >
-          <Text>FAQ</Text>
-          <FontAwesome5 name='chevron-right' solid />
-        </Pressable>
-        <Pressable
-          style={{
-            marginBottom: 27,
-            borderRadius: 20,
-            paddingVertical: 20,
-            paddingHorizontal: 23,
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            backgroundColor: color.white,
-            alignItems: 'center',
-            shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
-            shadowRadius: 5,
-            shadowRadius: 5,
-            elevation: 10,
-          }}
-        >
-          <Text>Payment Methods</Text>
-          <FontAwesome5 name='chevron-right' solid />
-        </Pressable>
+          <View style={{ flexDirection: 'column', marginLeft: 16 }}>
+            <RadioButton
+              value='first'
+              status={checked === 'first' ? 'checked' : 'unchecked'}
+              onPress={() => setChecked('first')}
+            />
+          </View>
+        </View>
+
         <Pressable
           style={{
             marginBottom: 67,
@@ -240,4 +183,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Checkout;
