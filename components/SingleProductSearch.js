@@ -1,11 +1,11 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
-import style, { color } from '../assets/css/style';
+import style from '../assets/css/style';
 const { productSearch } = style;
 const SingleProductsSearch = ({ data }) => {
   const imgUrl = { uri: data.image };
   return (
-    <View style={[productSearch.container]}>
+    <View style={productSearch.container}>
       <View style={productSearch.image}>
         <Image
           source={imgUrl}

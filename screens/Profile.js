@@ -1,9 +1,17 @@
-import { Pressable, ScrollView, TextInput, View } from 'react-native';
+import {
+  Pressable,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, { useEffect, useState } from 'react';
-import { color } from '../assets/css/style';
+import style, { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { products } from '../mocks/data';
 import SingleProductSearch from '../components/SingleProductSearch';
+const { productDetails } = style;
 
 const SearchDetails = () => {
   const [fev, setFev] = useState(false);

@@ -361,7 +361,7 @@ const style = StyleSheet.create({
       alignSelf: 'center',
       zIndex: 12,
       backgroundColor: color.white,
-      shadowColor: 'rgba(57,57,57,0.5)',
+      shadowColor: 'rgba(57,57,57,0.7)',
       shadowOffset: { width: 0, height: 1 },
       shadowRadius: 2,
       elevation: 20,

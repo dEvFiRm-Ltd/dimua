@@ -62,7 +62,7 @@ const Home = ({ navigation }) => {
           { title: 'sauces' },
           { title: 'desserts' },
         ]}
-        renderItem={({ item, index, separators }) => (
+        renderItem={({ item, index }) => (
           <TouchableHighlight key={index}>
             <View
               style={{

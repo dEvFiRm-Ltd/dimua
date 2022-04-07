@@ -8,7 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Logo from '../assets/img/logo.svg';
-import style, { color } from '../assets/css/style';
+import style from '../assets/css/style';
 import LoginScreen from '../components/LoginScreen';
 import TabBar from '../components/TabBar';
 import SignupScreen from '../components/SignupScreen';

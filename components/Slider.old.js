@@ -1,6 +1,6 @@
 import { View, Image, FlatList } from 'react-native';
 import React, { useRef, useState } from 'react';
-import style, { color } from '../assets/css/style';
+import { color } from '../assets/css/style';
 const Slider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatlistRef = useRef(null);
