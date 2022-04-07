@@ -1,17 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel, {
   Pagination,
   ParallaxImage,
 } from 'react-native-snap-carousel';
-import {
-  View,
-  Text,
-  Dimensions,
-  StyleSheet,
-  TouchableOpacity,
-  Platform,
-  Image,
-} from 'react-native';
+import { View, Dimensions } from 'react-native';
 import { products } from '../mocks/data';
 import { color } from '../assets/css/style';
 
@@ -70,7 +62,11 @@ const Slider = (props) => {
       <Pagination
         dotsLength={entries.length}
         activeDotIndex={activeSlide}
-        containerStyle={{ backgroundColor: 'transparent' }}
+        containerStyle={{
+          backgroundColor: 'transparent',
+          marginVertical: 10,
+          paddingVertical: 0,
+        }}
         dotStyle={{
           width: 8,
           height: 8,

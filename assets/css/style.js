@@ -338,5 +338,34 @@ const style = StyleSheet.create({
       color: color.red,
     },
   },
+  /* Product Details Page */
+  productDetails: {
+    contianer: {
+      flex: 1,
+      backgroundColor: color.base,
+      padding: 40,
+    },
+    header: {
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+      marginBottom: 10,
+    },
+    title: { textAlign: 'center', ...h3, ...semibold, color: color.black },
+    price: { textAlign: 'center', ...h4, ...bold, color: color.red },
+    textHeader: {
+      textAlign: 'left',
+      ...h6,
+      color: color.black,
+      textTransform: 'capitalize',
+      marginBottom: 7,
+    },
+    textDetails: {
+      textAlign: 'left',
+      ...h7,
+      color: color.ash,
+      textTransform: 'capitalize',
+      marginBottom: 7,
+    },
+  },
 });
 export default style;
