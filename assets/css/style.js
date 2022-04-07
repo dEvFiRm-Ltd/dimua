@@ -411,5 +411,10 @@ const style = StyleSheet.create({
       marginBottom: 7,
     },
   },
+
+  /* Profile Screen */
+  profile: {
+    container: {},
+  },
 });
 export default style;

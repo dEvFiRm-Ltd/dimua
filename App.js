@@ -4,6 +4,7 @@ import { color } from './assets/css/style';
 import AuthScreen from './screens/AuthScreen';
 import MainScreen from './screens/Main';
 import ProductDetails from './screens/ProductDetails';
+import Profile from './screens/Profile';
 import SearchResult from './screens/SearchResult';
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       {/* <MainScreen /> */}
       {/* <AuthScreen /> */}
       {/* <ProductDetails /> */}
-      <SearchResult />
+      {/* <SearchResult /> */}
+      <Profile />
     </View>
   );
 };
