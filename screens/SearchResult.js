@@ -2,14 +2,17 @@ import { Pressable, ScrollView, TextInput, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import SearchSuccess from '../components/SearchSuccess';
 import { products } from '../mocks/data';
-import SingleProductSearch from '../components/SingleProductSearch';
+import SearchFailed from '../components/SearchFailed';
 
 const SearchResult = () => {
   const [fev, setFev] = useState(false);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     setFev(false);
+    setSearch(products);
   }, []);
 
   return (
@@ -41,33 +44,7 @@ const SearchResult = () => {
           }}
         />
       </View>
-      <ScrollView
-        style={{
-          borderTopRightRadius: 30,
-          borderTopLeftRadius: 30,
-          backgroundColor: '#f9f9f9',
-          padding: 34,
-          paddingBottom: 90,
-        }}
-        contentContainerStyle={{ flexWrap: 'wrap', flexDirection: 'row' }}
-      >
-        {products.map((product, index) => {
-          return (
-            <View
-              key={index}
-              style={{
-                width: 160,
-                height: 280,
-                paddingTop: 70,
-                paddingHorizontal: 10,
-                marginTop: index % 2 === 0 ? 0 : 65,
-              }}
-            >
-              <SingleProductSearch data={product} rank={index} />
-            </View>
-          );
-        })}
-      </ScrollView>
+      {search.length > 0 ? <SearchSuccess item={search} /> : <SearchFailed />}
     </ScrollView>
   );
 };

@@ -8,7 +8,7 @@ import HistoryFailed from '../screens/HistoryFailed';
 import NoInternet from '../screens/NoInternet';
 import OrderBlank from '../screens/OrderBlank';
 import Profile from '../screens/Profile';
-import SearchFailed from '../screens/SearchFailed';
+import SearchFailed from './SearchFailed';
 import SearchResult from '../screens/SearchResult';
 import Onboarding from '../screens/Onboarding';
 import Loader from '../screens/Loader';
@@ -17,7 +17,7 @@ const StackNavigation = () => {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName='Home'
+      initialRouteName='Search'
     >
       <Stack.Screen name='Home' component={HomeScreen} />
       <Stack.Screen name='Auth' component={AuthScreen} />

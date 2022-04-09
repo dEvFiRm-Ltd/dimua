@@ -2,7 +2,7 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import style from '../assets/css/style';
 const { productSearch } = style;
-const SingleProductsSearch = ({ data }) => {
+const SingleProductSearch = ({ data }) => {
   const imgUrl = { uri: data.image };
   return (
     <View style={productSearch.container}>
@@ -21,4 +21,4 @@ const SingleProductsSearch = ({ data }) => {
   );
 };
 
-export default SingleProductsSearch;
+export default SingleProductSearch;
