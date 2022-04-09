@@ -113,13 +113,23 @@ const Home = ({ navigation }) => {
           showsHorizontalScrollIndicator={false}
           data={products}
           renderItem={({ item, index, separators }) => (
-            <TouchableHighlight
-              key={index}
-              style={{ height: 270, marginTop: 72 }}
-              onPress={() => navigation.navigate('Details')}
+            <View
+              style={{
+                height: 270,
+                width: 175,
+                padding: 0,
+                marginTop: 72,
+                marginHorizontal: 16,
+              }}
             >
-              <SingleProducts data={item} />
-            </TouchableHighlight>
+              <TouchableHighlight
+                key={index}
+                style={{ flex: 1 }}
+                onPress={() => navigation.navigate('Details')}
+              >
+                <SingleProducts data={item} />
+              </TouchableHighlight>
+            </View>
           )}
         />
         <View
