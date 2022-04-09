@@ -6,7 +6,7 @@ import SearchSuccess from '../components/SearchSuccess';
 import { products } from '../mocks/data';
 import SearchFailed from '../components/SearchFailed';
 
-const SearchResult = () => {
+const SearchResult = ({ navigation }) => {
   const [fev, setFev] = useState(false);
   const [search, setSearch] = useState('');
 
@@ -31,7 +31,10 @@ const SearchResult = () => {
           marginBottom: 37,
         }}
       >
-        <Pressable style={{ padding: 6, marginRight: 30 }}>
+        <Pressable
+          style={{ padding: 6, marginRight: 30 }}
+          onPress={() => navigation.goBack()}
+        >
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>
         <TextInput

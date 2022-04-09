@@ -13,7 +13,7 @@ import { RadioButton } from 'react-native-paper';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const Delivery = () => {
+const Delivery = ({ navigation }) => {
   const [checked, setChecked] = React.useState('first');
   return (
     <ScrollView
@@ -35,6 +35,7 @@ const Delivery = () => {
             marginRight: 30,
             width: 24,
           }}
+          onPress={() => navigation.goBack()}
         >
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>

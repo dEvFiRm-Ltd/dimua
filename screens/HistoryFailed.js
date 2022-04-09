@@ -4,7 +4,7 @@ import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
-const HistoryFailed = () => {
+const HistoryFailed = ({ navigation }) => {
   return (
     <View
       style={{
@@ -26,6 +26,7 @@ const HistoryFailed = () => {
             marginRight: 30,
             width: 24,
           }}
+          onPress={() => navigation.goBack()}
         >
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>
@@ -71,6 +72,7 @@ const HistoryFailed = () => {
             shadowRadius: 5,
             elevation: 10,
           }}
+          onPress={() => navigation.navigate('Home')}
         >
           <Text
             style={{

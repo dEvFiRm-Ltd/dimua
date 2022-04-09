@@ -12,7 +12,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
   return (
     <ScrollView
       style={{
@@ -33,6 +33,7 @@ const Profile = () => {
             marginRight: 30,
             width: 24,
           }}
+          onPress={() => navigation.goBack()}
         >
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>

@@ -4,7 +4,7 @@ import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
-const NoInternet = () => {
+const NoInternet = ({ navigation }) => {
   return (
     <View
       style={{
@@ -26,6 +26,7 @@ const NoInternet = () => {
             marginRight: 30,
             width: 24,
           }}
+          onPress={() => navigation.goBack()}
         >
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>

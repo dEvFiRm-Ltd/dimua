@@ -1,81 +1,214 @@
-import * as React from 'react';
-import { Keyboard, TouchableWithoutFeedback } from 'react-native';
-import style from '../assets/css/style';
-import { useDrawerStatus } from '@react-navigation/drawer';
-import Animated, {
-  Extrapolate,
-  interpolate,
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
-import Home from '../components/Home';
+import {
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  Keyboard,
+  FlatList,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+} from 'react-native';
+import React from 'react';
+import style, { color } from '../assets/css/style';
+import Cart from '../assets/img/cart.svg';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { products } from '../mocks/data';
+import SingleProducts from '../components/SingleProducts';
 
 const { home } = style;
 
-export default function HomeScreen({ navigation }) {
-  const scaleAnimation = useSharedValue(0);
-  const isDrawerOpen = useDrawerStatus();
-  const animatedParentStyle = useAnimatedStyle(() => {
-    const scale = interpolate(scaleAnimation.value, [0, 1], [1, 0.75], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const translateX = interpolate(scaleAnimation.value, [0, 1], [0, -40], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const translateY = interpolate(scaleAnimation.value, [0, 1], [0, 40], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const borderRadius = interpolate(scaleAnimation.value, [0, 1], [0, 30], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    return {
-      transform: [{ scale }, { translateX }, { translateY }],
-      borderRadius,
-    };
-  });
-  const animatedStyle = useAnimatedStyle(() => {
-    const translateX = interpolate(scaleAnimation.value, [0, 1], [0, 40], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const translateY = interpolate(scaleAnimation.value, [0, 1], [0, -50], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    const borderRadius = interpolate(scaleAnimation.value, [0, 1], [0, 30], {
-      extrapolateRight: Extrapolate.CLAMP,
-    });
-    return {
-      transform: [{ translateX }, { translateY }],
-      borderRadius,
-    };
-  });
-  React.useEffect(() => {
-    if (isDrawerOpen === 'open') {
-      scaleAnimation.value = withTiming(1, { duration: 500 });
-    } else {
-      scaleAnimation.value = withTiming(0, { duration: 500 });
-    }
-  }, [isDrawerOpen]);
-
+const Home = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <Animated.View
-        style={[
-          {
-            backgroundColor: 'rgba(242, 242, 242, 0.2)',
-            flex: 1,
-            elevation: 0,
-            flexDirection: 'row',
-          },
-          animatedParentStyle,
-        ]}
+      <View
+        style={{
+          paddingHorizontal: 40,
+          paddingTop: 25,
+          paddingBottom: 5,
+          flex: 1,
+        }}
       >
-        <Animated.View style={[home.container, animatedStyle]}>
-          {/* Main Component */}
-          <Home navigation={navigation} />
-          {/* Main Component */}
-        </Animated.View>
-      </Animated.View>
+        <View style={home.header}>
+          <Pressable
+            style={{ flexDirection: 'column' }}
+            onPress={() => {
+              navigation.toggleDrawer();
+              Keyboard.dismiss();
+            }}
+          >
+            <View style={home.drawerTop} />
+            <View style={home.drawerMiddle} />
+            <View style={home.drawerBottom} />
+          </Pressable>
+          <Pressable style={home.cartBtn}>
+            <Cart />
+          </Pressable>
+        </View>
+        <View style={{ width: 186, marginTop: 16 }}>
+          <Text style={home.titleText}>Delicious food for you</Text>
+        </View>
+        <View style={{ position: 'relative' }}>
+          <FontAwesome5
+            style={home.searchIcon}
+            name='search'
+            size={18}
+            color={color.ash}
+          />
+          <TextInput
+            style={home.searchBox}
+            placeholder='Search for food'
+            keyboardType='default'
+          />
+        </View>
+        <FlatList
+          style={{ flexGrow: 0 }}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={[
+            { title: 'foods' },
+            { title: 'drinks' },
+            { title: 'snacks' },
+            { title: 'sauces' },
+            { title: 'desserts' },
+          ]}
+          renderItem={({ item, index }) => (
+            <TouchableHighlight key={index}>
+              <View
+                style={{
+                  marginHorizontal: 10,
+                  position: 'relative',
+                }}
+              >
+                <Text
+                  style={{
+                    textTransform: 'capitalize',
+                    padding: 10,
+                    color: color.red,
+                  }}
+                >
+                  {item.title}
+                </Text>
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    width: '100%',
+                    height: 3,
+                    borderRadius: 10,
+                    backgroundColor: color.red,
+                  }}
+                />
+              </View>
+            </TouchableHighlight>
+          )}
+        />
+        <View style={{ marginLeft: 'auto', marginTop: 25 }}>
+          <Pressable>
+            <Text style={{ color: color.red }}>See More</Text>
+          </Pressable>
+        </View>
+        <FlatList
+          style={{ flexGrow: 0 }}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={products}
+          renderItem={({ item, index, separators }) => (
+            <TouchableHighlight
+              key={index}
+              style={{ height: 270, marginTop: 72 }}
+              onPress={() => navigation.navigate('Details')}
+            >
+              <SingleProducts data={item} />
+            </TouchableHighlight>
+          )}
+        />
+        <View
+          style={{
+            marginTop: 'auto',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexDirection: 'row',
+          }}
+        >
+          <Pressable
+            style={{
+              // shadowOffset: { width: 0, height: 1 },
+              shadowRadius: 2,
+              shadowOpacity: 0.4,
+              elevation: 20,
+            }}
+          >
+            <FontAwesome5
+              name='home'
+              size={24}
+              style={{
+                shadowColor: color.red,
+                padding: 7,
+              }}
+              color={color.red}
+            />
+          </Pressable>
+          <Pressable
+            style={{
+              // shadowOffset: { width: 0, height: 1 },
+              shadowRadius: 2,
+              shadowOpacity: 0.4,
+              elevation: 20,
+            }}
+            onPress={() => navigation.navigate('NoHistory')}
+          >
+            <FontAwesome5
+              name='heart'
+              size={24}
+              style={{
+                shadowColor: color.ash,
+                padding: 7,
+              }}
+              color={color.ash}
+            />
+          </Pressable>
+          <Pressable
+            style={{
+              // shadowOffset: { width: 0, height: 1 },
+              shadowRadius: 2,
+              shadowOpacity: 0.4,
+              elevation: 20,
+            }}
+            onPress={() => navigation.navigate('Profile')}
+          >
+            <FontAwesome5
+              name='user'
+              size={24}
+              style={{
+                shadowColor: color.ash,
+                padding: 7,
+              }}
+              color={color.ash}
+            />
+          </Pressable>
+          <Pressable
+            style={{
+              // shadowOffset: { width: 0, height: 1 },
+              shadowRadius: 2,
+              shadowOpacity: 0.4,
+              elevation: 20,
+            }}
+            onPress={() => navigation.navigate('NoHistory')}
+          >
+            <FontAwesome5
+              name='history'
+              size={24}
+              style={{
+                shadowColor: color.ash,
+                padding: 7,
+              }}
+              color={color.ash}
+            />
+          </Pressable>
+        </View>
+      </View>
     </TouchableWithoutFeedback>
   );
-}
+};
+
+export default Home;

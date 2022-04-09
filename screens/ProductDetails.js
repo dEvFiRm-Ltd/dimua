@@ -12,7 +12,7 @@ import Slider from '../components/Slider';
 import { products } from '../mocks/data';
 const { forms, productDetails } = style;
 
-const ProductDetails = () => {
+const ProductDetails = ({ navigation }) => {
   const [fev, setFev] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const ProductDetails = () => {
   return (
     <ScrollView style={productDetails.contianer}>
       <View style={productDetails.header}>
-        <Pressable style={{ padding: 6 }}>
+        <Pressable style={{ padding: 6 }} onPress={() => navigation.goBack()}>
           <FontAwesome5 name='chevron-left' regular size={18} />
         </Pressable>
         <Pressable style={{ padding: 12 }} onPress={() => setFev(!fev)}>

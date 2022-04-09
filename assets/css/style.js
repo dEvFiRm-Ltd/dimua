@@ -239,9 +239,6 @@ const style = StyleSheet.create({
   /* Home Screen */
   home: {
     container: {
-      paddingHorizontal: 40,
-      paddingTop: 25,
-      paddingBottom: 5,
       flex: 1,
       elevation: 0,
       overflow: 'hidden',
