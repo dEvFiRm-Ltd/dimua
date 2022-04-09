@@ -298,7 +298,7 @@ const style = StyleSheet.create({
       borderRadius: 30,
       backgroundColor: color.white,
       height: '100%',
-      width: '100%',
+      width: 220,
       flex: 1,
       marginHorizontal: 16,
       shadowColor: 'rgba(57,57,57,0.1)',

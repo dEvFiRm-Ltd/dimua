@@ -5,7 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { products } from '../mocks/data';
 import SingleProductSearch from '../components/SingleProductSearch';
 
-const SearchDetails = () => {
+const SearchResult = () => {
   const [fev, setFev] = useState(false);
 
   useEffect(() => {
@@ -72,4 +72,4 @@ const SearchDetails = () => {
   );
 };
 
-export default SearchDetails;
+export default SearchResult;

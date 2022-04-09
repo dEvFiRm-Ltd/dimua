@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { TouchableWithoutFeedback, Keyboard, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -68,26 +67,24 @@ const AuthScreen = () => {
     { route: 'signup', title: 'Signup', component: SignupScreen },
   ];
   return (
-    <NavigationContainer>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-        <View style={auths.container}>
-          <Animated.View style={[auths.upperContainer, animatedStyle]}>
-            <Animated.View style={[auths.imgContainer, logoAnimation]}>
-              <Logo width='100%' height='100%' />
-            </Animated.View>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={auths.container}>
+        <Animated.View style={[auths.upperContainer, animatedStyle]}>
+          <Animated.View style={[auths.imgContainer, logoAnimation]}>
+            <Logo width='100%' height='100%' />
           </Animated.View>
+        </Animated.View>
 
-          <Tab.Navigator
-            initialRouteName='Login'
-            tabBar={(props) => <TabBar {...props} />}
-          >
-            {tabs.map((tab, i) => (
-              <Tab.Screen key={i} name={tab.title} component={tab.component} />
-            ))}
-          </Tab.Navigator>
-        </View>
-      </TouchableWithoutFeedback>
-    </NavigationContainer>
+        <Tab.Navigator
+          initialRouteName='Login'
+          tabBar={(props) => <TabBar {...props} />}
+        >
+          {tabs.map((tab, i) => (
+            <Tab.Screen key={i} name={tab.title} component={tab.component} />
+          ))}
+        </Tab.Navigator>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
