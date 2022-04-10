@@ -5,10 +5,9 @@ import {
   TextInput,
   Keyboard,
   FlatList,
-  TouchableHighlight,
   TouchableWithoutFeedback,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import style, { color } from '../assets/css/style';
 import Cart from '../assets/img/cart.svg';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -16,8 +15,16 @@ import { products } from '../mocks/data';
 import SingleProducts from '../components/SingleProducts';
 
 const { home } = style;
+const data = [
+  { title: 'foods' },
+  { title: 'drinks' },
+  { title: 'snacks' },
+  { title: 'sauces' },
+  { title: 'desserts' },
+];
 
 const Home = ({ navigation }) => {
+  const [active, setActive] = useState('foods');
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View
@@ -58,21 +65,18 @@ const Home = ({ navigation }) => {
             style={home.searchBox}
             placeholder='Search for food'
             keyboardType='default'
+            onSubmitEditing={({ text, eventCount, target }) => {
+              navigation.navigate('Search');
+            }}
           />
         </View>
         <FlatList
           style={{ flexGrow: 0 }}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          data={[
-            { title: 'foods' },
-            { title: 'drinks' },
-            { title: 'snacks' },
-            { title: 'sauces' },
-            { title: 'desserts' },
-          ]}
+          data={data}
           renderItem={({ item, index }) => (
-            <TouchableHighlight key={index}>
+            <Pressable key={index} onPress={() => setActive(item.title)}>
               <View
                 style={{
                   marginHorizontal: 10,
@@ -83,7 +87,7 @@ const Home = ({ navigation }) => {
                   style={{
                     textTransform: 'capitalize',
                     padding: 10,
-                    color: color.red,
+                    color: item.title === active ? color.red : color.ash,
                   }}
                 >
                   {item.title}
@@ -92,14 +96,14 @@ const Home = ({ navigation }) => {
                   style={{
                     position: 'absolute',
                     bottom: 0,
-                    width: '100%',
+                    width: item.title === active ? '100%' : 0,
                     height: 3,
                     borderRadius: 10,
                     backgroundColor: color.red,
                   }}
                 />
               </View>
-            </TouchableHighlight>
+            </Pressable>
           )}
         />
         <View style={{ marginLeft: 'auto', marginTop: 25 }}>
@@ -122,13 +126,13 @@ const Home = ({ navigation }) => {
                 marginHorizontal: 16,
               }}
             >
-              <TouchableHighlight
+              <Pressable
                 key={index}
                 style={{ flex: 1 }}
                 onPress={() => navigation.navigate('Details')}
               >
                 <SingleProducts data={item} />
-              </TouchableHighlight>
+              </Pressable>
             </View>
           )}
         />

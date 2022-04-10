@@ -232,8 +232,9 @@ const Profile = ({ navigation }) => {
               textTransform: 'capitalize',
               textAlign: 'center',
             }}
+            onPress={() => navigation.navigate('Auth')}
           >
-            Update
+            Sign Out
           </Text>
         </Pressable>
       </View>
