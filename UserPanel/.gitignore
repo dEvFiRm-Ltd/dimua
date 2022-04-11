@@ -123,6 +123,3 @@ artifacts
 */p-key.txt
 
 /.firebase
-
-.firebaserc
-firebase.json
