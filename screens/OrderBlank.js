@@ -1,4 +1,4 @@
-import { Dimensions, Pressable, Text, TextInput, View } from 'react-native';
+import { Dimensions, Pressable, Text, View } from 'react-native';
 import React from 'react';
 import { color } from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';

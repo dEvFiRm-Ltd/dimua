@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import HomeScreen from '../screens/HomeScreen';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -23,6 +22,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import Cart from '../screens/Cart';
 const { home } = style;
 const Stack = createStackNavigator();
 const StackNavigation = () => {
@@ -85,7 +85,7 @@ const StackNavigation = () => {
         {/* Main Component */}
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName='Home'
+          initialRouteName='Order'
         >
           <Stack.Screen name='Home' component={HomeScreen} />
           <Stack.Screen name='Auth' component={AuthScreen} />
@@ -94,6 +94,7 @@ const StackNavigation = () => {
           <Stack.Screen name='NoHistory' component={HistoryFailed} />
           <Stack.Screen name='NoNetwork' component={NoInternet} />
           <Stack.Screen name='NoOrder' component={OrderBlank} />
+          <Stack.Screen name='Order' component={Cart} />
           <Stack.Screen name='Profile' component={Profile} />
           <Stack.Screen name='Payment' component={Payment} />
           <Stack.Screen name='NoItem' component={SearchFailed} />
