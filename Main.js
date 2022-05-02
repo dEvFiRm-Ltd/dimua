@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler';
 import * as React from 'react';
 import { LogBox, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -12,7 +11,7 @@ LogBox.ignoreLogs([
 
 const Drawer = createDrawerNavigator();
 
-export default function App() {
+export default function Main() {
   return (
     <View style={{ backgroundColor: color.red, flex: 1 }}>
       <NavigationContainer>
