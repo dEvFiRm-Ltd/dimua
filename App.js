@@ -1,43 +1,20 @@
-import * as React from 'react';
-import { LogBox, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { color } from './assets/css/style';
-import Drawers from './components/Drawers';
-import StackNavigation from './components/StackNavigation';
-LogBox.ignoreLogs([
-  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
-]);
-
-const Drawer = createDrawerNavigator();
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{ backgroundColor: color.red, flex: 1 }}>
-      <NavigationContainer>
-        <Drawer.Navigator
-          drawerContent={(props) => {
-            return <Drawers {...props} />;
-          }}
-          screenOptions={{
-            headerShown: false,
-            swipeEnabled: false,
-            drawerType: 'slide',
-            overlayColor: 'transparent',
-            drawerStyle: {
-              backgroundColor: 'transparent',
-            },
-            sceneContainerStyle: {
-              backgroundColor: 'transparent',
-            },
-          }}
-          initialRouteName='Main'
-        >
-          <Drawer.Screen name='Main'>
-            {(props) => <StackNavigation {...props} />}
-          </Drawer.Screen>
-        </Drawer.Navigator>
-      </NavigationContainer>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
