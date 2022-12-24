@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Carousel, {
-  Pagination,
-  ParallaxImage,
-} from 'react-native-snap-carousel';
-import { View, Dimensions } from 'react-native';
-import { products } from '../mocks/data';
-import { color } from '../assets/css/style';
+import React, {useState, useEffect} from 'react';
+import Carousel, {Pagination, ParallaxImage} from 'react-native-snap-carousel';
+import {View, Dimensions} from 'react-native';
+import {products} from '@/mocks/data';
+import {color} from '@/assets/css/style';
 
-const { width: screenWidth } = Dimensions.get('window');
+const {width: screenWidth} = Dimensions.get('window');
 
-const Slider = (props) => {
+const Slider = props => {
   const [entries, setEntries] = useState([]);
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -17,7 +14,7 @@ const Slider = (props) => {
     setEntries(products);
   }, []);
 
-  const renderItem = ({ item }, parallaxProps) => {
+  const renderItem = ({item}, parallaxProps) => {
     return (
       <View
         style={{
@@ -26,13 +23,12 @@ const Slider = (props) => {
           borderRadius: 241 / 2,
           overflow: 'hidden',
           shadowColor: color.black,
-          shadowOffset: { width: 0, height: 1 },
+          shadowOffset: {width: 0, height: 1},
           shadowRadius: 2,
           elevation: 15,
-        }}
-      >
+        }}>
         <ParallaxImage
-          source={{ uri: item.image }}
+          source={{uri: item.image}}
           containerStyle={{
             width: null,
             height: null,
@@ -55,7 +51,7 @@ const Slider = (props) => {
         sliderHeight={screenWidth}
         itemWidth={screenWidth - 60}
         data={entries}
-        onSnapToItem={(index) => setActiveSlide(index)}
+        onSnapToItem={index => setActiveSlide(index)}
         renderItem={renderItem}
         hasParallaxImages={true}
       />

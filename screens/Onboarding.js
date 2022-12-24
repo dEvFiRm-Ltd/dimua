@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, StatusBar, Text, Image, Pressable } from 'react-native';
-import Logo from '../assets/img/logo.svg';
+import {View, StatusBar, Text, Image, Pressable} from 'react-native';
+import Logo from '@/assets/img/logo.svg';
 import LinearGradient from 'react-native-linear-gradient';
-import style, { color } from '../assets/css/style';
-const { onboarding } = style;
+import style, {color} from '@/assets/css/style';
+const {onboarding} = style;
 const Onboarding = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Onboarding = () => {
       <View style={onboarding.container}>
         <View style={onboarding.header}>
           <View style={onboarding.imgContainer}>
-            <Logo width='100%' height='100%' />
+            <Logo width="100%" height="100%" />
           </View>
           <View>
             <Text style={onboarding.title}>Food for Everyone</Text>
@@ -21,8 +21,7 @@ const Onboarding = () => {
           <LinearGradient
             colors={['rgba(255, 71, 11, 0.1)', '#FF470B']}
             locations={[-0.4, 0.75]}
-            style={onboarding.overlay}
-          >
+            style={onboarding.overlay}>
             <Pressable style={onboarding.button}>
               <Text style={onboarding.btntxt}>Let's get started!</Text>
             </Pressable>

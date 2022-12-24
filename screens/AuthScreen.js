@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { TouchableWithoutFeedback, Keyboard, View } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {TouchableWithoutFeedback, Keyboard, View} from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Logo from '../assets/img/logo.svg';
-import style from '../assets/css/style';
-import LoginScreen from '../components/LoginScreen';
-import TabBar from '../components/TabBar';
-import SignupScreen from '../components/SignupScreen';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import Logo from '@/assets/img/logo.svg';
+import style from '@/assets/css/style';
+import LoginScreen from '@/components/LoginScreen';
+import TabBar from '@/components/TabBar';
+import SignupScreen from '@/components/SignupScreen';
 
-const { auths } = style;
+const {auths} = style;
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -58,27 +58,26 @@ const AuthScreen = () => {
     scale.value = withTiming(keyboardStatus ? 100 : defaultSize, {
       duration: 500,
     });
-    heights.value = withTiming(keyboardStatus ? 90 : 150, { duration: 500 });
+    heights.value = withTiming(keyboardStatus ? 90 : 150, {duration: 500});
   }, [keyboardStatus]);
 
   // console.log(keyboardStatus);
   const tabs = [
-    { route: 'login', title: 'Login', component: LoginScreen },
-    { route: 'signup', title: 'Signup', component: SignupScreen },
+    {route: 'login', title: 'Login', component: LoginScreen},
+    {route: 'signup', title: 'Signup', component: SignupScreen},
   ];
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={auths.container}>
         <Animated.View style={[auths.upperContainer, animatedStyle]}>
           <Animated.View style={[auths.imgContainer, logoAnimation]}>
-            <Logo width='100%' height='100%' />
+            <Logo width="100%" height="100%" />
           </Animated.View>
         </Animated.View>
 
         <Tab.Navigator
-          initialRouteName='Login'
-          tabBar={(props) => <TabBar {...props} />}
-        >
+          initialRouteName="Login"
+          tabBar={props => <TabBar {...props} />}>
           {tabs.map((tab, i) => (
             <Tab.Screen key={i} name={tab.title} component={tab.component} />
           ))}

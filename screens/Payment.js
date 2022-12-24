@@ -1,12 +1,12 @@
-import { Dimensions, Pressable, ScrollView, Text, View } from 'react-native';
+import {Dimensions, Pressable, ScrollView, Text, View} from 'react-native';
 import React from 'react';
-import { color } from '../assets/css/style';
+import {color} from '@/assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { RadioButton } from 'react-native-paper';
+import {RadioButton} from 'react-native-paper';
 
-const { width: screenWidth } = Dimensions.get('window');
+const {width: screenWidth} = Dimensions.get('window');
 
-const Payment = ({ navigation }) => {
+const Payment = ({navigation}) => {
   const [checked, setChecked] = React.useState('first');
   return (
     <ScrollView
@@ -14,23 +14,20 @@ const Payment = ({ navigation }) => {
         flex: 1,
         backgroundColor: color.base,
         padding: 40,
-      }}
-    >
+      }}>
       <View
         style={{
           flexDirection: 'row',
           marginBottom: 37,
-        }}
-      >
+        }}>
         <Pressable
           style={{
             padding: 6,
             marginRight: 30,
             width: 24,
           }}
-          onPress={() => navigation.goBack()}
-        >
-          <FontAwesome5 name='chevron-left' regular size={18} />
+          onPress={() => navigation.goBack()}>
+          <FontAwesome5 name="chevron-left" regular size={18} />
         </Pressable>
         <Text
           style={{
@@ -39,8 +36,7 @@ const Payment = ({ navigation }) => {
             fontSize: 16,
             textAlign: 'center',
             textTransform: 'capitalize',
-          }}
-        >
+          }}>
           Checkout
         </Text>
       </View>
@@ -50,22 +46,19 @@ const Payment = ({ navigation }) => {
           textTransform: 'capitalize',
           color: color.black,
           fontSize: 34,
-        }}
-      >
+        }}>
         Payment
       </Text>
       <View
         style={{
           marginTop: 42,
-        }}
-      >
+        }}>
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginBottom: 11,
-          }}
-        >
+          }}>
           <Text>Delivery Method</Text>
         </View>
         <View
@@ -80,32 +73,29 @@ const Payment = ({ navigation }) => {
             justifyContent: 'flex-start',
             flexDirection: 'row',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <View
             style={{
               flexDirection: 'column',
               marginLeft: 16,
               justifyContent: 'center',
-            }}
-          >
+            }}>
             <Pressable
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
                 paddingVertical: 15,
               }}
-              onPress={() => setChecked('first')}
-            >
+              onPress={() => setChecked('first')}>
               <RadioButton
-                value='first'
+                value="first"
                 status={checked === 'first' ? 'checked' : 'unchecked'}
                 onPress={() => setChecked('first')}
-                uncheckedColor='#9f9f9f'
+                uncheckedColor="#9f9f9f"
                 color={color.red}
               />
               <View
@@ -113,8 +103,7 @@ const Payment = ({ navigation }) => {
                   marginLeft: 15,
                   flexDirection: 'row',
                   alignItems: 'center',
-                }}
-              >
+                }}>
                 <Text>Door Delivery</Text>
               </View>
             </Pressable>
@@ -131,13 +120,12 @@ const Payment = ({ navigation }) => {
                 alignItems: 'center',
                 paddingVertical: 15,
               }}
-              onPress={() => setChecked('second')}
-            >
+              onPress={() => setChecked('second')}>
               <RadioButton
-                value='second'
+                value="second"
                 status={checked === 'second' ? 'checked' : 'unchecked'}
                 onPress={() => setChecked('second')}
-                uncheckedColor='#9f9f9f'
+                uncheckedColor="#9f9f9f"
                 color={color.red}
               />
               <View
@@ -145,8 +133,7 @@ const Payment = ({ navigation }) => {
                   marginLeft: 15,
                   flexDirection: 'row',
                   alignItems: 'center',
-                }}
-              >
+                }}>
                 <Text>Pick Up</Text>
               </View>
             </Pressable>
@@ -157,8 +144,7 @@ const Payment = ({ navigation }) => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginBottom: 11,
-          }}
-        >
+          }}>
           <Text>Payment Method</Text>
         </View>
         <View
@@ -173,32 +159,29 @@ const Payment = ({ navigation }) => {
             justifyContent: 'flex-start',
             flexDirection: 'row',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <View
             style={{
               flexDirection: 'column',
               marginLeft: 16,
               justifyContent: 'center',
-            }}
-          >
+            }}>
             <Pressable
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
                 paddingVertical: 15,
               }}
-              onPress={() => setChecked('first')}
-            >
+              onPress={() => setChecked('first')}>
               <RadioButton
-                value='first'
+                value="first"
                 status={checked === 'first' ? 'checked' : 'unchecked'}
                 onPress={() => setChecked('first')}
-                uncheckedColor='#9f9f9f'
+                uncheckedColor="#9f9f9f"
                 color={color.red}
               />
               <View
@@ -206,8 +189,7 @@ const Payment = ({ navigation }) => {
                   marginLeft: 15,
                   flexDirection: 'row',
                   alignItems: 'center',
-                }}
-              >
+                }}>
                 <View
                   style={{
                     backgroundColor: color.red,
@@ -218,10 +200,9 @@ const Payment = ({ navigation }) => {
                     height: 40,
                     borderRadius: 10,
                     marginRight: 11,
-                  }}
-                >
+                  }}>
                   <FontAwesome5
-                    name='university'
+                    name="university"
                     solid
                     color={color.white}
                     size={18}
@@ -243,13 +224,12 @@ const Payment = ({ navigation }) => {
                 alignItems: 'center',
                 paddingVertical: 15,
               }}
-              onPress={() => setChecked('second')}
-            >
+              onPress={() => setChecked('second')}>
               <RadioButton
-                value='second'
+                value="second"
                 status={checked === 'second' ? 'checked' : 'unchecked'}
                 onPress={() => setChecked('second')}
-                uncheckedColor='#9f9f9f'
+                uncheckedColor="#9f9f9f"
                 color={color.red}
               />
               <View
@@ -257,8 +237,7 @@ const Payment = ({ navigation }) => {
                   marginLeft: 15,
                   flexDirection: 'row',
                   alignItems: 'center',
-                }}
-              >
+                }}>
                 <View
                   style={{
                     backgroundColor: color.red,
@@ -269,10 +248,9 @@ const Payment = ({ navigation }) => {
                     height: 40,
                     borderRadius: 10,
                     marginRight: 11,
-                  }}
-                >
+                  }}>
                   <FontAwesome5
-                    name='university'
+                    name="university"
                     solid
                     color={color.white}
                     size={18}
@@ -289,8 +267,7 @@ const Payment = ({ navigation }) => {
             justifyContent: 'space-between',
             flexDirection: 'row',
             marginBottom: 48,
-          }}
-        >
+          }}>
           <Text>Total PRice</Text>
           <Text>$150</Text>
         </View>
@@ -305,19 +282,17 @@ const Payment = ({ navigation }) => {
             marginLeft: 'auto',
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text
             style={{
               color: color.white,
               textTransform: 'capitalize',
               textAlign: 'center',
-            }}
-          >
+            }}>
             proceed to payment
           </Text>
         </Pressable>

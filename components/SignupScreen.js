@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Text,
-  View,
-  Keyboard,
-  TouchableOpacity,
-} from 'react-native';
-import style, { color } from '../assets/css/style';
+import React, {useEffect, useState} from 'react';
+import {Text, View, Keyboard, TouchableOpacity} from 'react-native';
+import style, {color} from '@/assets/css/style';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
 import TextInput from 'react-native-material-textinput';
-const { forms } = style;
+const {forms} = style;
 
 /**
  * @description SignupScreen is the screen that is displayed Login Screen.
@@ -22,7 +17,7 @@ const SignupScreen = () => {
   const [name, setName] = useState('');
   const heights = useSharedValue(23);
 
-  const handleInputChange = (value) => setName(value);
+  const handleInputChange = value => setName(value);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -45,14 +40,14 @@ const SignupScreen = () => {
   });
 
   useEffect(() => {
-    heights.value = withTiming(keyboardStatus ? 5 : 13, { duration: 500 });
+    heights.value = withTiming(keyboardStatus ? 5 : 13, {duration: 500});
   }, [keyboardStatus]);
 
   return (
     <View style={forms.container}>
       <Animated.View style={[forms.input, gapAnimation]}>
         <TextInput
-          label='Email Address'
+          label="Email Address"
           value={name}
           labelActiveColor={color.ash}
           labelColor={color.ash}
@@ -65,7 +60,7 @@ const SignupScreen = () => {
       </Animated.View>
       <Animated.View style={[forms.input, gapAnimation]}>
         <TextInput
-          label='Password'
+          label="Password"
           value={name}
           labelActiveColor={color.ash}
           labelColor={color.ash}
@@ -78,7 +73,7 @@ const SignupScreen = () => {
       </Animated.View>
       <Animated.View style={[forms.input, gapAnimation]}>
         <TextInput
-          label='Confirm Password'
+          label="Confirm Password"
           value={name}
           labelActiveColor={color.ash}
           labelColor={color.ash}

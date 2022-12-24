@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const color = {
   white: '#ffffff',
@@ -111,7 +111,7 @@ const style = StyleSheet.create({
       borderRadius: 50,
       backgroundColor: color.white,
     },
-    title: { ...h1, paddingLeft: 2, paddingTop: 31, color: color.white },
+    title: {...h1, paddingLeft: 2, paddingTop: 31, color: color.white},
     footer: {
       position: 'relative',
       bottom: 0,
@@ -167,7 +167,7 @@ const style = StyleSheet.create({
     logo: {
       animation: 'spin infinite 20s linear',
     },
-    title: { ...text3, color: color.red },
+    title: {...text3, color: color.red},
   },
   /* Auth Screen */
   auths: {
@@ -271,7 +271,7 @@ const style = StyleSheet.create({
       marginVertical: 2,
       backgroundColor: color.black,
     },
-    cartBtn: { width: 24, height: 24 },
+    cartBtn: {width: 24, height: 24},
     titleText: {
       textAlign: 'left',
       fontSize: 34,
@@ -287,7 +287,7 @@ const style = StyleSheet.create({
       borderRadius: 30,
       marginBottom: 26,
     },
-    searchIcon: { position: 'absolute', top: 25, left: 35, zIndex: 1 },
+    searchIcon: {position: 'absolute', top: 25, left: 35, zIndex: 1},
   },
   /* Product Screen */
   product: {
@@ -298,7 +298,7 @@ const style = StyleSheet.create({
       width: '100%',
       flex: 1,
       shadowColor: 'rgba(57,57,57,0.1)',
-      shadowOffset: { width: 0, height: 1 },
+      shadowOffset: {width: 0, height: 1},
       shadowRadius: 2,
       elevation: 10,
       position: 'relative',
@@ -314,7 +314,7 @@ const style = StyleSheet.create({
       zIndex: 12,
       backgroundColor: color.white,
       shadowColor: 'rgba(57,57,57,0.5)',
-      shadowOffset: { width: 0, height: 1 },
+      shadowOffset: {width: 0, height: 1},
       shadowRadius: 2,
       elevation: 20,
       overflow: 'hidden',
@@ -342,7 +342,7 @@ const style = StyleSheet.create({
       width: '100%',
       flex: 1,
       shadowColor: 'rgba(57,57,57,0.1)',
-      shadowOffset: { width: 0, height: 1 },
+      shadowOffset: {width: 0, height: 1},
       shadowRadius: 2,
       elevation: 10,
       paddingHorizontal: 20,
@@ -358,7 +358,7 @@ const style = StyleSheet.create({
       zIndex: 12,
       backgroundColor: color.white,
       shadowColor: 'rgba(57,57,57,0.7)',
-      shadowOffset: { width: 0, height: 1 },
+      shadowOffset: {width: 0, height: 1},
       shadowRadius: 2,
       elevation: 20,
       overflow: 'hidden',
@@ -390,8 +390,8 @@ const style = StyleSheet.create({
       flexDirection: 'row',
       marginBottom: 10,
     },
-    title: { textAlign: 'center', ...h3, ...semibold, color: color.black },
-    price: { textAlign: 'center', ...h4, ...bold, color: color.red },
+    title: {textAlign: 'center', ...h3, ...semibold, color: color.black},
+    price: {textAlign: 'center', ...h4, ...bold, color: color.red},
     textHeader: {
       textAlign: 'left',
       ...h6,

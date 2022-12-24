@@ -7,35 +7,32 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import { color } from '../assets/css/style';
+import {color} from '@/assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const { width: screenWidth } = Dimensions.get('window');
+const {width: screenWidth} = Dimensions.get('window');
 
-const Profile = ({ navigation }) => {
+const Profile = ({navigation}) => {
   return (
     <ScrollView
       style={{
         flex: 1,
         backgroundColor: color.base,
         padding: 40,
-      }}
-    >
+      }}>
       <View
         style={{
           flexDirection: 'row',
           marginBottom: 37,
-        }}
-      >
+        }}>
         <Pressable
           style={{
             padding: 6,
             marginRight: 30,
             width: 24,
           }}
-          onPress={() => navigation.goBack()}
-        >
-          <FontAwesome5 name='chevron-left' regular size={18} />
+          onPress={() => navigation.goBack()}>
+          <FontAwesome5 name="chevron-left" regular size={18} />
         </Pressable>
         <Text
           style={{
@@ -44,8 +41,7 @@ const Profile = ({ navigation }) => {
             fontSize: 16,
             textAlign: 'center',
             textTransform: 'capitalize',
-          }}
-        >
+          }}>
           Profile
         </Text>
       </View>
@@ -55,25 +51,22 @@ const Profile = ({ navigation }) => {
           textTransform: 'capitalize',
           color: color.black,
           fontSize: 34,
-        }}
-      >
+        }}>
         My Profile
       </Text>
       <View
         style={{
           marginTop: 42,
-        }}
-      >
+        }}>
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginBottom: 11,
-          }}
-        >
+          }}>
           <Text>Personal details</Text>
           <Pressable>
-            <Text style={{ color: color.red }}>change</Text>
+            <Text style={{color: color.red}}>change</Text>
           </Pressable>
         </View>
         <View
@@ -88,20 +81,18 @@ const Profile = ({ navigation }) => {
             justifyContent: 'flex-start',
             flexDirection: 'row',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <View
             style={{
               width: 91,
               height: 100,
               borderRadius: 10,
               overflow: 'hidden',
-            }}
-          >
+            }}>
             <Image
               source={require('../assets/img/user.png')}
               style={{
@@ -112,19 +103,15 @@ const Profile = ({ navigation }) => {
               }}
             />
           </View>
-          <View style={{ flexDirection: 'column', marginLeft: 16 }}>
-            <Text style={{ fontSize: 18, marginBottom: 4 }}>Alem Bura</Text>
-            <Text style={{ fontSize: 16, marginBottom: 4 }}>
+          <View style={{flexDirection: 'column', marginLeft: 16}}>
+            <Text style={{fontSize: 18, marginBottom: 4}}>Alem Bura</Text>
+            <Text style={{fontSize: 16, marginBottom: 4}}>
               AlemBura@buras.com
             </Text>
-            <View
-              style={{ width: 165, height: 1, backgroundColor: color.ash }}
-            />
-            <Text style={{ fontSize: 16, marginBottom: 4 }}>+333333333333</Text>
-            <View
-              style={{ width: 165, height: 1, backgroundColor: color.ash }}
-            />
-            <Text style={{ fontSize: 16, marginBottom: 4, width: 190 }}>
+            <View style={{width: 165, height: 1, backgroundColor: color.ash}} />
+            <Text style={{fontSize: 16, marginBottom: 4}}>+333333333333</Text>
+            <View style={{width: 165, height: 1, backgroundColor: color.ash}} />
+            <Text style={{fontSize: 16, marginBottom: 4, width: 190}}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Architecto, nam!{' '}
             </Text>
@@ -141,14 +128,13 @@ const Profile = ({ navigation }) => {
             backgroundColor: color.white,
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text>Orders</Text>
-          <FontAwesome5 name='chevron-right' solid />
+          <FontAwesome5 name="chevron-right" solid />
         </Pressable>
         <Pressable
           style={{
@@ -161,14 +147,13 @@ const Profile = ({ navigation }) => {
             backgroundColor: color.white,
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text>Pending Reviews</Text>
-          <FontAwesome5 name='chevron-right' solid />
+          <FontAwesome5 name="chevron-right" solid />
         </Pressable>
         <Pressable
           style={{
@@ -181,14 +166,13 @@ const Profile = ({ navigation }) => {
             backgroundColor: color.white,
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text>FAQ</Text>
-          <FontAwesome5 name='chevron-right' solid />
+          <FontAwesome5 name="chevron-right" solid />
         </Pressable>
         <Pressable
           style={{
@@ -201,14 +185,13 @@ const Profile = ({ navigation }) => {
             backgroundColor: color.white,
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text>Payment Methods</Text>
-          <FontAwesome5 name='chevron-right' solid />
+          <FontAwesome5 name="chevron-right" solid />
         </Pressable>
         <Pressable
           style={{
@@ -220,20 +203,18 @@ const Profile = ({ navigation }) => {
             marginLeft: 'auto',
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
-          }}
-        >
+          }}>
           <Text
             style={{
               color: color.white,
               textTransform: 'capitalize',
               textAlign: 'center',
             }}
-            onPress={() => navigation.navigate('Auth')}
-          >
+            onPress={() => navigation.navigate('Auth')}>
             Sign Out
           </Text>
         </Pressable>

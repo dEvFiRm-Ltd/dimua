@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Text, View, Keyboard, TouchableOpacity } from 'react-native';
-import style, { color } from '../assets/css/style';
+import React, {useEffect, useState} from 'react';
+import {Text, View, Keyboard, TouchableOpacity} from 'react-native';
+import style, {color} from '@/assets/css/style';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
 import TextInput from 'react-native-material-textinput';
-const { forms } = style;
+const {forms} = style;
 
 /**
  * @description LoginScreen is the screen that is displayed Login Screen.
@@ -17,7 +17,7 @@ const LoginScreen = () => {
   const [name, setName] = useState('');
   const heights = useSharedValue(23);
 
-  const handleInputChange = (value) => setName(value);
+  const handleInputChange = value => setName(value);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
@@ -40,14 +40,14 @@ const LoginScreen = () => {
   });
 
   useEffect(() => {
-    heights.value = withTiming(keyboardStatus ? 13 : 23, { duration: 500 });
+    heights.value = withTiming(keyboardStatus ? 13 : 23, {duration: 500});
   }, [keyboardStatus]);
 
   return (
     <View style={forms.container}>
       <Animated.View style={[forms.input, gapAnimation]}>
         <TextInput
-          label='Email Address'
+          label="Email Address"
           value={name}
           labelActiveColor={color.ash}
           labelColor={color.ash}
@@ -60,7 +60,7 @@ const LoginScreen = () => {
       </Animated.View>
       <Animated.View style={[forms.input, gapAnimation]}>
         <TextInput
-          label='Password'
+          label="Password"
           value={name}
           labelActiveColor={color.ash}
           labelColor={color.ash}

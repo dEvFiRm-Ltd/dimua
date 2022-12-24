@@ -9,8 +9,9 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["/components/*"],
-      "@/screens/*":["/screens/*"],
-      "@/assets/*":["/assets/*"],
-    }
-  }
+      "@/screens/*": ["/screens/*"],
+      "@/assets/*": ["/assets/*"],
+      "@/mocks/*": ["/mocks/*"],
+    },
+  },
 }

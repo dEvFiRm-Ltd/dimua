@@ -1,42 +1,32 @@
-import {
-  Dimensions,
-  FlatList,
-  Image,
-  Pressable,
-  Text,
-  View,
-} from 'react-native';
+import {Dimensions, FlatList, Image, Pressable, Text, View} from 'react-native';
 import React from 'react';
-import { color } from '../assets/css/style';
+import {color} from '@/assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const { height: screenHeight, width: screenWidth } = Dimensions.get('window');
+const {height: screenHeight, width: screenWidth} = Dimensions.get('window');
 
-const Cart = ({ navigation }) => {
+const Cart = ({navigation}) => {
   return (
     <View
       style={{
         flex: 1,
         backgroundColor: color.base,
         paddingTop: 40,
-      }}
-    >
+      }}>
       <View
         style={{
           flexDirection: 'row',
           marginBottom: 37,
           paddingHorizontal: 40,
-        }}
-      >
+        }}>
         <Pressable
           style={{
             padding: 6,
             marginRight: 30,
             width: 24,
           }}
-          onPress={() => navigation.goBack()}
-        >
-          <FontAwesome5 name='chevron-left' regular size={18} />
+          onPress={() => navigation.goBack()}>
+          <FontAwesome5 name="chevron-left" regular size={18} />
         </Pressable>
         <Text
           style={{
@@ -45,8 +35,7 @@ const Cart = ({ navigation }) => {
             fontSize: 16,
             textAlign: 'center',
             textTransform: 'capitalize',
-          }}
-        >
+          }}>
           order
         </Text>
       </View>
@@ -57,10 +46,9 @@ const Cart = ({ navigation }) => {
           height: screenHeight - 130,
           paddingHorizontal: 70,
           flexDirection: 'column',
-        }}
-      >
+        }}>
         <FlatList
-          style={{ flexGrow: 0 }}
+          style={{flexGrow: 0}}
           /*  data={data}
           renderItem={({ item, index }) => (
             <Pressable key={index} onPress={() => setActive(item.title)}>
@@ -100,15 +88,14 @@ const Cart = ({ navigation }) => {
             backgroundColor: color.white,
             overflow: 'hidden',
             shadowColor: 'rgba(0, 0, 0, 0.3)',
-            shadowOffset: { width: 2, height: 2 },
+            shadowOffset: {width: 2, height: 2},
             elevation: 10,
             shadowRadius: 4,
             width: screenWidth - 80,
             flexDirection: 'row',
             justifyContent: 'flex-start',
             alignItems: 'center',
-          }}
-        >
+          }}>
           <View
             style={{
               width: 69,
@@ -117,12 +104,11 @@ const Cart = ({ navigation }) => {
               borderRadius: (1 / 2) * 69,
               overflow: 'hidden',
               shadowColor: 'rgba(0, 0, 0, 0.7)',
-              shadowOffset: { width: 2, height: 2 },
+              shadowOffset: {width: 2, height: 2},
               elevation: 10,
               shadowRadius: 2,
               marginRight: 16,
-            }}
-          >
+            }}>
             <Image
               source={require('../assets/img/item01.jpg')}
               style={{
@@ -140,13 +126,11 @@ const Cart = ({ navigation }) => {
               justifyContent: 'flex-start',
               alignItems: 'flex-start',
               width: '100%',
-            }}
-          >
+            }}>
             <Text
               numberOfLines={1}
-              ellipsizeMode='tail'
-              style={{ width: 188, marginBottom: 11 }}
-            >
+              ellipsizeMode="tail"
+              style={{width: 188, marginBottom: 11}}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse,
               ipsum.
             </Text>
@@ -156,17 +140,15 @@ const Cart = ({ navigation }) => {
                 justifyContent: 'flex-start',
                 // alignItems: 'flex-start',
                 width: 188,
-              }}
-            >
-              <Text style={{ color: color.red }}>$10.00</Text>
+              }}>
+              <Text style={{color: color.red}}>$10.00</Text>
               <Pressable
                 style={{
                   marginTop: 6,
                   borderRadius: 30,
                   backgroundColor: color.red,
                   marginLeft: 'auto',
-                }}
-              >
+                }}>
                 <Text>btn</Text>
               </Pressable>
             </View>
@@ -181,20 +163,18 @@ const Cart = ({ navigation }) => {
             marginTop: 'auto',
             alignItems: 'center',
             shadowColor: 'rgba(57,57,57,0.03)',
-            shadowOffset: { width: 0, height: 2 },
+            shadowOffset: {width: 0, height: 2},
             shadowRadius: 5,
             shadowRadius: 5,
             elevation: 10,
           }}
-          onPress={() => navigation.navigate('Home')}
-        >
+          onPress={() => navigation.navigate('Home')}>
           <Text
             style={{
               color: color.white,
               textTransform: 'capitalize',
               textAlign: 'center',
-            }}
-          >
+            }}>
             Complete Order
           </Text>
         </Pressable>
