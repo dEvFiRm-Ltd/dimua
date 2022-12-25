@@ -8,11 +8,11 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import React, {useState} from 'react';
-import style, {color} from '@/assets/css/style';
-import Cart from '@/assets/img/cart.svg';
+import style, {color} from '../assets/css/style';
+import Cart from '../assets/img/cart.svg';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import {products} from '@/mocks/data';
-import SingleProducts from '@/components/SingleProducts';
+import {products} from '../mocks/data';
+import SingleProducts from '../components/SingleProducts';
 
 const {home} = style;
 const data = [

@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
 
-const Drawers = () => {
+const Drawers = ({props}) => {
   return (
     <View>
       <Text>Drawers</Text>

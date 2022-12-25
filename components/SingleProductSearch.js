@@ -1,6 +1,6 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
-import style from '@/assets/css/style';
+import style from '../assets/css/style';
 const {productSearch} = style;
 const SingleProductSearch = ({data}) => {
   const imgUrl = {uri: data.image};

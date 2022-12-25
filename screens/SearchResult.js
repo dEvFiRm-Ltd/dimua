@@ -1,10 +1,10 @@
 import {Pressable, ScrollView, TextInput, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {color} from '@/assets/css/style';
+import {color} from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import SearchSuccess from '@/components/SearchSuccess';
-import {products} from '@/mocks/data';
-import SearchFailed from '@/components/SearchFailed';
+import SearchSuccess from '../components/SearchSuccess';
+import {products} from '../mocks/data';
+import SearchFailed from '../components/SearchFailed';
 
 const SearchResult = ({navigation}) => {
   const [fev, setFev] = useState(false);

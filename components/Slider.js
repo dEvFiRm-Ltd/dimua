@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Carousel, {Pagination, ParallaxImage} from 'react-native-snap-carousel';
 import {View, Dimensions} from 'react-native';
-import {products} from '@/mocks/data';
-import {color} from '@/assets/css/style';
+import {products} from '../mocks/data';
+import {color} from '../assets/css/style';
 
 const {width: screenWidth} = Dimensions.get('window');
 

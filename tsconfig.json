@@ -6,12 +6,5 @@
 
     /* Completeness */
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["/components/*"],
-      "@/screens/*": ["/screens/*"],
-      "@/assets/*": ["/assets/*"],
-      "@/mocks/*": ["/mocks/*"],
-    },
   },
 }

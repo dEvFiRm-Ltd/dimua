@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {color} from '@/assets/css/style';
+import {color} from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {RadioButton} from 'react-native-paper';
 

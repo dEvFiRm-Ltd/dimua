@@ -6,10 +6,10 @@ import {
   View,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
-import style, {color} from '@/assets/css/style';
+import style, {color} from '../assets/css/style';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Slider from '@/components/Slider';
-import {products} from '@/mocks/data';
+import Slider from '../components/Slider';
+import {products} from '../mocks/data';
 const {forms, productDetails} = style;
 
 const ProductDetails = ({navigation}) => {

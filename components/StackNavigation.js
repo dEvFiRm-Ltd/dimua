@@ -1,19 +1,19 @@
 import React from 'react';
-import HomeScreen from '@/screens/HomeScreen';
+import HomeScreen from '../screens/HomeScreen';
 import {createStackNavigator} from '@react-navigation/stack';
-import AuthScreen from '@/screens/AuthScreen';
-import Delivery from '@/screens/Delivery';
-import HistoryFailed from '@/screens/HistoryFailed';
-import NoInternet from '@/screens/NoInternet';
-import OrderBlank from '@/screens/OrderBlank';
-import Profile from '@/screens/Profile';
+import AuthScreen from '../screens/AuthScreen';
+import Delivery from '../screens/Delivery';
+import HistoryFailed from '../screens/HistoryFailed';
+import NoInternet from '../screens/NoInternet';
+import OrderBlank from '../screens/OrderBlank';
+import Profile from '../screens/Profile';
 import SearchFailed from './SearchFailed';
-import SearchResult from '@/screens/SearchResult';
-import Onboarding from '@/screens/Onboarding';
-import Loader from '@/screens/Loader';
-import Payment from '@/screens/Payment';
-import ProductDetails from '@/screens/ProductDetails';
-import style from '@/assets/css/style';
+import SearchResult from '../screens/SearchResult';
+import Onboarding from '../screens/Onboarding';
+import Loader from '../screens/Loader';
+import Payment from '../screens/Payment';
+import ProductDetails from '../screens/ProductDetails';
+import style from '../assets/css/style';
 import {useDrawerStatus} from '@react-navigation/drawer';
 import Animated, {
   Extrapolate,
@@ -22,7 +22,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import Cart from '@/screens/Cart';
+import Cart from '../screens/Cart';
 const {home} = style;
 const Stack = createStackNavigator();
 const StackNavigation = () => {
@@ -84,7 +84,7 @@ const StackNavigation = () => {
         {/* Main Component */}
         <Stack.Navigator
           screenOptions={{headerShown: false}}
-          initialRouteName="Order">
+          initialRouteName="Details">
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Auth" component={AuthScreen} />
           <Stack.Screen name="Details" component={ProductDetails} />

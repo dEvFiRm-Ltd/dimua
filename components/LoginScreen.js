@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View, Keyboard, TouchableOpacity} from 'react-native';
-import style, {color} from '@/assets/css/style';
+import style, {color} from '../assets/css/style';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
